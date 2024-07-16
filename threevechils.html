@@ -1,142 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THREE vehicle</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
 
-        .card-container {
-            display: flex;
-            gap: 10px;
-            padding-top: 10px;
-          
-        }
+      .card-container {
+        display: flex;
+        gap: 10px;
+        padding-top: 10px;
+    
+      }
 
-        .conatiner {
-            min-width: 400px;
-        }
+      .conatiner {
+        min-width: 400px;
+      }
 
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            width: 110px;
-            transition: transform 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 117px;
-        }
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 110px;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 117px;
+      }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+      .card:hover {
+        transform: scale(1.05);
+      }
 
-        .card-image {
-            width: 100%;
-            height: auto;
-        }
+      .card-image {
+        width: 100%;
+        height: auto;
+      }
 
-        .card-content {
-            padding: 10px;
-        }
+      .card-content {
+        padding: 10px;
+      }
 
-        .card-title {
-            font-size: 15px;
-            margin: 0;
-            color: #333;
-            font-weight: 700;
-            padding-top: 5px;
-            text-align: center;
-        }
+      .card-title {
+        font-size: 15px;
+        margin: 0;
+        color: #333;
+        font-weight: 700;
+        padding-top: 5px;
+        text-align: center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="conatiner">
-        <div class="card-container">
-            <div class="card">
-                <img src="./assets/images/autobajaj.png" alt="Image 1" class="card-image" style="max-width: 60px;">
-                <div class="card-content">
-                    <h2 class="card-title">Bajaj Auto</h2>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/atulauto.jpg" alt="Image 2" class="card-image" style="max-width: 72px;">
-                <div class="card-content">
-                    <h2 class="card-title">Atal Auto</h2>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/mahindra.jpg" alt="Image 3" class="card-image" style="max-width: 89px; margin-bottom: 10px;">
-                <div class="card-content">
-                    <h2 class="card-title">Mahindra Auto</h2>
-                </div>
-            </div>
+      <div class="card-container" style="justify-content: center;">
+        <div class="card">
+          <img
+            src="./assets/images/autobajaj.png"
+            alt="Image 1"
+            class="card-image"
+            style="max-width: 60px"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Bajaj Auto</h2>
+          </div>
         </div>
-        <div class="card-container">
-            <div class="card">
-                <img src="./assets/images/puiaggio.webp" alt="Image 1" class="card-image" style="max-width: 60px;">
-                <div class="card-content">
-                    <h2 class="card-title">Piaggio Auto</h2>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/jsauto.png" alt="Image 2" class="card-image" style="max-width: 72px;">
-                <div class="card-content">
-                    <h2 class="card-title">Js Auto</h2>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/karanti.jpg" alt="Image 3" class="card-image" style="max-width: 113px; margin-top: 25px;">
-                <div class="card-content">
-                    <h2 class="card-title" style="margin-bottom: 45px; padding-top: 0 !important;">Kranti Auto</h2>
-                </div>
-            </div>
+        <div class="card">
+          <img
+            src="./assets/images/atulauto.jpg"
+            alt="Image 2"
+            class="card-image"
+            style="max-width: 72px"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Atal Auto</h2>
+          </div>
         </div>
-        <div class="card-container">
-            <div class="card">
-                <img src="./assets/images/kapil.avif" alt="Image 1" class="card-image" style="max-width: 72px;">
-                <div class="card-content">
-                    <h2 class="card-title">Kapil Auto</h2>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/lohai.jpg" alt="Image 2" class="card-image" style="max-width: 78px;">
-                <div class="card-content">
-                    <h2 class="card-title">Lohia Auto</h2>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/baxy.jpg" alt="Image 3" class="card-image" style="max-width: 130px; margin-bottom: 10px;">
-                <div class="card-content">
-                    <h2 class="card-title" style="margin-top: -46px;">Baxy Auto</h2>
-                </div>
-            </div>
+        <div class="card">
+          <img
+            src="./assets/images/mahindra.jpg"
+            alt="Image 3"
+            class="card-image"
+            style="max-width: 89px; margin-bottom: 10px"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Mahindra Auto</h2>
+          </div>
         </div>
-        <div class="card-container">
-            <div class="card">
-                <img src="./assets/images/teza.jpg" alt="Image 3" class="card-image" style="max-width: 102px; margin-top: 10px;">
-                <div class="card-content">
-                    <h2 class="card-title" style="margin-top: 16px;">Teza Auto</h2>
-                </div>
-            </div>
+      </div>
+      <div class="card-container" style="justify-content: center;">
+        <div class="card">
+          <img
+            src="./assets/images/puiaggio.webp"
+            alt="Image 1"
+            class="card-image"
+            style="max-width: 60px"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Piaggio Auto</h2>
+          </div>
         </div>
+        <div class="card">
+          <img
+            src="./assets/images/jsauto.png"
+            alt="Image 2"
+            class="card-image"
+            style="max-width: 72px"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Js Auto</h2>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/images/karanti.jpg"
+            alt="Image 3"
+            class="card-image"
+            style="max-width: 113px; margin-top: 25px"
+          />
+          <div class="card-content">
+            <h2
+              class="card-title"
+              style="margin-bottom: 45px; padding-top: 0 !important"
+            >
+              Kranti Auto
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container" style="justify-content: center;">
+        <div class="card">
+          <img
+            src="./assets/images/kapil.avif"
+            alt="Image 1"
+            class="card-image"
+            style="max-width: 72px"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Kapil Auto</h2>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/images/lohai.jpg"
+            alt="Image 2"
+            class="card-image"
+            style="max-width: 78px"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Lohia Auto</h2>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/images/baxy.jpg"
+            alt="Image 3"
+            class="card-image"
+            style="max-width: 130px; margin-bottom: 10px"
+          />
+          <div class="card-content">
+            <h2 class="card-title" style="margin-top: -46px">Baxy Auto</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container" style="justify-content: start; margin-left: 25px;">
+        <div class="card">
+          <img
+            src="./assets/images/teza.jpg"
+            alt="Image 3"
+            class="card-image"
+            style="max-width: 102px; margin-top: 10px"
+          />
+          <div class="card-content">
+            <h2 class="card-title" style="margin-top: 16px">Teza Auto</h2>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
