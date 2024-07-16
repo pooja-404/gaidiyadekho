@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .container {
+            max-width: 1320px;
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            height: 400px;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .min-vh-100 {
+            min-height: 100vh;
+        }
+        .align-items{
+            align-items: center;
+        }
+        .bg-img{
+            background-image: url(./assets/images/img1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+   
+}
+        
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <section class="d-flex min-vh-100  align-items">
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-img">Slide 1</div>
+                    <div class="swiper-slide bg-img">Slide 2</div>
+                    <div class="swiper-slide bg-img">Slide 3</div>
+                    <div class="swiper-slide bg-img">Slide 4</div>
+                    <div class="swiper-slide bg-img">Slide 5</div>
+                    <div class="swiper-slide bg-img">Slide 6</div>
+                    <div class="swiper-slide bg-img">Slide 7</div>
+                    <div class="swiper-slide bg-img">Slide 8</div>
+                    <div class="swiper-slide bg-img">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
+</body>
+</html>

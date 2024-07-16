@@ -1,0 +1,3076 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Now you don't need to depend on others to purchase old vehicles. Go to our 'Be Expert' page and become yourself expert. " />
+    <meta property="og:description" content="Now you don't need to depend on others to purchase old vehicles. Go to our 'Be Expert' page and become yourself expert. Gaadiyadekho.com is the single platform on which you can buy and sell vehicles of every type at best price." />
+    <meta property="og:url" content="https://www.gaadiyadekho.com/" />
+    <meta property="og:image" itemprop="image" content="https://www.gaadiyadekho.com/img/logo.png" />
+    <meta property="og:image:width" content="191">
+    <meta property="og:image:height" content="76">
+
+    <title> Gaadiyan Dekho</title>
+    <meta name="description" content="Gaadiyan Dekho">
+    <meta name="author" content="Gaadiyan Dekho">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+    <!-- END Icons -->
+    <link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="/fonts/font-awesome/css/fonts.min.css" rel="stylesheet" />
+
+    
+    <link href="/Content/Loader.min.css" rel="stylesheet" />
+    <style>
+        .open-small-chat {
+            height: 50px !important;
+            width: 50px !important;
+            display: block;
+            background: #ed5565 !important;
+            padding: 15px 15px !important;
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+        }
+
+        .badge-noti {
+            background-color: #b94a48 !important;
+        }
+
+        .open-small-chat .fa-comments {
+            font-size: 20px !important;
+        }
+
+        #to-top {
+            z-index: 9999999 !important;
+        }
+    </style>
+
+    <style type="text/css">
+        .notificationclass {
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 2px;
+            padding-top: 2px;
+            background-color: #CC0000;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            display: none;
+            text-align: center;
+            border-radius: 4px;
+            position: absolute;
+        }
+
+        .hoverdiv {
+            color: #0D88C3;
+            border: solid 1px #0D88C3;
+            margin-top: -4px;
+        }
+
+            .hoverdiv:hover {
+                background-color: #0D88C3;
+                border-color: #0D88C3;
+                color: white;
+            }
+
+        .hoverdivexp {
+            color: #CC0000;
+            border: solid 1px #CC0000;
+            margin-top: -4px;
+        }
+
+            .hoverdivexp:hover {
+                background-color: #CC0000;
+                border-color: #CC0000;
+                color: white;
+            }
+    </style>
+
+    <!-- Primary Inspinia style -->
+
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet"/>
+<link href="/Content/bootstrap-theme.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+<link href="/plugins.min.css" rel="stylesheet"/>
+
+
+    <link href="/fonts/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+    
+    <link href="/Scripts/plugins/jquery-ui/jquery-ui.css" rel="stylesheet"/>
+
+
+
+
+
+
+
+
+    <style>
+        .modal {
+            z-index: 9999999;
+        }
+
+        .select2-search-choice {
+            width: 50%;
+        }
+
+        .media-body a {
+            padding: 5px;
+            text-transform: lowercase !important;
+        }
+
+
+        #to-top {
+            color: #fff;
+        }
+
+        .select2-selection__choice__remove {
+            display: none !important;
+        }
+
+        .select2-container--focus .select2-autocomplete .select2-selection__choice {
+            display: none;
+        }
+
+        .lazyload {
+            background-image: url('/img/2.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .input-group {
+            float: left !important;
+        }
+    </style>
+    <script src="/Scripts/jquery-1.11.0.js"></script>
+<script src="/Scripts/jquery.fancybox.js"></script>
+<script src="/Scripts/select2.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+
+    <script>
+        var currentloc = "";
+    </script>
+</head>
+<body>
+
+
+
+    <div class="loading">Loading.....&#8230;</div>
+
+    <!--navigation bar static-->
+    
+
+        <input type="hidden" name="cityhdn" id="cityhdn" value="0" />
+
+    <div class="navbar navbar-site navbarbottom navbar-static-top">
+        <div class="topright clearfix">
+
+
+                <a href="/Account/Login" class="login-btn">Login</a>
+
+                <i class="icon glyphicon-map-marker"></i><span id="clocation">All India</span>
+            <i class="icon icon-phone"></i> 070 588 90066 (Toll free) / 0909 012 3451-3
+
+        </div>
+
+        <div class="containerNavigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a href="/" class="navbar-brand hidden-desktop"><img src="http://gadiyadekho.com/img/logo.png" alt="Logo" /></a>
+            </div>
+
+            <div class="navbar-collapse nav_bg collapse">
+                <div class="containerNavigationTop pull-right" style="width:100%;">
+                    <a href="/" class="navbar-brand hidden-mobile"><img src="http://gadiyadekho.com/img/logo.png" alt="Logo" /></a>
+                    <ul class="nav navbar-nav navbar-right margin_adj">
+                        <li class="dropdown">
+
+                            <a class="dropdown-toggle" id="locationahref" data-toggle="dropdown" href="#"> select  location<span class="caret"></span></a>
+                            <ul id="location" class="dropdown-menu"></ul>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">New <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Home/New">All   new vehicle </a></li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">By Price</a>
+                                    <ul class="dropdown-menu">
+                                        <li> <a title="1 lakh - 3 lakh" href="/Home/NewSearchResults?price=%3E%3D100000%20and%20%3C%3D300000">1 lakh - 3 lakh</a></li>
+                                        <li> <a title="3 lakh - 5 lakh" href="/Home/NewSearchResults?price=%3E%3D300000%20and%20%3C%3D500000">3 lakh - 5 lakh</a></li>
+                                        <li> <a title="5 lakh - 10 lakh" href="/Home/NewSearchResults?price=%3E%3D500000%20and%20%3C%3D1000000">5 lakh - 10 lakh</a></li>
+                                        <li> <a title="10 lakh - 20 lakh" href="/Home/NewSearchResults?price=%3E%3D1000000%20and%20%3C%3D2000000">10 lakh - 20 lakh</a></li>
+                                        <li> <a title="20 lakh - 50 lakh" href="/Home/NewSearchResults?price=%3E%3D2000000%20and%20%3C%3D5000000">20 lakh - 50 lakh</a></li>
+                                        <li> <a title="50 lakh  Plus" href="/Home/NewSearchResults?price=%3E%3D5000000">50 Lakh Plus</a></li>
+
+                                    </ul>
+
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">By Brands</a>
+                                    <ul class="dropdown-menu" id="layout_brands">
+                                        
+
+
+                                    </ul>
+
+                                </li>
+                                <li><a href="/Home/NewSearchResults?upcoming=1&amp;catid=38">Upcoming cars</a></li>
+                                <li><a href="/Home/DealerPoint">Vehicle dealers</a></li>
+                                
+                                <li><a href="/Home/EmiCalculator">Emi calculator</a></li>
+                                <li><a href="/Home/BuyingTips">Buying tips</a></li>
+                                <li><a href="/Home/Helplinenumbers">Helpline numbers</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/Home/SearchResult">Used <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+
+                                <li><a href="/Home/SearchResult">All   old vehicle </a></li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" onmouseover="showCities()" onclick="showCities()"  href="javascript:void()">By City</a>
+                                    <ul class="dropdown-menu" id="layout_allcities">
+                                        
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">By Budget</a>
+                                    <ul class="dropdown-menu">
+                                        <li> <a title="1 lakh - 3 lakh" href="/Home/SearchResult?pricefrom=100000&amp;priceto=300000">1 lakh - 3 lakh</a></li>
+                                        <li> <a title="3 lakh - 5 lakh" href="/Home/SearchResult?pricefrom=300000&amp;priceto=500000">3 lakh - 5 lakh</a></li>
+                                        <li> <a title="5 lakh - 10 lakh" href="/Home/SearchResult?pricefrom=500000&amp;priceto=1000000">5 lakh - 10 lakh</a></li>
+                                        <li> <a title="10 lakh - 20 lakh" href="/Home/SearchResult?pricefrom=1000000&amp;priceto=2000000">10 lakh - 20 lakh</a></li>
+                                        <li> <a title="20 lakh - 50 lakh" href="/Home/SearchResult?pricefrom=2000000&amp;priceto=5000000">20 lakh - 50 lakh</a></li>
+                                        <li> <a title="50 lakh  Plus" href="/Home/SearchResult?pricefrom=5000000">50 Lakh Plus</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" onmouseover="showVersion()" onclick="showVersion()">By version</a>
+                                    <ul class="dropdown-menu" id="layout_allversion"></ul>
+                                </li>
+
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">By Category</a>
+                                    <ul class="dropdown-menu" id="layout_allcategory">
+                                        
+                                    </ul>
+                                </li>
+
+                                <li><a href="/Home/SearchResult?type=Bankit">Bank kit vehicles</a></li>
+                                <li><a href="/Home/OfferBid">Offer your bid</a></li>
+                                
+                            </ul>
+                        </li>
+                        
+                        <li><a href="/Home/sell">sell</a></li>
+                        <li><a href="/Home/Comapre">Compare</a></li>
+                        <li><a href="/Home/VehicleLone">Vehicle Loan</a></li>
+                        <li><a href="/Home/More">More</a></li>
+                    </ul>
+                    <div class="containerNavigationBottom">
+                        <ul class="nav navbar-nav margin_adj">
+                            
+                            <li><a href="/Home/TrafficRules">Traffic Rules</a></li>
+                            
+                            <li><a href="/Home/DealerPoint">Dealer Point</a></li>
+                            <li><a href="/Home/BeExpert">Be Expert</a></li>
+                            
+                            <li><a href="/Home/ImportanceofRules">Importance of insurance</a></li>
+                            <!-- <li><a href="/Dealer/Bid">Auction</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        
+
+
+    </div>
+
+
+    <!--navigation ends-->
+    <!--main container-->
+    
+    
+    <div class="page-wrapper">
+        
+<style>
+    .lazyload {
+        background-image: linear-gradient(to right top, #ffffff, #dddee0, #babfc1, #98a0a2, #788381);
+    }
+
+    .alert {
+        position: fixed;
+        left: 50%;
+        top: 30vh;
+        transform: translateX(-50%);
+        z-index: 99999;
+        min-width: 200px;
+        min-height: 100px;
+    }
+
+    /* The close button */
+    .closebtn {
+        background-color: black !important;
+        border-radius: 5%;
+        padding: 5px;
+        color: #fff !important;
+    }
+        /* When moving the mouse over the close button */
+        .closebtn:hover {
+            color: black;
+        }
+
+    #alerBox {
+        z-index: 99999999;
+        position: absolute;
+    }
+</style>
+<script>
+    //const alertBox = document.querySelector("#alerBox");
+    function displayAlertBox(msg, msgType = "success") {
+
+        const box = document.querySelector('#alerBox') !== null ? document.querySelector('#alerBox') : document.createElement('div');
+        box.id = "alerBox"
+        let html = `
+                    <div  class="alert alert-${msgType} alert-dismissible alert">
+                        <a href="#" class="close closebtn" data-dismiss="alert" aria-label="close" onclick="closeAlertBox()">&times;</a>
+                         ${msg}.
+                    </div>
+                `;
+        box.innerHTML = html;
+        document.querySelector("body").insertAdjacentElement("afterbegin", box)
+    }
+    function closeAlertBox() {
+        if (document.querySelector('#alerBox') === null) return;
+        document.querySelector('#alerBox').remove();
+
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            //if esc key was not pressed in combination with ctrl or alt or shift
+            const isNotCombinedKey = !(event.ctrlKey || event.altKey || event.shiftKey);
+            if (isNotCombinedKey) {
+                if (document.querySelector('#alerBox') === null) return;
+                closeAlertBox();
+            }
+        }
+    });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        try {
+            ImageObserver("img.lazyload");
+        }
+        catch (e) {
+            console.log(e);
+        }
+    })
+    function ImageObserver(selector) {
+        try {
+            const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target
+                        if (!lazyImage.hasAttribute("data-src")) {
+                            console.log("lazyImage.dataset.data-src", lazyImage.dataset.src)
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("loader");
+                            lazyImage.onerror = () => {
+                                lazyImage.onerror = null;
+                                lazyImage.src = "http://gadiyadekho.com//img/noimg.png";
+                            };
+                            lazyImage.classList.remove("lazyload");
+                        }
+                    }
+                })
+            });
+            //console.log(typeof selector, selector)
+            const arr = typeof selector === 'string' ? document.querySelectorAll(selector) ?? [] : selector;
+            if (arr) {
+                if (Array.isArray(arr)) {
+                    arr?.forEach((v) => {
+                        if (v) {
+                            console.log("ob", v)
+                            imageObserver.observe(v);
+                        }
+                    })
+                }
+            }
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+</script>
+
+
+<style>
+    .lazyload {
+        background-image: linear-gradient(to right top, #ffffff, #dddee0, #babfc1, #98a0a2, #788381);
+    }
+
+    .alert {
+        position: fixed;
+        left: 50%;
+        top: 30vh;
+        transform: translateX(-50%);
+        z-index: 99999;
+        min-width:200px;
+        min-height:100px;
+        
+    }
+
+    /* The close button */
+    .closebtn {
+        background-color: black !important;
+        border-radius: 5%;
+        padding: 5px;
+        color: #fff !important;
+    }
+        /* When moving the mouse over the close button */
+        .closebtn:hover {
+            color: black;
+        }
+</style>
+<script>
+    const alertBox = document.querySelector("#alerBox");
+    function displayAlertBox(msg, msgType = "success") {
+        if (document.querySelector('#alerBox') !== null) return;
+        const box = document.createElement('div');
+        box.id = "alerBox"
+        let html = ` 
+                    <div  class="alert alert-${msgType} alert-dismissible alert">
+                        <a href="#" class="close closebtn" data-dismiss="alert" aria-label="close" onclick="closeAlertBox()">&times;</a>
+                         ${msg}.
+                    </div>
+                `;
+        box.innerHTML = html;
+        document.querySelector("body").insertAdjacentElement("afterbegin", box)
+    }
+    function closeAlertBox()
+    {
+        if (document.querySelector('#alerBox') === null) return;
+        document.querySelector('#alerBox').remove();
+
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            //if esc key was not pressed in combination with ctrl or alt or shift
+            const isNotCombinedKey = !(event.ctrlKey || event.altKey || event.shiftKey);
+            if (isNotCombinedKey) {
+                if (document.querySelector('#alerBox') === null) return;
+                closeAlertBox();
+            }
+        }
+    });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        try {
+            ImageObserver("img.lazyload");
+        }
+        catch (e) {
+            console.log(e);
+        }
+    })
+    function ImageObserver(selector) {
+        try {
+            const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target
+                        if (!lazyImage.hasAttribute("src")) {
+                            console.log("lazyImage.dataset.src", lazyImage.dataset.src)
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("loader");
+                            lazyImage.onerror = () => {
+                                lazyImage.onerror = null;
+                                lazyImage.src = "http://gadiyadekho.com//img/noimg.png";
+                            };
+                            lazyImage.classList.remove("lazyload");
+                        }
+                    }
+                })
+            });
+            console.log(selector);
+            const arr = document.querySelectorAll(selector);
+            if (arr) {
+                arr?.forEach((v) => {
+                    if (v)
+                        imageObserver.observe(v);
+                })
+            }
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+</script>
+
+
+
+    <script src="/Scripts/owl.carousel.min.js"></script>
+    <style>
+        .imgv
+        {
+            height:50px;
+            width:50px;
+        }
+        .vech-img img {
+            width: 100%;
+        }
+
+        .product-price {
+            background-color: #FF725E !important;
+        }
+
+            .product-price i {
+                color: #fff !important;
+            }
+
+        .vshare {
+            right: 25px !important;
+        }
+
+
+        .ibox {
+            margin-bottom: 40px;
+            /* height: 650px; */
+            height: auto;
+        }
+
+        #filtertogel {
+            margin: 15px;
+            float: left;
+            padding: 0px !important;
+        }
+
+        .field-validation-error {
+            color: red;
+        }
+
+        .filter-rgn {
+            background-color: #fff !important;
+        }
+
+        .product-imitation .outer {
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-imitation > .outer > .inner {
+            width: 100%;
+            height: 100%;
+        }
+
+            .product-imitation > .outer > .inner > a > img {
+                max-width: 100%;
+                display: block;
+                margin: auto;
+                height: 194px;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+
+        .dealer-section-btn button:hover, .dealer-section-btn button:focus {
+            background-color: #c60210;
+            border: 1px solid #c60210;
+            color: #fff !important;
+        }
+
+
+        .dealer-section-btn {
+            text-align: center;
+            padding: 5px !important;
+        }
+
+        .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+            margin-right: 0 !important;
+            margin-left: -15px;
+        }
+
+        .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+            margin-left: -15px !important;
+        }
+
+        .filter-content select.form-control {
+            background: white url(../img/drop.png) right center no-repeat;
+        }
+
+        .filter-content span {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+
+        /*
+                .outer {
+                    width: 200px;
+                    height: 200px;
+                    margin: 0px auto;
+                }
+
+                .inner {
+                    display: table-cell;
+                    height: 200px;
+                    width: 200px;
+                    vertical-align: middle;
+                }
+                */
+
+        .list-inline img {
+            cursor: pointer;
+        }
+
+        .carousel-control {
+            color: #FF725E !important;
+            font-size: 50px !important;
+            padding-top: 25% !important;
+        }
+
+        .modal-dialog {
+            width: 450px;
+        }
+
+        #TrafficRules .item {
+            height: 450px;
+        }
+        #TrafficRules img{
+            width:100% !important;
+        }
+            .loader {
+            border: 5px solid #ff5a00;
+            border-radius: 50%;
+            border-top: 5px solid #1ab394;
+            width: 50px;
+            height: 50px;
+            margin: auto 0px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .working {
+            background: url('../../images/notloader.gif') no-repeat left center;
+        }
+
+        .btn btn-md btn-primary {
+            font-size: 12px;
+            border: 1px solid #ff725e;
+            color: #ff725e;
+            line-height: 10px;
+            text-transform: none;
+        }
+
+        .btn-responsive:hover {
+            color: #fff !important;
+        }
+
+        .btn-responsive:focus {
+            color: #fff !important;
+        }
+
+        .has-danger {
+            border-color: red !important;
+        }
+
+        /*
+                .varientdec {
+                    padding: 5px;
+                    height: 200px;
+                    overflow-y: scroll;
+                }
+                */
+        .varientdec {
+            width: 100%;
+        }
+
+            .varientdec h1 {
+                text-align: center;
+                padding: 10px 5px 5px;
+                margin: 0;
+                border-top: 1px solid #e7eaec;
+            }
+
+        #totalvec {
+            font-weight: 700;
+        }
+
+
+
+
+
+        .varcarsl {
+            margin: 0px;
+            float: left;
+        }
+
+        /*
+                .varcarsl img {
+                    width: 300px !important;
+                    height: 235px !important;
+                }
+                */
+
+        .varientdec td {
+            padding: 5px;
+        }
+
+        .carimg img {
+            width: 100% !important;
+            height: 120px !important;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .product-desc {
+            background-color: #f8f8f9;
+        }
+
+        .dealervhead {
+            font-size: 13px !important;
+            color: #333;
+            font-weight: bold;
+            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .carousel-control {
+            width: 0px !important;
+        }
+
+
+        .carousel-showmanymoveone .carousel-control {
+            width: 4%;
+            background-image: none;
+        }
+
+            .carousel-showmanymoveone .carousel-control.left {
+                margin-left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-control.right {
+                margin-right: 0;
+            }
+
+        .carousel-showmanymoveone .cloneditem-1,
+        .carousel-showmanymoveone .cloneditem-2,
+        .carousel-showmanymoveone .cloneditem-3 {
+            display: none;
+        }
+
+        .carousel .item .col-xs-12 {
+            padding: 0;
+        }
+
+
+        /* Medium Devices, Desktops */
+
+        @media only screen and (max-width: 992px) {
+            .carousel .item .col-xs-12:nth-last-child(-n+2) {
+                display: none;
+            }
+        }
+
+        @media all and (min-width: 768px) {
+            .carousel-showmanymoveone .carousel-inner > .active.left,
+            .carousel-showmanymoveone .carousel-inner > .prev {
+                left: -50%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner > .active.right,
+            .carousel-showmanymoveone .carousel-inner > .next {
+                left: 50%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner > .left,
+            .carousel-showmanymoveone .carousel-inner > .prev.right,
+            .carousel-showmanymoveone .carousel-inner > .active {
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+                display: block;
+            }
+        }
+
+        @media all and (min-width: 768px) and (transform-3d), all and (min-width: 768px) and (-webkit-transform-3d) {
+            .carousel-showmanymoveone .carousel-inner > .item.active.right,
+            .carousel-showmanymoveone .carousel-inner > .item.next {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner > .item.active.left,
+            .carousel-showmanymoveone .carousel-inner > .item.prev {
+                -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+                left: 0;
+            }
+
+                .carousel-showmanymoveone .carousel-inner > .item.left,
+                .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+                .carousel-showmanymoveone .carousel-inner > .item.active {
+                    -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                    left: 0;
+                }
+        }
+
+        @media all and (min-width: 992px) {
+            .carousel-showmanymoveone .carousel-inner > .active.left,
+            .carousel-showmanymoveone .carousel-inner > .prev {
+                left: -16.6%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner > .active.right,
+            .carousel-showmanymoveone .carousel-inner > .next {
+                left: 16.6%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner > .left,
+            .carousel-showmanymoveone .carousel-inner > .prev.right,
+            .carousel-showmanymoveone .carousel-inner > .active {
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner .cloneditem-2,
+            .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
+                display: block;
+            }
+        }
+
+        @media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
+            .carousel-showmanymoveone .carousel-inner > .item.active.right,
+            .carousel-showmanymoveone .carousel-inner > .item.next {
+                -webkit-transform: translate3d(16.6%, 0, 0);
+                transform: translate3d(16.6%, 0, 0);
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner > .item.active.left,
+            .carousel-showmanymoveone .carousel-inner > .item.prev {
+                -webkit-transform: translate3d(-16.6%, 0, 0);
+                transform: translate3d(-16.6%, 0, 0);
+                left: 0;
+            }
+
+                .carousel-showmanymoveone .carousel-inner > .item.left,
+                .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+                .carousel-showmanymoveone .carousel-inner > .item.active {
+                    -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                    left: 0;
+                }
+        }
+
+
+
+
+
+
+
+
+
+
+        .voutchers {
+            background-color: #fff;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            overflow: hidden;
+        }
+
+        .voutcher-divider {
+            display: flex;
+        }
+
+        .voutcher-left {
+            width: 60%
+        }
+
+        .voutcher-name {
+            color: grey;
+            font-size: 9px;
+            font-weight: 500;
+        }
+
+        .voutcher-code {
+            color: red;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .voutcher-right {
+            width: 40%;
+            color: #fff;
+        }
+
+        .discount-percent {
+            font-size: 12px;
+            font-weight: bold;
+            position: relative;
+            top: 5px;
+        }
+
+        .off {
+            font-size: 14px;
+            position: relative;
+            bottom: 5px;
+        }
+
+        #vechileresults .ibox, #vechileresults .product-box, #vechileresults .product-box {
+            height: auto !important;
+        }
+    </style>
+
+
+<link href="/Content/Loader.min.css" rel="stylesheet" />
+<script>
+    var fromrow;
+    var to=1;
+    var isname = "";
+    var posteduserid = "";
+    var vecid = "";
+
+
+
+    function FillDistrict() {
+
+        var ID = $("#StateID").val();
+        $.ajax({
+            url: '/Home/FillDistrict',
+            type: "GET",
+            dataType: "JSON",
+            data: { StateID: ID },
+            success: function (DistrictType) {
+
+                if (DistrictType.length > 0) {
+                    $('#DistrictID').prop('disabled', false);
+                }
+                else {
+                    $('#DistrictID').prop('disabled', true);
+                }
+                $("#DistrictID").html(""); // clear before appending new list
+
+                for (var i = 0; i < DistrictType.length; i++) {
+                    $("#DistrictID").append(
+                        '<option selected=' + DistrictType[i].Selected + ' value=' + DistrictType[i].Value + '>' + DistrictType[i].Text + '</option>');
+                }
+
+
+
+            }
+        });
+    }
+
+    function FillSubDistrict() {
+
+        var ID = $("#DistrictID").val();
+
+        $.ajax({
+            url: '/Home/FillSubDistrict',
+            type: "GET",
+            dataType: "JSON",
+            data: { DistrictID: ID },
+            success: function (DistrictType) {
+
+                if (DistrictType.length > 0) {
+                    $('#CityID').prop('disabled', false);
+                }
+                else {
+                    $('#CityID').prop('disabled', true);
+                }
+                $("#CityID").html(""); // clear before appending new list
+
+                for (var i = 0; i < DistrictType.length; i++) {
+                    $("#CityID").append(
+                        '<option selected=' + DistrictType[i].Selected + ' value=' + DistrictType[i].Value + '>' + DistrictType[i].Text + '</option>');
+                }
+
+
+
+            }
+        });
+    }
+    function loadfiltervec() {
+
+        isfulldone = true;
+        $(".loading").show();
+        var TypeID = "0";
+        var name = "0";
+        var SubCategoryID = "0";
+        var BrandID = "0";
+        var ModelID = "0";
+        var PriceID = "0";
+        var Fuleid = "All";
+        var ColorID = "0";
+        var kms = "0";
+        var year = "0";
+        var StateID = "0";
+        var DistrictID = "0";
+        var CityID = "0";
+        if ($("#SearchInput").val() != "") {
+            name = $("#SearchInput").val();
+        }
+        else {
+            name = "";
+        }
+
+        if ($("#TypeID").val() != "" || $("#TypeID").val() != "null") {
+            TypeID = $("#TypeID").val();
+        }
+        else {
+            TypeID = "0";
+        }
+
+        if (StateID != "0" || $("#StateID").val() != "null") {
+            StateID = $("#StateID").val();
+        }
+        else {
+            StateID = "0";
+        }
+        if ($("#DistrictID").val() != "" || $("#DistrictID").val() != "null") {
+            DistrictID = $("#DistrictID").val();
+        }
+        else {
+            DistrictID = "0";
+        }
+        if ($("#CityID").val() != "" || $("#CityID").val() != "null") {
+            CityID = $("#CityID").val();
+        }
+        else {
+            CityID = "0";
+        }
+
+
+
+        if (SubCategoryID != "0" || $("#SubCategoryID").val() != "null") {
+            SubCategoryID = $("#SubCategoryID").val();
+        }
+        else {
+            SubCategoryID = "0";
+        }
+        if ($("#BrandID").val() != "" || $("#BrandID").val() != "null") {
+            BrandID = $("#BrandID").val();
+        }
+        else {
+            BrandID = "0";
+        }
+        if ($("#ModelID").val() != "" || $("#ModelID").val() != "null") {
+            ModelID = $("#ModelID").val();
+        }
+        else {
+            ModelID = "0";
+        }
+
+
+        if ($("#PriceID").val() != "" || $("#PriceID").val() != "null") {
+            PriceID = $("#PriceID").val();
+        }
+        else {
+            PriceID = "< 0";
+        }
+        if ($("#Fuleid").val() != "" || $("#Fuleid").val() != "All") {
+            Fuleid = $("#Fuleid").val();
+        }
+        else {
+            Fuleid = "All";
+        }
+
+
+        fromrow = 1;
+        to = 1;
+        $.ajax({
+            url: '/Home/LoadMoreSearchNewVechfilter',
+            type: "GET",
+            dataType: "JSON",
+
+            data: { from: 18, to:to, TypeID: TypeID, name: name, SubCategoryID: SubCategoryID, BrandID: BrandID, ModelID: ModelID, PriceID: PriceID, Fuleid: Fuleid},
+            success: function (response) {
+                $(".loading").hide();
+                if (response != "") {
+                    $("#vechileresults").html(response);
+                    $(".loading").hide();
+
+                }
+                else {
+
+                    var messge = '<div class="middle-box text-center animated fadeInDown"><h3 class="font-bold">Results Not Found</h3><div class="error-desc"><br/><a href="/Home/NewSearchResults" class="btn btn-default m-t"> click here to  see all vehicles</a><br /></div></div>';
+                    $("#vechileresults").html(messge);
+                    $(".loading").hide();
+                }
+                ImageObserver(".lazyload");
+                //$('.lazyload').each(function () {
+
+                //    //* set the img src from data-src
+                //    $(this).load(function () {
+                //        $(this).css("background-image", "none");
+                //    });
+
+                //    $(this).error(function () {
+                //        $(this).attr('onerror', this.src = '/noimg.png');
+                //        $(this).css("background-image", "none");
+                //    })
+                //});
+            },
+            error: function (request, status, error) {
+                $(".loading").hide();
+            }
+        });
+
+    }
+
+    var isfulldone = true;
+
+
+    //var scrollToTop = function () {
+    //    // Get link
+    //    var link = $('#to-top-price');
+    //    var windowW = window.innerWidth
+    //                    || document.documentElement.clientWidth
+    //                    || document.body.clientWidth;
+
+    //    $(window).scroll(function () {
+    //        // If the user scrolled a bit (150 pixels) show the link in large resolutions
+    //        if (($(this).scrollTop() > 1) && (windowW > 991)) {
+    //            link.fadeIn(100);
+    //        } else {
+    //            link.fadeOut(100);
+    //        }
+    //    });
+
+    //    // On click get to top
+    //    link.click(function () {
+    //        $('html, body').animate({ scrollTop: 0 }, 400);
+    //        return false;
+    //    });
+    //};
+    var prvsfrom;
+    $(document).ready(function () {
+
+
+        var lastScrollTop = 0;
+
+        //$(window).scroll(function () {
+        //    console.log($(document).height());
+        //    console.log($(window).height());
+        //    if ($(window).scrollTop() ==
+        //      $(document).height() - $(window).height()) {
+
+
+        //        if (isfulldone == true) {
+        //            if (prvsfrom != fromrow) {
+        //                alert("aaaa");
+        //                GetData();
+        //            }
+
+        //        }
+
+
+
+        //    }
+
+        //});
+
+        $(document).scroll(function (e) {
+
+            // grab the scroll amount and the window height
+            var scrollAmount = $(window).scrollTop();
+            var documentHeight = $(document).height();
+
+            // calculate the percentage the user has scrolled down the page
+            var scrollPercent = (scrollAmount / documentHeight) * 100;
+
+            if (scrollPercent > 50) {
+                // run a function called doSomething
+                if (isfulldone == true) {
+                    if (prvsfrom != fromrow) {
+                        GetData();
+                    }
+                }
+            }
+
+
+
+        });
+    })
+
+
+
+
+    //$(function () {
+
+    //    $(window).scroll(function () {
+
+    //        //if ($(window).scrollTop() ==
+    //           // $(document).height() - $(window).height()) {
+    //            if ($('.loader').css('display') == 'none') {
+    //                GetData();
+    //            //}
+    //        }
+    //    });
+    //});
+    function getQueryStrings() {
+        var assoc = {};
+        var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+        var queryString = location.search.substring(1);
+        var keyValues = queryString.split('&');
+
+
+
+        for (var i in keyValues) {
+            var key = keyValues[i].split('=');
+            if (key.length > 1) {
+                assoc[decode(key[0])] = decode(key[1]);
+            }
+        }
+
+        return assoc;
+
+    }
+
+    function GetData() {
+
+
+            prvsfrom = fromrow;
+            isfulldone = false;
+            $(".loader").show();
+            var TypeID = "0";
+            var SubCategoryID = "0";
+            var BrandID = "0";
+            var ModelID = "0";
+            var PriceID = "0";
+            var Fuleid = "All";
+            var ColorID = "0";
+            var kms = "0";
+            var year = "0";
+            var StateID = "0";
+            var DistrictID = "0";
+            var CityID = "0";
+            var name = "";
+            if ($("#SearchInput").val() != "") {
+                name = $("#SearchInput").val();
+            }
+            else {
+                if ($("#SearchInput").val() != "") {
+                    name = $("#SearchInput").val();
+                }
+                else {
+                    var qs = getQueryStrings();
+                    var myParam = qs["name"];
+
+                    if (myParam != "") {
+                        name = myParam;
+                    }
+                    else {
+                        name = "";
+                    }
+                }
+
+
+
+            }
+            if ($("#TypeID").val() != "" || $("#TypeID").val() != "null") {
+                TypeID = $("#TypeID").val();
+            }
+            else {
+                TypeID = "0";
+            }
+
+            if (SubCategoryID != "0" || $("#SubCategoryID").val() != "null") {
+                SubCategoryID = $("#SubCategoryID").val();
+            }
+            else {
+                SubCategoryID = "0";
+            }
+            if ($("#BrandID").val() != "" || $("#BrandID").val() != "null") {
+                BrandID = $("#BrandID").val();
+            }
+            else {
+                BrandID = "0";
+
+
+
+            }
+            if ($("#ModelID").val() != "" || $("#ModelID").val() != "null") {
+                ModelID = $("#ModelID").val();
+            }
+            else {
+
+                ModelID = "0";
+
+            }
+            if ($("#PriceID").val() != "" || $("#PriceID").val() != "null") {
+                PriceID = $("#PriceID").val();
+            }
+            else {
+                PriceID = "< 0";
+            }
+            if ($("#Fuleid").val() != "" || $("#Fuleid").val() != "All") {
+                Fuleid = $("#Fuleid").val();
+            }
+            else {
+                Fuleid = "All";
+            }
+
+
+            var Bankit = "0"; var Scarp = "0"; HotDeal = "0";
+
+            var qs = getQueryStrings();
+            var type = qs["type"];
+            switch (type) {
+                case "HotDeal": { HotDeal = "1" } break;
+
+                case "Scarp": { Scarp = "1" } break;
+
+                case "Bankit": { Bankit = "1" } break;
+            }
+            if (myParam != "") {
+                name = myParam;
+            }
+            else {
+                name = "";
+            }
+
+
+            $.ajax({
+                type: 'GET',
+                url: '/Home/LoadMoreSearchNewVech',
+                data: { from: 18, to: to, TypeID: TypeID, name: name, SubCategoryID: SubCategoryID, BrandID: BrandID, ModelID: ModelID, PriceID: PriceID, Fuleid: Fuleid },
+                dataType: 'json',
+                success: function (data) {
+                        if (data != "") {
+                            $("#vechileresults").append(data);
+                            $("#vechileresults").animate({ "scrollTop": $('loadmore').scrollHeight }, "slow")
+                            $(".loader").hide();
+                            ImageObserver(".lazyload");
+                            //$('.lazyload').each(function () {
+
+                            //    //* set the img src from data-src
+                            //    $(this).attr('src', $(this).attr('data-src'));
+                            //    //$(this).attr('onerror', this.src = '/noimg.png');
+                            //    /// remove the loading
+
+                            //    $(this).css("background-image", "none");
+                            //});
+
+
+                        }
+
+
+
+
+
+
+                },
+                beforeSend: function () {
+                    $("#progress").show();
+                    isfulldone = true;
+
+                },
+                complete: function () {
+                    $("#progress").hide();
+                    $(".loader").hide();
+                    isfulldone = true;
+                },
+                error: function () {
+                    $(".loader").hide();
+                    isfulldone = true;
+                    alert("Error while retrieving data!");
+                }
+            });
+
+
+
+    }
+    function showmodeimage(id) {
+
+        $("#vechiledetails_" + id + " img").each(function () {
+
+            //* set the img src from data-src
+            $(this).attr('src', $(this).attr('data-src'));
+            //$(this).attr('onerror', this.src = '/noimg.png');
+            /// remove the loading
+            $(this).removeClass("loader")
+
+        });
+        $('[id^=carousel-selector-]').click(function () {
+            var id_selector = $(this).attr("id");
+
+            var id = id_selector.substr(id_selector.length - 1);
+            id = parseInt(id);
+            //  alert(id);
+            $('.carousel').carousel(id);
+            $('[id^=carousel-selector-]').removeClass('selected');
+            $(this).addClass('selected');
+        });
+
+        // when the carousel slides, auto update
+        $('#myCarousel').on('slid', function (e) {
+            var id = $('.item.active').data('slide-number');
+
+            id = parseInt(id);
+            $('[id^=carousel-selector-]').removeClass('selected');
+            $('[id=carousel-selector-' + id + ']').addClass('selected');
+        });
+
+
+    }
+
+    function comaprevec(catid,subcatid,vecid,brandid,modelid,varietid)
+    {
+
+        var url = "http://gadiyadekho.com/Home/Comapre" + "?catid=" + catid + "&subcatid=" + subcatid + "&vecid=" + vecid + "&brandid=" + brandid + "&modelid=" + modelid + "&varietid=" + varietid;
+        window.open(
+          url,
+          '_blank' // <- This is what makes it open in a new window.
+        );
+
+
+    }
+
+
+</script>
+<div id="TrafficRules" class="carousel slide" data-ride="carousel" data-interval="2500">
+    <ol class="carousel-indicators">
+        <li data-target="#TrafficRules" data-slide-to="0" class="active"></li>
+        <li data-target="#TrafficRules" data-slide-to="1"></li>
+        <li data-target="#TrafficRules" data-slide-to="2"></li>
+        <li data-target="#TrafficRules" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+        <div class="item active">
+            <img src="http://gadiyadekho.com//img/Banners/sale.jpg" class="bannerimg img-responsive">
+
+        </div>
+        <!-- End Item -->
+
+        <div class="item">
+            <img src="http://gadiyadekho.com//images/expert-banner.jpg">
+
+        </div>
+        <!-- End Item -->
+
+        <div class="item">
+            <img src="http://gadiyadekho.com//images/rta-banner-01.jpg">
+
+        </div>
+        <!-- End Item -->
+        
+        <!-- End Item -->
+
+    </div>
+    <!-- End Carousel Inner -->
+    <!--ads-->
+    <!--ads end-->
+
+</div>
+<div class="container" style="width:100% !important">
+
+
+
+
+
+
+
+    <div class="dealervhead"><a href="#filtertogel" class="navbar-toggle filter-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span>     </a></div>
+
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div id="filtertogel" class="panel panel-default">
+
+
+            <div class="filter-content">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <span>Type</span>
+                    <select name="TypeID" id="TypeID" class="form-control">
+                        <option value="0">Select Type</option>
+                                <option value="36">Two Wheelers</option>
+                                <option value="37">Three  Wheelers</option>
+                                <option value="38">Four Wheelers</option>
+                                <option value="39">Commercial Vehicle(CV)</option>
+                                <option value="40">Tractor</option>
+                                <option value="41">Bus</option>
+                                <option value="42">Construction Equipment(CE)</option>
+                                <option value="43">Scarp</option>
+                                <option value="44">E-Rickshaw</option>
+                                <option value="45">E-Scooter</option>
+                                <option value="46">Electric Cars</option>
+                                <option value="48">Electric Bus</option>
+                                <option value="49">Hybrid Vehicle</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <span>Sub Type</span>
+
+
+                    <select name="SubCategoryID" id="SubCategoryID" class="form-control">
+                        <option value="0">Select Sub Type</option>
+                    </select>
+                </div>
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <span>Brand</span>
+
+                    <select name="BrandID" id="BrandID" class="form-control">
+                        <option value="0">Select Brand</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <span>Model</span>
+                    <select name="ModelID" id="ModelID" class="form-control">
+                        <option value="0">Select Model</option>
+                    </select>
+
+                </div>
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+
+                    <span>Budget</span>
+                    <select name="PriceID" id="PriceID" class="form-control">
+                        <option value="> 0">select</option>
+                                <option value="&gt;=0 and &lt;=50000">0-50000</option>
+                                <option value="&gt;=50000 and &lt;=100000">50000-1 Lakh</option>
+                                <option value="&gt;=100000 and &lt;=150000">1 lakh-1.5 Lakh</option>
+                                <option value="&gt;=150000 and &lt;=200000">1.5 lakh-2 Lakh</option>
+                                <option value="&gt;=200000">2 Lakh above</option>
+                    </select>
+
+                </div>
+
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <span>  Fuel Type</span>
+
+                    <select id="Fuleid" name="Fuleid" class="form-control">
+                        <option value="All">Select   Fuel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="LPG">LPG</option>
+                        <option value="CNG">CNG</option>
+                        <option value="Soler">Soler</option>
+                    </select>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+        <ol class="breadcrumb">
+
+
+
+
+
+            <li><a href="#">Home</a></li>
+
+            <li class="active">Search Results</li>
+
+        </ol>
+
+
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group">
+
+                    <div class="col-md-12">
+
+                        <input class="form-control text-box single-line" id="SearchInput" name="SearchInput" type="text" value="" />
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 vsearch col-sm-12 col-xs-12">
+                <div class="searchheading row">
+
+                    <div id="totalvec" class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-left">
+                        Total 8 Vehicles found.
+                    </div>
+                </div>
+
+                    <div id="vechileresults" class="row">
+
+                        
+                        
+
+                        
+                        <script>fromrow = 1; to = 2;</script>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/5385">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/a2d64b15-561c-41da-bc3b-48a670a0e1b2/new/bca7bbf5-4de4-40cd-b2b4-1373a01cc652.png ?? ""' alt=" Aprilia SR 125 BS6   Aprilia SR 125 BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 154419 -- </span> <span><i class="fa fa-inr"></i> 132553 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#"> Aprilia SR 125 BS6   Aprilia SR 125 BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_5385" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/5385">  Aprilia SR 125 BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/5385">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/a2d64b15-561c-41da-bc3b-48a670a0e1b2/new/bca7bbf5-4de4-40cd-b2b4-1373a01cc652.png' alt=" Aprilia SR 125 BS6   Aprilia SR 125 BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_5385').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="5385" data-vecid="5385" onclick="comaprevec('36','27','5385','1177','2116','7038')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/5387">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/649a494e-cda7-4ef4-8dca-2db02ea7c535/new/9df1130a-7d05-4c0c-969e-6187c8510775.png ?? ""' alt="Aprilia SR 160 BS6    Aprilia SR 160 Race BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 165237 -- </span> <span><i class="fa fa-inr"></i> 141769 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#">Aprilia SR 160 BS6    Aprilia SR 160 Race BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_5387" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/5387">   Aprilia SR 160 Race BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/5387">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/649a494e-cda7-4ef4-8dca-2db02ea7c535/new/9df1130a-7d05-4c0c-969e-6187c8510775.png' alt="Aprilia SR 160 BS6    Aprilia SR 160 Race BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_5387').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="5387" data-vecid="5387" onclick="comaprevec('36','27','5387','1177','2117','3366')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/5390">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/9fe9e020-cabf-4f24-9650-36d48ef8327c/new/26af163c-5716-4557-b7bb-b354b49283ee.png ?? ""' alt="Aprilia SR 125 Storm BS6   Aprilia Storm 125 BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 146541 -- </span> <span><i class="fa fa-inr"></i> 125841 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#">Aprilia SR 125 Storm BS6   Aprilia Storm 125 BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_5390" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/5390">  Aprilia Storm 125 BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/5390">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/9fe9e020-cabf-4f24-9650-36d48ef8327c/new/26af163c-5716-4557-b7bb-b354b49283ee.png' alt="Aprilia SR 125 Storm BS6   Aprilia Storm 125 BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_5390').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="5390" data-vecid="5390" onclick="comaprevec('36','27','5390','1177','2118','3367')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/5399">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/02f332dd-e8cd-4265-bc3d-48835851d299/new/a0683432-a55f-411f-8d41-0b776e654417.png ?? ""' alt=" Aprilia SXR 125 BS6   Aprilia SXR 125 STD BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 166806 -- </span> <span><i class="fa fa-inr"></i> 143106 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#"> Aprilia SXR 125 BS6   Aprilia SXR 125 STD BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_5399" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/5399">  Aprilia SXR 125 STD BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/5399">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/02f332dd-e8cd-4265-bc3d-48835851d299/new/7780351f-a652-4c8a-b460-7306492911d0.png' alt=" Aprilia SXR 125 BS6   Aprilia SXR 125 STD BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_5399').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="5399" data-vecid="5399" onclick="comaprevec('36','27','5399','1177','2383','7606')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/8608">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/02f332dd-e8cd-4265-bc3d-48835851d299/new/a0683432-a55f-411f-8d41-0b776e654417.png ?? ""' alt="Aprilia SXR 160 BS6 Aprilia SXR 160 BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 182685 -- </span> <span><i class="fa fa-inr"></i> 0 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#">Aprilia SXR 160 BS6 Aprilia SXR 160 BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_8608" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/8608">Aprilia SXR 160 BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/8608">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/02f332dd-e8cd-4265-bc3d-48835851d299/new/a0683432-a55f-411f-8d41-0b776e654417.png' alt="Aprilia SXR 160 BS6 Aprilia SXR 160 BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_8608').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="8608" data-vecid="8608" onclick="comaprevec('36','27','8608','1177','3622','7039')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/8609">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/ac3d3afe-cb0c-4aec-8c92-109a7fe53aa5/new/de53db1d-bdf9-4ac2-a8cd-c6c3dcb3817b.png ?? ""' alt=" Aprilia RS 660 BS6  Aprilia RS 660 STD BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 2224140 -- </span> <span><i class="fa fa-inr"></i> 1851600 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#"> Aprilia RS 660 BS6  Aprilia RS 660 STD BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_8609" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/8609"> Aprilia RS 660 STD BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/8609">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/ac3d3afe-cb0c-4aec-8c92-109a7fe53aa5/new/de53db1d-bdf9-4ac2-a8cd-c6c3dcb3817b.png' alt=" Aprilia RS 660 BS6  Aprilia RS 660 STD BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_8609').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="8609" data-vecid="8609" onclick="comaprevec('36','27','8609','1177','2380','7603')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/10181">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/2317b973-b919-4b44-a459-bdfbee008e8a/new/4d0f779f-5cb2-4683-aeed-7ef0bdba6c03.jpg ?? ""' alt="Aprilia SR Carbon BS6 Aprilia SR Carbon BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 170371 -- </span> <span><i class="fa fa-inr"></i> 146451 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#">Aprilia SR Carbon BS6 Aprilia SR Carbon BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_10181" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/10181">Aprilia SR Carbon BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/10181">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/2317b973-b919-4b44-a459-bdfbee008e8a/new/4d0f779f-5cb2-4683-aeed-7ef0bdba6c03.jpg' alt="Aprilia SR Carbon BS6 Aprilia SR Carbon BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_10181').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="10181" data-vecid="10181" onclick="comaprevec('36','26','10181','1177','4735','9885')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="ibox">
+
+                                    <div class="ibox-content product-box voutchers">
+
+                                        <div class="product-imitation">
+
+
+
+                                            <div class="outer">
+                                                <div class="inner">
+                                                    
+                                                            <a href="/Home/VechileDetails/10183">
+                                                                
+                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/e27b5245-6c1e-442d-830a-f504dd801818/new/7d01e57a-727e-4710-8ba1-4e9d6cd733ac.png ?? ""' alt="Aprilia SR Race BS6 Aprilia SR Race BS6" onerror="this.src='http://gadiyadekho.com//img/noimg.png';" class="img-responsive lazyload" />
+
+                                                            </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="product-desc">
+                                            <span class="product-price dealervprice">
+
+
+                                                        <span><i class="fa fa-inr"></i> 178566 -- </span> <span><i class="fa fa-inr"></i> 153433 </span>
+                                            </span>
+
+                                            <div class="dealervhead dealersectionbllow"><a href="#">Aprilia SR Race BS6 Aprilia SR Race BS6</a></div>
+
+                                            <div class="mt-3" style="margin:5px auto;text-align:center">
+                                                <div class="card">
+                                                    <span class="text-muted">Variets</span>
+                                                    <div class="voutcher-divider">
+
+                                                                <div id="vari_10183" class="owl-carousel owl-theme">
+                                                                            <div class="item">
+                                                                                <div class="dealervhead">
+                                                                                    <a href="/Home/VechileDetails/10183">Aprilia SR Race BS6 </a>
+                                                                                </div>
+                                                                                    <a href="/Home/VechileDetails/10183">
+                                                                                        
+                                                                                        <img data-src='http://gadiyadekho.com//img/vehicle/e27b5245-6c1e-442d-830a-f504dd801818/new/7d01e57a-727e-4710-8ba1-4e9d6cd733ac.png' alt="Aprilia SR Race BS6 Aprilia SR Race BS6" class="img-responsive lazyload imgv" />
+                                                                                    </a>
+
+
+                                                                            </div>
+
+                                                                </div>
+                                                            <script>
+                                                        $('#vari_10183').owlCarousel({
+                                                            loop: true,
+                                                            margin: 1,
+
+                                                        })
+                                                            </script>
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="dealer-section-btn">
+
+                                                <button type="button" data-user="10183" data-vecid="10183" onclick="comaprevec('36','26','10183','1177','4736','9886')" class="btn  btn-action btn-responsive">Comapre Vehicle</button>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                    </div>
+
+
+
+
+
+
+                <center> <div class="loader"></div></center>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+        </div>
+        
+
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3">
+                        <h4>main</h4>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            
+                            <li><a href="/Home/privacypolicy">Privacy</a></li>
+                            
+                            <li><a href="/Home/Contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-3 col-md-3">
+                        <h4>Commitment</h4>
+                        <ul>
+                            <li><a href="/Home/Contact">Customer Support</a></li>
+                            <li><a href="/Home/Contact">Refund Policy</a></li>
+                            <li><a href="/Home/Contact">Affiliates</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-3 col-md-3">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="/Home/Contact">Terms of Service</a></li>
+                            <li><a href="/Home/Contact">Privacy</a></li>
+                            <li>
+                                <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=erTTOJ9mADesNx6WxsHRwUmMVlMevhM80uaO2G33Mbyd5RLkFnROj7UDRSva"></script></span>
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-3 col-md-3">
+                        <h4>Follow Us VIA</h4>
+                        <ul class="socials">
+                            <li><a href="https://www.facebook.com/profile.php?id=100082251351638" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>           
+
+                        <!-- <div class="row">
+                             <div class="col-sm-7 col-md-7">
+                                 
+                             </div>
+                             <div class="col-sm-5 col-md-5">
+
+                             </div>
+                         </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="/Scripts/fileinput.js"></script>
+        <script type="text/javascript" src="/Scripts/notify.min.js"></script>
+
+        
+
+    <script src="/Scripts/vendor/jquery-1.11.0.min.js"></script>
+    <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-1.11.0.min.js"%3E%3C/script%3E'));</script>
+
+    <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
+    <script src="/Scripts/vendor/bootstrap.min.js"></script>
+
+    <script src="/Scripts/jquery.bootpag.min.js"></script>
+    <script src="/Scripts/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+            $("#SubCategoryID").change(function () {
+                var selecteditem = $(this).val();
+                if (selecteditem != -1) {
+                    $.ajax({
+                        url: '/Home/BindBrand',
+                        type: "GET",
+                        dataType: "JSON",
+                        data: { id: selecteditem },
+                        success: function (brand) {
+                            var option = "";
+                            if (brand.length > 0) {
+
+                                option += "<option value='0'>Brand</option>";
+                                for (var i = 0; i < brand.length; i++) {
+                                    option += "<option value='" + brand[i].Value + "'>" + brand[i].Text + "</option>";
+
+
+                                }
+                                $("#BrandID").html(option);
+
+                            }
+                            else {
+                                option += "<option value='0'>Brand</option>";
+                                $("#BrandID").html(option);
+                            }
+
+                        }
+                    });
+                }
+
+
+            });
+            $("#TypeID").change(function () {
+                var selecteditem = $(this).val();
+                if (selecteditem != -1) {
+                    $.ajax({
+                        url: '/Home/BindCategory',
+                        type: "GET",
+                        dataType: "JSON",
+                        data: { id: selecteditem },
+                        success: function (SubCategory) {
+                            var option = "";
+                            if (SubCategory.length > 0) {
+
+                                option += ("<option value='0'>Sub Category</option>")
+                                for (var i = 0; i < SubCategory.length; i++) {
+                                    option += "<option value='" + SubCategory[i].Value + "'>" + SubCategory[i].Text + "</option>";
+
+
+                                }
+                                $("#SubCategoryID").html(option);
+
+                            }
+                            else {
+                                option += ("<option value='0'>Sub Category</option>")
+                                $("#SubCategoryID").html(option);
+                            }
+
+                        }
+                    });
+                }
+
+
+            });
+            $("#BrandID").change(function () {
+                var selecteditem = $(this).val();
+                if (selecteditem != -1) {
+                    $.ajax({
+                        url: '/Home/BindModel',
+                        type: "GET",
+                        dataType: "JSON",
+                        data: { id: selecteditem },
+                        success: function (model) {
+                            var option = "";
+                            if (model.length > 0) {
+
+                                option += ("<option value='0'>Model</option>")
+
+                                for (var i = 0; i < model.length; i++) {
+                                    option += "<option value='" + model[i].Value + "'>" + model[i].Text + "</option>";
+
+                                }
+                                $("#ModelID").html(option);
+
+                            }
+                            else {
+                                option += ("<option value='0'>Model</option>")
+                                $("#ModelID").html(option);
+
+                            }
+
+                        }
+                    });
+                }
+
+
+            });
+
+            $("select").change(function () {
+                loadfiltervec();
+                if ($(this).attr("id") == "TypeID") {
+                    $.ajax({
+                        url: '/Home/BindPricesForOldVec',
+                        type: "GET",
+                        dataType: "JSON",
+                        data: { typeid: $(this).val() },
+                        success: function (model) {
+                            $("#PriceID").html("");
+                            $("#PriceID").append("<option value='> 0'>select</option>");
+                            if (model.length > 0) {
+                                $("#PriceID").append(model);
+
+                            }
+
+
+                        }
+                    });
+                }
+                //$("form").submit();
+            });
+
+            $(".bannerbtn button").click(function () {
+                $(".bannerbtn button").removeClass("active");
+                $(this).addClass("active");
+            }
+            );
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+
+            $('#vehicles-list').bootpag({
+                total: 5
+            }).on("page", function (event, /* page number here */ num) {
+
+
+                for (var i = 0; i < 10; i++) {
+                    $("#content").html($("#content").html());
+                }
+                // some ajax content loading...
+            });
+
+            $(window).resize(function () {
+
+                if ($('body').width() >= 768) {
+
+                    $('#filtertogel').show();
+                    $('#filtertogel').removeClass("modalDialog");
+                    $('#closefilter').remove();
+                }
+                else {
+                    $('#filtertogel').hide();
+                }
+
+            });
+            $('.filter-toggle').click(function () {
+
+                $('#filtertogel').show();
+                $('#filtertogel').addClass("modalDialog");
+                if ($('#closefilter').length == 0) {
+                    $('.modalDialog').prepend(" <a id='closefilter' href='#close' title='Close' class='close'>X</a>");
+                }
+
+            });
+
+
+            //if ($("#rules").hasClass("active")) {
+
+            //    $(TrafficRules).removeClass("carousel");
+            //}
+            $("#TrafficRules").on('slid.bs.carousel', function () {
+
+
+            });
+            //$('[id^=carousel-selector-]').click(function () {
+            //    var id_selector = $(this).attr("id");
+
+            //    var id = id_selector.substr(id_selector.length - 1);
+            //    id = parseInt(id);
+            //    //  alert(id);
+            //    $('.carousel').carousel(id);
+            //    $('[id^=carousel-selector-]').removeClass('selected');
+            //    $(this).addClass('selected');
+            //});
+
+            //// when the carousel slides, auto update
+            //$('#myCarousel').on('slid', function (e) {
+            //    var id = $('.item.active').data('slide-number');
+
+            //    id = parseInt(id);
+            //    $('[id^=carousel-selector-]').removeClass('selected');
+            //    $('[id=carousel-selector-' + id + ']').addClass('selected');
+            //});
+
+
+
+
+
+
+
+
+        });
+        $(document).ready(function () {
+            //$("input").password('toggle');
+
+            var selectAction = function (event, ui) {
+                //do whatever you want with event and ui objects
+                $("#SearchInput").val(ui.item.label);
+                fromrow = 1;
+                to = 1;
+                loadfiltervec();
+                $(this).removeClass('working');
+            }
+
+            $("#SearchInput").autocomplete({
+                html: true,
+                search: function () { $(this).addClass('working'); },
+                open: function () { $(this).removeClass('working'); },
+                select: selectAction,
+
+
+                source: function (request, response) {
+
+                    $.ajax({
+                        url: '/Home/AutoFillNewvecSearch',
+                        type: "GET",
+                        dataType: "JSON",
+                        data: { text: $("#SearchInput").val() },
+                        success: function (data) {
+                            $(this).removeClass('working');
+                            response($.map(data, function (item) {
+
+
+                                return { label: item.Text, value: item.Value };
+                            }))
+
+                        }
+                    })
+                },
+
+                error: function (request, status, error) {
+                    $(this).removeClass('working');
+                }
+
+            });
+        })
+
+    </script>
+
+
+
+        <script>
+        var x = document.getElementById("location");
+
+        function getLocation() {
+            var se = "";
+
+            if (se.length == "0") {
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            else {
+
+                $("#location").html(se);
+                var curlloc="";
+
+
+                $("#locationahref").html($("#location li").first().html());
+                $("#clocation").html($("#location li ").first().find("a").html())
+                if (curlloc.length==0) {
+                    setlocation($("#location li ").first().find("a"));
+                }
+                else {
+                    // s = JSON.parse(s.replace("&quot;", ""));
+                    var lici = $('#location li:contains("' + curlloc + '")').find("a");
+
+                    setlocation(lici);
+                }
+                //$.post( "/Home/SetLocation", { city: "John", lat: "2pm",lon:lon } );
+                if (currentloc == "") {
+                    //location = $("#location li").first().find("a").attr("href");
+                }
+            }
+
+        }
+        function suffellocationli() {
+
+            var s = "";
+        }
+        function showPosition(position) {
+
+
+
+
+           var s = $("#cityhdn").val();
+
+            $.ajax({
+                url: '/Home/GetCurrentLoaction',
+                type: "POST",
+                dataType: "JSON",
+                async: true,
+                data: { Lat: position.coords.latitude, lon: +position.coords.longitude },
+                success: function (result) {
+
+                    //$(".loading").show();
+                    $("#location").html(result);
+                    $("#locationahref").html($("#location li").first().html());
+                    $("#clocation").html($("#location li ").first().find("a").html())
+                    if (s == "0") {
+                        setlocation($("#location li ").first().find("a"));
+                    }
+                    else {
+                        // s = JSON.parse(s.replace("&quot;", ""));
+                        var lici = $('#location li:contains("' + s + '")').find("a");
+
+                        setlocation(lici);
+                    }
+                    //$.post( "/Home/SetLocation", { city: "John", lat: "2pm",lon:lon } );
+                    if (currentloc == "") {
+                        //location = $("#location li").first().find("a").attr("href");
+                    }
+                    location = location.href;
+                }
+            });
+
+
+        }
+            function setlocation(id) {
+            var city = ""; lat = ""; lon = "";
+            city = $(id).attr("SubDistrictsName");
+            lat = $(id).attr("lat");
+            lon = $(id).attr("lon");
+
+
+            $.post("/Home/SetLocation", { city: city, lat: lat, lon: lon }, function (data) {
+                $("#clocation").html(data.CityName);
+                $("#locationahref").html(data.CityName);
+                $(".loading").hide();
+            });
+        }
+        function removelocation() {
+            $.post("/Home/RemoveLocation", function (data) {
+               $("#clocation").html("All India");
+                $("#locationahref").html("All India");
+                navigator.geolocation.clearWatch(x);
+            });
+        }
+
+        $(window).load(function () {
+            ImageObserver(".lazyload");
+            //$('.lazyload').each(function () {
+
+            //    //* set the img src from data-src
+            //    $(this).attr('src', $(this).attr('data-src'));
+
+            //    /// remove the loading
+            //    $(this).load(function () {
+            //        $(this).css("background-image", "none");
+            //    });
+
+            //    $(this).error(function () {
+            //        $(this).attr('onerror', this.src = 'http://gadiyadekho.com//img/noimg.png');
+            //        $(this).css("background-image", "none");
+            //    })
+            //});
+        });
+        getLocation();
+        </script>
+
+                
+
+        <a href="#" id="to-top"><i class="fa fa-angle-up"></i></a>
+        <style>
+            @media (max-width: 767px) {
+                .containerNavigation .containerNavigationBottom ul {
+                    background: none !important;
+                    color: #000 !important;
+                }
+
+                    .containerNavigation .containerNavigationBottom ul li {
+                        background-color: none !important;
+                        color: #000 !important;
+                    }
+
+                        .containerNavigation .containerNavigationBottom ul li a {
+                            background-color: none !important;
+                            color: #000 !important;
+                        }
+
+                .notificationclass {
+                    margin-top: 115px;
+                }
+
+                .dropdown-submenu > .dropdown-menu {
+                    left: 5px;
+                }
+        </style>
+
+        <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            var $subMenu = $(this).next(".dropdown-menu");
+            $subMenu.toggleClass('show');
+
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+
+
+            return false;
+        });
+
+        $(function () {
+           //var  lay_curpage="NewSearchResults";
+            $('.containerNavigation a').click(function () {
+
+               // $(".loading").show();
+            });
+        });
+
+        $(document).ready(function () {
+
+            $(".loading").hide();
+        });
+
+        $.ajax({
+            url: '/Home/AllBrands',
+            type: "GET",
+            dataType: "JSON",
+            async: true,
+
+            success: function (brand) {
+                $("#layout_brands").html(brand);
+                
+            }
+        });
+
+        $.ajax({
+            url: '/Home/AllCategory',
+            type: "GET",
+            dataType: "JSON",
+            async: true,
+            success: function (brand) {
+                $("#layout_allcategory").html(brand);
+              }
+        });
+            function showCities() {
+                let isloaded = $("#layout_allcities").html().trim().length > 0;
+                
+                if (!isloaded) {
+                    $("#layout_allcities").html("<li>loading....</li>");
+                    $.ajax({
+                        url: '/Home/AllCitites',
+                        type: "GET",
+                        dataType: "JSON",
+                        async: true,
+                        success: function (brand) {
+                            $("#layout_allcities").html(brand);
+                        }
+                    });
+                }
+            }
+            //layout_allcities
+            function showVersion() {
+
+                let isloaded = $("#layout_allversion").html().trim().length > 0;
+
+                if (!isloaded) {
+                    $("#layout_allversion").html("<li>loading....</li>");
+                    $.ajax({
+                        url: '/Home/AllVersion',
+                        type: "GET",
+                        dataType: "JSON",
+                        async: true,
+                        success: function (brand) {
+                            $("#layout_allversion").html(brand);
+                        }
+                    });
+                }
+            }
+
+        </script>
+        <style>
+            .Districtli {
+                left: 0;
+            }
+
+            .SubDistrictsul {
+                left: 0;
+            }
+
+            #layout_allcities {
+                left: -150px;
+            }
+
+            #layout_allversion {
+                left: -150px;
+            }
+
+            .margin_adj ul {
+                max-width: 250px;
+            }
+            body {
+                overflow: hidden;
+            }
+        </style>
+</body>
+
+</html>

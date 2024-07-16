@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangular Partition Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .card {
+        position: relative;
+        width: 300px;
+        height: 450px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .triangle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .triangle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .top-triangle {
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+      }
+      .bottom-triangle {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="triangle top-triangle">
+        <img src="./assets/images/car2.jpg" alt="Image 1" />
+      </div>
+      <div class="triangle bottom-triangle">
+        <img src="./assets/images/car3.jpg" alt="Image 2" />
+      </div>
+    </div>
+  </body>
+</html>
