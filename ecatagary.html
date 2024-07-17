@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWO VEHICHELS</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: ghostwhite;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            width: 120px;
+            height: 106px;
+            border-radius: 8px;
+            background: rgb(255, 253, 253);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 10px;
+            transition: 300ms linear;
+        }
+        .card2{
+            width: 120px;
+            height: 106px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 10px;
+            transition: 300ms linear;
+        }
+
+        p {
+            font-size: 15px !important;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .card img {
+            max-width: 100px;
+            max-height: 80px;
+            object-fit: contain;
+            /* Maintain aspect ratio */
+            padding-top: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .view-more-button {
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px;
+            cursor: pointer;
+            background-color: #131313;
+            color: #fff;
+            border: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-more-button:hover {
+            background-color: #171818;
+        }
+
+        .d-none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h2 style="text-align: center; font-size: 24px;">Select Electric Vehicle Brands</h2>
+            <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 10px;">
+                <div class="card">
+                    <img src="./assets/images/okinawa.jpeg" alt="Honda">
+                    <p>okinawa</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/avan.png" alt="Hero">
+                    <p>avan motors</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/hero-logo.png" alt="Bajaj">
+                    <p>hero electric</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 10px;">
+                <div class="card">
+                    <img src="./assets/images/dhavala-yo.avif" alt="Honda">
+                    <p>yo Bikes</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/gowell_industires_logo.jpeg" alt="Hero">
+                    <p>Gowell</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/bahubali.jpg" alt="Bajaj">
+                    <p>bahubali</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 10px;">
+                <div class="card">
+                    <img src="./assets/images/benling.jpeg" alt="Honda">
+                    <p>benling</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/lion.png" alt="Hero">
+                    <p>li-lon electric</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/lohai.jpg" alt="Bajaj">
+                    <p>lohia e-scooty</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 10px;">
+                <div class="card">
+                    <img src="./assets/images/platino.png" alt="Honda">
+                    <p>palatino</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/ampare.jpg" alt="Hero">
+                    <p>amphere by greaves</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/athers.png" alt="Bajaj">
+                    <p>ather</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 10px;">
+                <div class="card">
+                    <img src="./assets/images/techo.avif" alt="Honda">
+                    <p>techo electra</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/vergemotors.jpeg" alt="Hero">
+                    <p>verge motors</p>
+                </div>
+                <div class="card2">
+                    <button id="showButton" class="view-more-button">View More</button>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            <div id="content" class="d-none">
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/amo.png" alt="TVS">
+                        <p>AMO mobility</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/batt.png" alt="Suzuki">
+                        <p>batt ree</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/emote.png" alt="Royal Enfield">
+                        <p>emote electric</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/everve.jpeg" alt="TVS">
+                        <p>everve motors</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/evoke.png" alt="Suzuki">
+                        <p>evoke</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/evoket.png" alt="Royal Enfield">
+                        <p>evoket electric</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/TVSMOTOR-logo.png" alt="TVS">
+                        <p>arera</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bg.jpg" alt="Suzuki">
+                        <p>bgauss</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/gemlogo.png" alt="Royal Enfield">
+                        <p>gemopai</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/aftek.png" alt="TVS">
+                        <p>aftek motors</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/gyan.png" alt="Suzuki">
+                        <p>gayon motors</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/jawa.jpg" alt="Royal Enfield">
+                        <p>jawa</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/vacus.png" alt="TVS">
+                        <p>varcas</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/joy.png" alt="Suzuki">
+                        <p>joy E-Bike</p>
+                    </div>
+                    <div class="card">
+                        <button id="showButton2" class="view-more-button">View More</button>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+            </div>
+            <div id="content2" class="d-none">
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/Marico_Logo.jpg" alt="KTM">
+                        <p>merico electric</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/evtric.png" alt="Kawasaki">
+                        <p>evtric motors</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/Tork-Logo.png" alt="BMW">
+                        <p>tork motors</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/revolte.jpg" alt="KTM">
+                        <p>revolt motors</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/thukral.jpeg" alt="Kawasaki">
+                        <p>thukral motors</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/skyride.jpeg" alt="BMW">
+                        <p>skyride</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/dmw.jpg" alt="KTM">
+                        <p>DMW</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/cropped-speego-vehiclelogo1.webp" alt="Kawasaki">
+                        <p>Speego E-Motors</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/Kymco-logo.jpg" alt="BMW">
+                        <p>kymco</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/kabira.png" alt="KTM">
+                        <p>kabira mobility</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/okaya.png" alt="Kawasaki">
+                        <p>odysse</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/pure.jpg" alt="BMW">
+                        <p>pure ev</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/eco.jpg" alt="KTM">
+                        <p>super eco</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/vjass.jpeg" alt="Kawasaki">
+                        <p>vjaas energy</p>
+                    </div>
+                    <div class="card">
+                        <button id="showButton3" class="view-more-button">View More</button>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+            </div>
+            <div id="content3" class="d-none">
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/m2go.png" alt="KTM">
+                        <p>M2GO</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/ultra.png" alt="Kawasaki">
+                        <p>ultraviolette</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/yukie.png" alt="BMW">
+                        <p>yukie</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/TVSMOTOR-logo.png" alt="KTM">
+                        <p>tvs</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/sahara_evols_logo.jpeg" alt="Kawasaki">
+                        <p>sahara tvols</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/plaudit.png" alt="BMW">
+                        <p>plaudit</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/gkon-logo-250x250.jpg" alt="KTM">
+                        <p>gkon</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/daltiric.jpeg" alt="Kawasaki">
+                        <p>deltric</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/tunwal.png" alt="BMW">
+                        <p>tunwal E-Scooter</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/victory.jpg" alt="KTM">
+                        <p>victory</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/husqvarana.jpg" alt="Kawasaki">
+                        <p>husqvarana E-BIKE</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/okaya.png" alt="BMW">
+                        <p>okaya</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/oreva.avif" alt="KTM">
+                        <p>oreva</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/dao.jpg" alt="Kawasaki">
+                        <p>DAO</p>
+                    </div>
+                    <div class="card">
+                        <button id="showButton4" class="view-more-button">View More</button>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                
+            </div>
+            <div id="content4" class="d-none">
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>fidato</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>GRP EV</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>OLA</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>Hop Electric</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>ivoomi</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>atumobile</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>nij automotive</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>e-ashwa e-scooter</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>diwa</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>raftaar</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>panther</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>mac</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>e-maggic</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>erisha</p>
+                    </div>
+                    <div class="card">
+                        <button id="showButton5" class="view-more-button">View More</button>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                
+            </div>
+            <div id="content5" class="d-none">
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>yullu</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>vida e-scooter</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>river</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>vioma</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>stella</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>ADMS</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>Zelio</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>simple energy</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>birla e-scooter</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>aeroride</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>dynamo</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/bmw.png" alt="BMW">
+                        <p>fuziyama</p>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                    <div class="card">
+                        <img src="./assets/images/ktm-logo.png" alt="KTM">
+                        <p>e-maggic</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kawasaki.jpg" alt="Kawasaki">
+                        <p>erisha</p>
+                    </div>
+                    <div class="card">
+                        <button id="showButton5" class="view-more-button">View More</button>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("showButton").addEventListener("click", function() {
+            document.getElementById("content").classList.toggle("d-none");
+            this.style.display = "block"; // Hide the button after clicking
+        });
+
+        document.getElementById("showButton2").addEventListener("click", function() {
+            document.getElementById("content2").classList.toggle("d-none");
+            this.style.display = "none"; // Hide the button after clicking
+        });
+        document.getElementById("showButton3").addEventListener("click", function() {
+            document.getElementById("content3").classList.toggle("d-none");
+            this.style.display = "none"; // Hide the button after clicking
+        });
+        document.getElementById("showButton4").addEventListener("click", function() {
+            document.getElementById("content4").classList.toggle("d-none");
+            this.style.display = "none"; // Hide the button after clicking
+        });
+        document.getElementById("showButton5").addEventListener("click", function() {
+            document.getElementById("content5").classList.toggle("d-none");
+            this.style.display = "none"; // Hide the button after clicking
+        });
+    </script>
+</body>
+
+</html>

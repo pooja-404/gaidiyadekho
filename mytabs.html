@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(234, 234, 236);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .tabs {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #e71919;
+        border-radius: 5px 5px 0 0;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        color: white;
+        font-weight: 600;
+        /* width: 100%;
+        padding-left: 10px;
+        padding-right: 10px; */
+      }
+      .tab.active {
+        background-color: white;
+        color: #e71919;
+      }
+      .tab-content {
+        display: none;
+        padding: 20px;
+        padding-top: 0;
+
+        border-radius: 0 0 5px 5px;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .car {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* height: 120px; */
+        max-width: 400px;
+      }
+      .car-card {
+        max-width: 100px;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+      }
+      .car-card2 {
+        width: 100%;
+      }
+      .car-card img {
+        max-width: 100%;
+        height: 100px;
+        border-radius: 8px;
+      }
+      .car-info {
+        margin-top: 10px;
+        text-transform: capitalize;
+        font-weight: 600;
+        text-align: center;
+      }
+      .container {
+        border-radius: 12px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: azure;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <img
+        src="./assets/images/TRUCK.jpg"
+        alt="truck"
+        style="
+          width: 95%;
+          height: 180px;
+          margin-top: 10px;
+          border-radius: 12px;
+          padding-left: 10px;
+          padding-right: 10px;
+          display: flex;
+          justify-content: center;
+        "
+      />
+      <h2 style="text-align: center; font-weight: 700">yamaha FZ-F1</h2>
+      <div class="tabs">
+        <div class="tab active" data-tab="all">All</div>
+        <div class="tab" data-tab="interior">Interior</div>
+        <div class="tab" data-tab="exterior">Exterior</div>
+        <div class="tab" data-tab="engine">Engine</div>
+      </div>
+      <div class="tab-content active" id="tab-all">
+        <div class="car">
+          <div class="car-car2">
+            <img
+              src="./assets/images/interorimg1.jpg"
+              alt="Car 1"
+              s
+              style="width: 100%; height: 180px; border-radius: 12px"
+            />
+            <div class="car-info">Interior</div>
+          </div>
+          <div class="car-car2">
+            <img
+              src="./assets/images/external2.jpeg"
+              alt="Car 2"
+              s
+              style="
+                width: 100%;
+                height: 180px;
+                border-radius: 12px;
+                margin-top: 10px;
+              "
+            />
+            <div class="car-info">exterior</div>
+          </div>
+          <div class="car-car2">
+            <img
+              src="./assets/images/engine2.jpg"
+              alt="Car 3"
+              s
+              style="
+                width: 100%;
+                height: 180px;
+                border-radius: 12px;
+                margin-top: 10px;
+              "
+            />
+            <div class="car-info">engine</div>
+          </div>
+        </div>
+      </div>
+      <div class="car">
+        <div class="tab-content" id="tab-interior">
+          <div class="car-card2">
+            <img
+              src="./assets/images/interorimg1.jpg"
+              alt="Car 1"
+              style="width: 100%; border-radius: 12px; height: 180px"
+            />
+            <img
+              src="./assets/images/interorimg2.jpg"
+              alt="Car 1"
+              style="
+                width: 100%;
+                border-radius: 12px;
+                height: 180px;
+                margin-top: 10px;
+              "
+            />
+            <img
+              src="./assets/images/interorimg3.jpg"
+              alt="Car 1"
+              style="
+                width: 100%;
+                border-radius: 12px;
+                height: 180px;
+                margin-top: 10px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-exterior">
+          <div class="car">
+            <div class="car-card2">
+              <img
+                src="./assets/images/external1.jpeg"
+                alt="Car 1"
+                style="width: 100%; border-radius: 12px; height: 180px"
+              />
+              <img
+                src="./assets/images/external2.jpeg"
+                alt="Car 1"
+                style="
+                  width: 100%;
+                  border-radius: 12px;
+                  height: 180px;
+                  margin-top: 10px;
+                "
+              />
+              <img
+                src="./assets/images/external3.jpeg"
+                alt="Car 1"
+                style="
+                  width: 100%;
+                  border-radius: 12px;
+                  height: 180px;
+                  margin-top: 10px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-engine">
+          <div class="car">
+            <div class="car-card2">
+              <img
+                src="./assets/images/engine1.jpg"
+                alt="Car 1"
+                style="width: 100%; border-radius: 12px; height: 180px"
+              />
+              <img
+                src="./assets/images/engine2.jpg"
+                alt="Car 1"
+                style="
+                  width: 100%;
+                  border-radius: 12px;
+                  height: 180px;
+                  margin-top: 10px;
+                "
+              />
+              <img
+                src="./assets/images/engine3.avif"
+                alt="Car 1"
+                style="
+                  width: 100%;
+                  border-radius: 12px;
+                  height: 180px;
+                  margin-top: 10px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Function to handle tab switching
+        function switchTab(tabName) {
+          // Hide all tab contents
+          var tabContents = document.querySelectorAll(".tab-content");
+          tabContents.forEach(function (content) {
+            content.classList.remove("active");
+          });
+
+          // Show the selected tab content
+          var selectedTab = document.getElementById("tab-" + tabName);
+          if (selectedTab) {
+            selectedTab.classList.add("active");
+          }
+        }
+
+        // Add click event listeners to tabs
+        var tabs = document.querySelectorAll(".tab");
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            // Remove active class from all tabs
+            tabs.forEach(function (tab) {
+              tab.classList.remove("active");
+            });
+
+            // Add active class to the clicked tab
+            tab.classList.add("active");
+
+            // Switch to the corresponding tab content
+            var tabName = tab.getAttribute("data-tab");
+            switchTab(tabName);
+          });
+        });
+      </script>
+    </section>
+  </body>
+</html>
