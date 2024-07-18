@@ -21,19 +21,20 @@
       .tab {
         padding: 10px 20px;
         cursor: pointer;
-        background-color: #e71919;
-        border-radius: 5px 5px 0 0;
+        background-color: white;
+        border-radius: 8px;
         margin-right: 5px;
         margin-bottom: 10px;
-        color: white;
+        color: darkblue;
         font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         /* width: 100%;
         padding-left: 10px;
         padding-right: 10px; */
       }
       .tab.active {
-        background-color: white;
-        color: #e71919;
+        background-color: darkblue;
+        color: white;
       }
       .tab-content {
         display: none;
@@ -83,11 +84,34 @@
         background-color: azure;
         margin-left: auto;
         margin-right: auto;
+        max-width: 400px;
+      }
+      .colors {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .color {
+        height: 36px;
+        width: 36px;
+        margin-left: 0.5em;
+        border-radius: 18px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        border: 2px solid #aaa;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <section class="container">
+    <div class="container">
       <img
         src="./assets/images/TRUCK.jpg"
         alt="truck"
@@ -118,7 +142,7 @@
               s
               style="width: 100%; height: 180px; border-radius: 12px"
             />
-            <div class="car-info">Interior</div>
+            <!-- <div class="car-info">Interior</div> -->
           </div>
           <div class="car-car2">
             <img
@@ -132,7 +156,7 @@
                 margin-top: 10px;
               "
             />
-            <div class="car-info">exterior</div>
+            <!-- <div class="car-info">exterior</div> -->
           </div>
           <div class="car-car2">
             <img
@@ -146,7 +170,7 @@
                 margin-top: 10px;
               "
             />
-            <div class="car-info">engine</div>
+            <!-- <div class="car-info">engine</div> -->
           </div>
         </div>
       </div>
@@ -246,40 +270,197 @@
         </div>
       </div>
 
-      <script>
-        // Function to handle tab switching
-        function switchTab(tabName) {
-          // Hide all tab contents
-          var tabContents = document.querySelectorAll(".tab-content");
-          tabContents.forEach(function (content) {
-            content.classList.remove("active");
-          });
+      <h2 style="text-align: center;">Comparison</h2>
+      <!-- First Car -->
+      <div style="display: flex; justify-content: space-between">
+        <img
+          id="productImage1"
+          src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
+          alt="Car 1"
+          style="width: 50%"
+        />
+        <div>
+          <h2
+            style="
+              margin-bottom: 0;
+              padding-left: 12px;
+              padding-right: 12px;
+              font-size: 20px;
+              font-weight: 600;
+            "
+          >
+            Vehicle Model 1
+          </h2>
+          <p>$10000-20000</p>
+          <p>Variant Name 1</p>
+        </div>
+      </div>
 
-          // Show the selected tab content
-          var selectedTab = document.getElementById("tab-" + tabName);
-          if (selectedTab) {
-            selectedTab.classList.add("active");
-          }
-        }
+      <div class="colors" id="colors1">
+        <div
+          class="color"
+          style="background-color: #000000"
+          data-hex="000000"
+          onclick="changeColor(this, 'productImage1')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #0d4671"
+          data-hex="0d4671"
+          onclick="changeColor(this, 'productImage1')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #63803a"
+          data-hex="63803a"
+          onclick="changeColor(this, 'productImage1')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #841210"
+          data-hex="841210"
+          onclick="changeColor(this, 'productImage1')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #a09e9f"
+          data-hex="none"
+          onclick="changeColor(this, 'productImage1')"
+        ></div>
+        <input
+          id="customColour1"
+          class="color jscolor"
+          onchange="update(this.jscolor, 'productImage1')"
+          data-hex=""
+        />
+      </div>
 
-        // Add click event listeners to tabs
-        var tabs = document.querySelectorAll(".tab");
-        tabs.forEach(function (tab) {
-          tab.addEventListener("click", function () {
-            // Remove active class from all tabs
-            tabs.forEach(function (tab) {
-              tab.classList.remove("active");
-            });
+      <div style="display: flex; justify-content: center; align-items: center">
+        <img
+          src="./assets/images/Line 1.png"
+          alt="Line"
+          style="width: 20%; height: 5px"
+        />
+        <h3 style="text-align: center">Vs</h3>
+        <img
+          src="./assets/images/Line 2.png"
+          alt="Line"
+          style="width: 20%; height: 5px"
+        />
+      </div>
 
-            // Add active class to the clicked tab
-            tab.classList.add("active");
+      <!-- Second Car -->
+      <div style="display: flex; justify-content: space-between">
+        <img
+          id="productImage2"
+          src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
+          alt="Car 2"
+          style="width: 50%"
+        />
+        <div>
+          <h2
+            style="
+              margin-bottom: 0;
+              padding-left: 12px;
+              padding-right: 12px;
+              font-size: 20px;
+              font-weight: 600;
+            "
+          >
+            Vehicle Model 2
+          </h2>
+          <p>$10000-20000</p>
+          <p>Variant Name 2</p>
+        </div>
+      </div>
 
-            // Switch to the corresponding tab content
-            var tabName = tab.getAttribute("data-tab");
-            switchTab(tabName);
-          });
+      <div class="colors" id="colors2">
+        <div
+          class="color"
+          style="background-color: #000000"
+          data-hex="000000"
+          onclick="changeColor(this, 'productImage2')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #0d4671"
+          data-hex="0d4671"
+          onclick="changeColor(this, 'productImage2')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #63803a"
+          data-hex="63803a"
+          onclick="changeColor(this, 'productImage2')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #841210"
+          data-hex="841210"
+          onclick="changeColor(this, 'productImage2')"
+        ></div>
+        <div
+          class="color"
+          style="background-color: #a09e9f"
+          data-hex="none"
+          onclick="changeColor(this, 'productImage2')"
+        ></div>
+        <input
+          id="customColour2"
+          class="color jscolor"
+          onchange="update(this.jscolor, 'productImage2')"
+          data-hex=""
+        />
+      </div>
+    </div>
+    <script>
+      // Function to handle tab switching
+      function switchTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.querySelectorAll(".tab-content");
+        tabContents.forEach(function (content) {
+          content.classList.remove("active");
         });
-      </script>
-    </section>
+
+        // Show the selected tab content
+        var selectedTab = document.getElementById("tab-" + tabName);
+        if (selectedTab) {
+          selectedTab.classList.add("active");
+        }
+      }
+
+      // Add click event listeners to tabs
+      var tabs = document.querySelectorAll(".tab");
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          // Remove active class from all tabs
+          tabs.forEach(function (tab) {
+            tab.classList.remove("active");
+          });
+
+          // Add active class to the clicked tab
+          tab.classList.add("active");
+
+          // Switch to the corresponding tab content
+          var tabName = tab.getAttribute("data-tab");
+          switchTab(tabName);
+        });
+      });
+    </script>
+    <script>
+      const base =
+        "https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D";
+
+      function changeColor(element, imgId) {
+        let hex = element.getAttribute("data-hex");
+        let updateColor = base + hex;
+        document.getElementById(imgId).src = updateColor;
+      }
+
+      function update(jscolor, imgId) {
+        let updateColor = base + jscolor;
+        document.getElementById(imgId).src = updateColor;
+      }
+    </script>
   </body>
 </html>

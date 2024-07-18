@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car Card</title>
     <style>
-        body{
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            background-color: rgb(233, 235, 235);
-        }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(233, 235, 235);
+      }
       .container {
         max-width: 400px;
         background-color: rgb(245, 247, 248);
         border-radius: 12px;
       }
-      /* Colour picker css only */
-
       .colors {
         display: flex;
-        position: fixed;
-        right: 23em;
-        top: 27%;
+        justify-content: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
-
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 18px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
       .color {
         height: 36px;
         width: 36px;
@@ -33,84 +37,79 @@
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         border: 2px solid #aaa;
         cursor: pointer;
-       
       }
     </style>
   </head>
   <body>
-    <!-- product image -->
-    <!-- Use the color picker or change the final 000000 value to any hex value to dynamically update the car color.-->
     <div class="container">
-    <img
-      id="productImage"
-      src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
-      alt="my base image" style="width: 50%;"
-    />
-  
-      <!-- Colour picker -->
-      <div class="colors">
-        <div
-          class="color"
-          style="background-color: #000000"
-          data-hex="000000"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #0d4671"
-          data-hex="0d4671"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #63803a"
-          data-hex="63803a"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #841210"
-          data-hex="841210"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #a09e9f"
-          data-hex="none"
-        ></div>
-        <input
-          id="customColour"
-          class="color jscolor"
-          onchange="update(this.jscolor)"
-          data-hex=""
+      <!-- First Car -->
+      <div style="display: flex; justify-content: space-between">
+        <img
+          id="productImage1"
+          src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
+          alt="Car 1"
+          style="width: 50%"
         />
+        <div>
+          <h2 style="margin-bottom: 0; padding-left: 12px;padding-right: 12px;">Vehicle Model 1</h2>
+          <p>$10000-20000</p>
+          <p>Variant Name 1</p>
+        </div>
+      </div>
+
+      <div class="colors" id="colors1">
+        <div class="color" style="background-color: #000000" data-hex="000000" onclick="changeColor(this, 'productImage1')"></div>
+        <div class="color" style="background-color: #0d4671" data-hex="0d4671" onclick="changeColor(this, 'productImage1')"></div>
+        <div class="color" style="background-color: #63803a" data-hex="63803a" onclick="changeColor(this, 'productImage1')"></div>
+        <div class="color" style="background-color: #841210" data-hex="841210" onclick="changeColor(this, 'productImage1')"></div>
+        <div class="color" style="background-color: #a09e9f" data-hex="none" onclick="changeColor(this, 'productImage1')"></div>
+        <input id="customColour1" class="color jscolor" onchange="update(this.jscolor, 'productImage1')" data-hex="" />
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="./assets/images/Line 1.png" alt="Line" style="width: 20%; height: 5px;" />
+        <h3 style="text-align: center;">Vs</h3>
+        <img src="./assets/images/Line 2.png" alt="Line" style="width: 20%; height: 5px;" />
+      </div>
+
+      <!-- Second Car -->
+      <div style="display: flex; justify-content: space-between">
+        <img
+          id="productImage2"
+          src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
+          alt="Car 2"
+          style="width: 50%"
+        />
+        <div>
+          <h2 style="margin-bottom: 0; padding-left: 12px;padding-right: 12px;">Vehicle Model 2</h2>
+          <p>$10000-20000</p>
+          <p>Variant Name 2</p>
+        </div>
+      </div>
+
+      <div class="colors" id="colors2">
+        <div class="color" style="background-color: #000000" data-hex="000000" onclick="changeColor(this, 'productImage2')"></div>
+        <div class="color" style="background-color: #0d4671" data-hex="0d4671" onclick="changeColor(this, 'productImage2')"></div>
+        <div class="color" style="background-color: #63803a" data-hex="63803a" onclick="changeColor(this, 'productImage2')"></div>
+        <div class="color" style="background-color: #841210" data-hex="841210" onclick="changeColor(this, 'productImage2')"></div>
+        <div class="color" style="background-color: #a09e9f" data-hex="none" onclick="changeColor(this, 'productImage2')"></div>
+        <input id="customColour2" class="color jscolor" onchange="update(this.jscolor, 'productImage2')" data-hex="" />
       </div>
     </div>
 
     <script>
-      // Colour picker JS only
-
-      // Reference of base image with paint watermark
       const base =
         "https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D";
 
-      // Click on a color
-      var el = document.getElementsByClassName("color");
-      for (var i = 0; i < el.length; i++) {
-        el[i].onclick = changeColor;
-      }
-
-      function changeColor(e) {
-        // get the hex color
-        let hex = e.target.getAttribute("data-hex");
-        // updated url
+      function changeColor(element, imgId) {
+        let hex = element.getAttribute("data-hex");
         let updateColor = base + hex;
-        // update src of image
-        document.getElementById("productImage").src = updateColor;
+        document.getElementById(imgId).src = updateColor;
       }
 
-      //http://jscolor.com
-      //Custom colourpicker
-      function update(jscolor) {
+      function update(jscolor, imgId) {
         let updateColor = base + jscolor;
-        // Use 'jscolor' instance for car color
-        document.getElementById("productImage").src = updateColor;
+        document.getElementById(imgId).src = updateColor;
       }
     </script>
   </body>
