@@ -17,14 +17,17 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        margin-left: 5px;
+       
       }
       .tab {
-        padding: 10px 20px;
+        padding: 10px 17px;
         cursor: pointer;
         background-color: white;
         border-radius: 8px;
         margin-right: 5px;
         margin-bottom: 10px;
+        border: 2px solid darkblue;
         color: darkblue;
         font-weight: 600;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -269,148 +272,153 @@
           </div>
         </div>
       </div>
-
-      <h2 style="text-align: center;">Comparison</h2>
-      <!-- First Car -->
-      <div style="display: flex; justify-content: space-between">
-        <img
-          id="productImage1"
-          src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
-          alt="Car 1"
-          style="width: 50%"
-        />
-        <div>
-          <h2
-            style="
-              margin-bottom: 0;
-              padding-left: 12px;
-              padding-right: 12px;
-              font-size: 20px;
-              font-weight: 600;
-            "
-          >
-            Vehicle Model 1
-          </h2>
-          <p>$10000-20000</p>
-          <p>Variant Name 1</p>
+      <div style="border: 2px solid black; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-right: 17px;margin-left: 17px; margin-bottom: 15px; padding-bottom: 10px;">
+        <h2 style="text-align: center">Comparison</h2>
+        <!-- First Car -->
+        <div style="display: flex; justify-content: space-between">
+          <img
+            id="productImage1"
+            src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
+            alt="Car 1"
+            style="width: 50%"
+          />
+          <div>
+            <h2
+              style="
+                margin-bottom: 0;
+                padding-left: 12px;
+                padding-right: 12px;
+                font-size: 20px;
+                font-weight: 600;
+              "
+            >
+              Vehicle Model 1
+            </h2>
+            <p>$10000-20000</p>
+            <p>Variant Name 1</p>
+            <p>Interior</p>
+          </div>
         </div>
-      </div>
 
-      <div class="colors" id="colors1">
-        <div
-          class="color"
-          style="background-color: #000000"
-          data-hex="000000"
-          onclick="changeColor(this, 'productImage1')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #0d4671"
-          data-hex="0d4671"
-          onclick="changeColor(this, 'productImage1')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #63803a"
-          data-hex="63803a"
-          onclick="changeColor(this, 'productImage1')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #841210"
-          data-hex="841210"
-          onclick="changeColor(this, 'productImage1')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #a09e9f"
-          data-hex="none"
-          onclick="changeColor(this, 'productImage1')"
-        ></div>
-        <input
-          id="customColour1"
-          class="color jscolor"
-          onchange="update(this.jscolor, 'productImage1')"
-          data-hex=""
-        />
-      </div>
-
-      <div style="display: flex; justify-content: center; align-items: center">
-        <img
-          src="./assets/images/Line 1.png"
-          alt="Line"
-          style="width: 20%; height: 5px"
-        />
-        <h3 style="text-align: center">Vs</h3>
-        <img
-          src="./assets/images/Line 2.png"
-          alt="Line"
-          style="width: 20%; height: 5px"
-        />
-      </div>
-
-      <!-- Second Car -->
-      <div style="display: flex; justify-content: space-between">
-        <img
-          id="productImage2"
-          src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
-          alt="Car 2"
-          style="width: 50%"
-        />
-        <div>
-          <h2
-            style="
-              margin-bottom: 0;
-              padding-left: 12px;
-              padding-right: 12px;
-              font-size: 20px;
-              font-weight: 600;
-            "
-          >
-            Vehicle Model 2
-          </h2>
-          <p>$10000-20000</p>
-          <p>Variant Name 2</p>
+        <div class="colors" id="colors1">
+          <div
+            class="color"
+            style="background-color: #000000"
+            data-hex="000000"
+            onclick="changeColor(this, 'productImage1')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #0d4671"
+            data-hex="0d4671"
+            onclick="changeColor(this, 'productImage1')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #63803a"
+            data-hex="63803a"
+            onclick="changeColor(this, 'productImage1')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #841210"
+            data-hex="841210"
+            onclick="changeColor(this, 'productImage1')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #a09e9f"
+            data-hex="none"
+            onclick="changeColor(this, 'productImage1')"
+          ></div>
+          <input
+            id="customColour1"
+            class="color jscolor"
+            onchange="update(this.jscolor, 'productImage1')"
+            data-hex=""
+          />
         </div>
-      </div>
 
-      <div class="colors" id="colors2">
         <div
-          class="color"
-          style="background-color: #000000"
-          data-hex="000000"
-          onclick="changeColor(this, 'productImage2')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #0d4671"
-          data-hex="0d4671"
-          onclick="changeColor(this, 'productImage2')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #63803a"
-          data-hex="63803a"
-          onclick="changeColor(this, 'productImage2')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #841210"
-          data-hex="841210"
-          onclick="changeColor(this, 'productImage2')"
-        ></div>
-        <div
-          class="color"
-          style="background-color: #a09e9f"
-          data-hex="none"
-          onclick="changeColor(this, 'productImage2')"
-        ></div>
-        <input
-          id="customColour2"
-          class="color jscolor"
-          onchange="update(this.jscolor, 'productImage2')"
-          data-hex=""
-        />
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <img
+            src="./assets/images/Line 1.png"
+            alt="Line"
+            style="width: 20%; height: 5px"
+          />
+          <h3 style="text-align: center">Vs</h3>
+          <img
+            src="./assets/images/Line 2.png"
+            alt="Line"
+            style="width: 20%; height: 5px"
+          />
+        </div>
+
+        <!-- Second Car -->
+        <div style="display: flex; justify-content: space-between">
+          <img
+            id="productImage2"
+            src="https://ddools.imgix.net/cars/base.png?w=600&mark-align=center,middle&mark=https%3A%2F%2Fddools.imgix.net%2Fcars%2Fpaint.png%3Fw%3D600%26bri%3D-18%26con%3D26%26monochrome%3D000000"
+            alt="Car 2"
+            style="width: 50%"
+          />
+          <div>
+            <h2
+              style="
+                margin-bottom: 0;
+                padding-left: 12px;
+                padding-right: 12px;
+                font-size: 20px;
+                font-weight: 600;
+              "
+            >
+              Vehicle Model 2
+            </h2>
+            <p>$10000-20000</p>
+            <p>Variant Name 2</p>
+            <p>exterior</p>
+          </div>
+        </div>
+
+        <div class="colors" id="colors2">
+          <div
+            class="color"
+            style="background-color: #000000"
+            data-hex="000000"
+            onclick="changeColor(this, 'productImage2')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #0d4671"
+            data-hex="0d4671"
+            onclick="changeColor(this, 'productImage2')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #63803a"
+            data-hex="63803a"
+            onclick="changeColor(this, 'productImage2')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #841210"
+            data-hex="841210"
+            onclick="changeColor(this, 'productImage2')"
+          ></div>
+          <div
+            class="color"
+            style="background-color: #a09e9f"
+            data-hex="none"
+            onclick="changeColor(this, 'productImage2')"
+          ></div>
+          <input
+            id="customColour2"
+            class="color jscolor"
+            onchange="update(this.jscolor, 'productImage2')"
+            data-hex=""
+          />
+        </div>
       </div>
     </div>
     <script>
