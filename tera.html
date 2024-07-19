@@ -22,7 +22,6 @@
         text-align: center;
         margin-right: 12px;
         margin-left: 12px;
-     
       }
       .img-container {
         border: 1px solid #ccc;
@@ -83,101 +82,104 @@
     </style>
   </head>
   <body>
-    <section style="background: rgb(208, 233, 241);  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 12px;
-        border: 2px solid black;">
+    <!-- Exterior Section -->
+    <section style="background: rgb(208, 233, 241); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 12px; border: 2px solid black;">
       <div class="container">
-        <div id="car1" class="swiper-container">
+        <div id="exteriorCar1" class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img
-                id="productImage1"
-                class="car-image"
-                src="./assets/image/car3.jpg"
-                alt="Car 1"
-              />
+              <img id="exteriorProductImage1" class="car-image" src="./assets/image/car3.jpg" alt="Car 1 Exterior" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="colors" id="colors1">
-          <img
-            class="color-image"
-            src="./assets/images/external2.jpeg"
-            onclick="changeCar(this, 'productImage1', 'car1')"
-          />
-          <img
-            class="color-image"
-            src="./assets/image/car3.jpg"
-            onclick="changeCar(this, 'productImage1', 'car1')"
-          />
-          <img
-            class="color-image"
-            src="./assets/image/car1.jpg"
-            onclick="changeCar(this, 'productImage1', 'car1')"
-          />
-          <img
-            class="color-image"
-            src="./assets/image/sliderimg1.jpg"
-            onclick="changeCar(this, 'productImage1', 'car1')"
-          />
+        <div class="colors" id="exteriorColors1">
+          <img class="color-image" src="./assets/images/external2.jpeg" onclick="changeCar(this, 'exteriorProductImage1')" />
+          <img class="color-image" src="./assets/image/car3.jpg" onclick="changeCar(this, 'exteriorProductImage1')" />
+          <img class="color-image" src="./assets/image/car1.jpg" onclick="changeCar(this, 'exteriorProductImage1')" />
+          <img class="color-image" src="./assets/image/sliderimg1.jpg" onclick="changeCar(this, 'exteriorProductImage1')" />
+          <h2>Exterior</h2>
+          <h3>Vehicle Model 1</h3>
+          <p>$20000-30000</p>
+          <p>Variant Name 1</p>
         </div>
-        <h2>Exterior</h2>
+       
+      </div>
+      
+      <div style="text-align: center;">
+        <img src="./assets/images/Line 1.png" alt="Line" style="width: 20%; height: 5px" />
+        <h3 style="display: inline-block; font-size: 24px; font-weight: 700; color: rgb(15, 15, 55);">Vs</h3>
+        <img src="./assets/images/Line 2.png" alt="Line" style="width: 20%; height: 5px" />
+      </div>
+      
+      <div class="container">
+        <div id="exteriorCar2" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img id="exteriorProductImage2" class="car-image" src="./assets/images/external2.jpeg" alt="Car 2 Exterior" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="colors" id="exteriorColors2">
+          <img class="color-image" src="./assets/images/external1.jpeg" onclick="changeCar(this, 'exteriorProductImage2')" />
+          <img class="color-image" src="./assets/images/external2.jpeg" onclick="changeCar(this, 'exteriorProductImage2')" />
+          <img class="color-image" src="./assets/images/external3.jpeg" onclick="changeCar(this, 'exteriorProductImage2')" />
+          <img class="color-image" src="./assets/image/car1.jpg" onclick="changeCar(this, 'exteriorProductImage2')" />
+          <h2>Exterior</h2>
+          <h3>Vehicle Model 2</h3>
+          <p>$20000-30000</p>
+          <p>Variant Name 2</p>
+        </div>
+       
+      </div>
+    </section>
+
+    <!-- Interior Section -->
+    <section style="background: rgb(208, 233, 241); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 12px; border: 2px solid black; margin-top: 20px;">
+      <div class="container">
+        <div id="interiorCar1" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img id="interiorProductImage1" class="car-image" src="./assets/images/interorimg1.jpg" alt="Car 1 Interior" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="colors" id="interiorColors1">
+          <img class="color-image" src="./assets/images/interorimg1.jpg" onclick="changeCar(this, 'interiorProductImage1')" />
+          <img class="color-image" src="./assets/images/interorimg2.jpg" onclick="changeCar(this, 'interiorProductImage1')" />
+          <img class="color-image" src="./assets/images/interorimg3.jpg" onclick="changeCar(this, 'interiorProductImage1')" />
+          <img class="color-image" src="./assets/images/interorimg2.jpg" onclick="changeCar(this, 'interiorProductImage1')" />
+        </div>
+        <h2>Interior</h2>
         <h3>Vehicle Model 1</h3>
         <p>$20000-30000</p>
         <p>Variant Name 1</p>
       </div>
-
+      
       <div style="text-align: center;">
-        <img
-          src="./assets/images/Line 1.png"
-          alt="Line"
-          style="width: 20%; height: 5px"
-        />
-        <h3 style="display: inline-block; font-size: 24px; font-weight: 700; color: rgb(15, 15, 55); ">Vs</h3>
-        <img
-          src="./assets/images/Line 2.png"
-          alt="Line"
-          style="width: 20%; height: 5px"
-        />
+        <img src="./assets/images/Line 1.png" alt="Line" style="width: 20%; height: 5px" />
+        <h3 style="display: inline-block; font-size: 24px; font-weight: 700; color: rgb(15, 15, 55);">Vs</h3>
+        <img src="./assets/images/Line 2.png" alt="Line" style="width: 20%; height: 5px" />
       </div>
+      
       <div class="container">
-        <div id="car2" class="swiper-container">
+        <div id="interiorCar2" class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img
-                id="productImage2"
-                class="car-image"
-                src="./assets/images/external2.jpeg"
-                alt="Car 2"
-              />
+              <img id="interiorProductImage2" class="car-image" src="./assets/images/interorimg2.jpg" alt="Car 2 Interior" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="colors" id="colors2">
-          <img
-            class="color-image"
-            src="./assets/images/external1.jpeg"
-            onclick="changeCar(this, 'productImage2', 'car2')"
-          />
-          <img
-            class="color-image"
-            src="./assets/images/external2.jpeg"
-            onclick="changeCar(this, 'productImage2', 'car2')"
-          />
-          <img
-            class="color-image"
-            src="./assets/images/external3.jpeg"
-            onclick="changeCar(this, 'productImage2', 'car2')"
-          />
-         
-          <img
-            class="color-image"
-            src="./assets/image/car1.jpg"
-            onclick="changeCar(this, 'productImage2', 'car2')"
-          />
+        <div class="colors" id="interiorColors2">
+          <img class="color-image" src="./assets/images/interorimg2.jpg" onclick="changeCar(this, 'interiorProductImage2')" />
+          <img class="color-image" src="./assets/images/interorimg1.jpg" onclick="changeCar(this, 'interiorProductImage2')" />
+          <img class="color-image" src="./assets/images/interorimg3.jpg" onclick="changeCar(this, 'interiorProductImage2')" />
+          <img class="color-image" src="./assets/images/interorimg4.jpg" onclick="changeCar(this, 'interiorProductImage2')" />
         </div>
-        <h2>Exterior</h2>
+        <h2>Interior</h2>
         <h3>Vehicle Model 2</h3>
         <p>$20000-30000</p>
         <p>Variant Name 2</p>
@@ -185,25 +187,36 @@
     </section>
     
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <script>
-      function changeCar(element, imgId, carType) {
+      function changeCar(element, imgId) {
         let imgSrc = element.getAttribute("src");
         document.getElementById(imgId).src = imgSrc;
       }
 
-      var swiper1 = new Swiper("#car1", {
+      var swiperExterior1 = new Swiper("#exteriorCar1", {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
       });
 
-      var swiper2 = new Swiper("#car2", {
+      var swiperExterior2 = new Swiper("#exteriorCar2", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      var swiperInterior1 = new Swiper("#interiorCar1", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      var swiperInterior2 = new Swiper("#interiorCar2", {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
