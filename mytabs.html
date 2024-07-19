@@ -12,7 +12,6 @@
         justify-content: center;
         align-items: center;
         margin: 0;
-        height: 100vh;
       }
       .tabs {
         display: flex;
@@ -20,14 +19,16 @@
         margin-top: 20px;
       }
       .tab {
-        padding: 10px 20px;
+        padding: 10px 17px;
         cursor: pointer;
-        border: 2px solid darkblue;
+        /* border: 2px solid darkblue; */
         border-radius: 4px;
         margin-right: 5px;
+        background: #fff;
         margin-bottom: 10px;
         color: darkblue;
         font-weight: 600;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       }
       .tab.active {
         background-color: darkblue;
@@ -35,7 +36,7 @@
       }
       .tab-content {
         display: none;
-        padding: 20px;
+
         padding-top: 0;
         border-radius: 0 0 5px 5px;
       }
@@ -77,7 +78,7 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
         background-color: rgb(240, 255, 255);
-        min-height: 100vh;
+        height: 140vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -90,6 +91,13 @@
   </head>
   <body>
     <section class="container">
+      <img
+        src="./assets/images/TRUCK.jpg"
+        alt="truck"
+        style="width: 347px; height: 200px; border-radius: 4px"
+      />
+      <h3 style="margin: 0; font-size: 20; font-weight: 700;  padding-top: 10px;">Vehicle Model 1</h3>
+        <p style="margin: 0; font-size: 18; font-weight: 600; padding-top: 10px;">$20000-30000</p>
       <div class="tabs">
         <div class="tab active" data-tab="all">All</div>
         <div class="tab" data-tab="interior">Interior</div>
@@ -104,7 +112,6 @@
               alt="Car 1"
               style="width: 100%; height: 180px; border-radius: 12px"
             />
-            <div class="car-info">Interior</div>
           </div>
           <div class="car-card2">
             <img
@@ -117,7 +124,6 @@
                 margin-top: 10px;
               "
             />
-            <div class="car-info">Exterior</div>
           </div>
           <div class="car-card2">
             <img
@@ -130,7 +136,6 @@
                 margin-top: 10px;
               "
             />
-            <div class="car-info">Engine</div>
           </div>
         </div>
       </div>
