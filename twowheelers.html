@@ -1,171 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TWO VEHICHELS</title>
     <style>
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
 
-        .container {
-            min-width: 360px;
-            padding-left: 12px;
-            padding-right: 12px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+      .container {
+        min-width: 360px;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-right: auto;
+        margin-left: auto;
+      }
 
-        .card {
-            width: 120px;
-            height: 106px;
-            background: rgb(255, 253, 253);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      .card {
+        width: 120px;
+        height: 106px;
+        background: rgb(255, 253, 253);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 10px;
+        transition: 300ms linear;
+      }
+
+      p {
+        font-size: 15px !important;
+        text-align: center;
+      }
+
+      .card img {
+        max-height: 200px;
+        object-fit: contain;
+        /* Maintain aspect ratio */
+        padding-top: 10px;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body style="background: ghostwhite">
+    <section style="display: flex; justify-content: center">
+      <div class="container">
+        <div
+          style="
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            overflow: hidden;
-            padding: 10px;
-            transition: 300ms linear;
-        }
-
-        p {
-            font-size: 15px !important;
-            text-align: center;
-        }
-
-        .card img {
-            max-height: 200px;
-            object-fit: contain;
-            /* Maintain aspect ratio */
-            padding-top: 10px;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
-</head>
-
-<body style="background: ghostwhite;">
-    <section style="display: flex; justify-content: center;">
-        <div class="container">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-                <div class="card">
-                    <img src="./assets/images/Honda_Logo.webp" alt="Honda" style="max-width: 100px;">
-                    <p style="font-weight: 700;">Honda</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/hero-logo.png" alt="Hero" style="max-width: 100px;">
-                    <p style="font-weight: 700; margin-top: -9px;">Hero</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/bajaj-logo.png" alt="Honda" style="max-width: 77px;">
-                    <p style="font-weight: 700;">Bajaj</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/TVSMOTOR-logo.png" alt="Honda"
-                        style="max-width: 110px; margin-top: 28px;">
-                    <p style="font-weight: 700; margin-top: 18px;">Tvs</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/suzuki-logo.jpg" alt="Hero" style="max-width: 100px;">
-                    <p style="font-size: 20px;font-weight: 700; margin-top: 8px;">Suzuki</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/royal-enfield-loggo.png" alt="Honda" style="max-width: 78px;">
-                    <p style="font-size: 20px;font-weight: 700;">Royal enfield</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/ktm-logo.png" alt="Honda"
-                        style="max-width: 108px; background-color: white; margin-top: 20px;">
-                    <p style="font-weight: 700; margin-top: 13px;">KTM</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/kawasaki.jpg" alt="Hero" style="max-width: 71px;">
-                    <p style="font-size: 20px;font-weight: 700;">Kawasaki</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/bmw.png" alt="Honda" style="max-width: 73px;">
-                    <p style="font-size: 20px;font-weight: 700;">BMW</p>
-
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/mahindra.jpg" alt="Honda" style="max-width: 100px;">
-                    <p style="font-size: 20px;font-weight: 700; margin-top: 32px;">mahindra</p>
-
-                </div>
-                <div class="card">
-                    <img src="./assets/images/yamaha.png" alt="Hero" style="max-width: 72px;">
-                    <p style="font-size: 20px;font-weight: 700;">yamaha</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/harley.png" alt="Honda" style="max-width: 66px;">
-                    <p style="font-size: 20px;font-weight: 700;">Herley Davidson</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/Ducati.svg" alt="Honda" style="max-width: 67px;">
-                    <p style="font-size: 20px;font-weight: 700; ">Ducati</p>
-
-                </div>
-                <div class="card">
-                    <img src="./assets/images/aprilia.png" alt="Hero" style="max-width: 100px; margin-top: 40px;">
-                    <p style="font-size: 20px;font-weight: 700;margin-top: 21px;">Aprilia</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/benelli.png" alt="Honda" style="max-width: 100px; margin-top: 34px;">
-                    <p style="font-weight: 700; margin-top: 23px;">Benelli</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets\/images/husqvarana.jpg" alt="Honda" style="max-width: 69px;">
-                    <p style="font-size: 20px;font-weight: 700;">Husqvarha</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/triumph.png" alt="Hero" style="max-width: 100px;">
-                    <p style="font-size: 18px;font-weight: 700;">Triumph Bikes</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/vesppa.jpg" alt="Honda" style="max-width: 100px;">
-                    <p style="font-size: 20px;font-weight: 700; margin-top: 24px;">Vespa</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/jawa.jpg" alt="Honda" style="max-width: 100px;">
-                    <p style="font-size: 20px;font-weight: 700;">Jawa</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/aftek.png" alt="Hero" style="max-width: 77px;">
-                    <p style="font-size: 20px;font-weight: 700;">Aftek</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/cfmoto.png" alt="Honda" style="max-width: 100px;">
-                    <p style="font-size: 20px;font-weight: 700;">CF Moto</p>
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/motoguzzi.png" alt="Honda" style="max-width: 100px;">
-                    <p style="font-size: 20px;font-weight: 700;">Moto Guzzi</p>
-                </div>
-            </div>
+            gap: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/Honda_Logo.webp"
+              alt="Honda"
+              style="max-width: 100px"
+            />
+            <p style="font-weight: 700">Honda</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/hero-logo.png"
+              alt="Hero"
+              style="max-width: 100px"
+            />
+            <p style="font-weight: 700; margin-top: -9px">Hero</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/bajaj-logo.png"
+              alt="Honda"
+              style="max-width: 77px"
+            />
+            <p style="font-weight: 700">Bajaj</p>
+          </div>
         </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/TVSMOTOR-logo.png"
+              alt="Honda"
+              style="max-width: 110px; margin-top: 28px"
+            />
+            <p style="font-weight: 700; margin-top: 18px">Tvs</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/suzuki-logo.jpg"
+              alt="Hero"
+              style="max-width: 100px"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 8px">
+              Suzuki
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/royal-enfield-loggo.png"
+              alt="Honda"
+              style="max-width: 78px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Royal enfield</p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/ktm-logo.png"
+              alt="Honda"
+              style="
+                max-width: 108px;
+                background-color: white;
+                margin-top: 20px;
+              "
+            />
+            <p style="font-weight: 700; margin-top: 13px">KTM</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/kawasaki.jpg"
+              alt="Hero"
+              style="max-width: 71px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Kawasaki</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/bmw.png"
+              alt="Honda"
+              style="max-width: 73px"
+            />
+            <p style="font-size: 20px; font-weight: 700">BMW</p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/mahindra.jpg"
+              alt="Honda"
+              style="max-width: 100px"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 32px">
+              mahindra
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/yamaha.png"
+              alt="Hero"
+              style="max-width: 72px"
+            />
+            <p style="font-size: 20px; font-weight: 700">yamaha</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/harley.png"
+              alt="Honda"
+              style="max-width: 66px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Herley Davidson</p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/Ducati.svg"
+              alt="Honda"
+              style="max-width: 67px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Ducati</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/aprilia.png"
+              alt="Hero"
+              style="max-width: 100px; margin-top: 40px"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 21px">
+              Aprilia
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/benelli.png"
+              alt="Honda"
+              style="max-width: 100px; margin-top: 34px"
+            />
+            <p style="font-weight: 700; margin-top: 23px">Benelli</p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets\/images/husqvarana.jpg"
+              alt="Honda"
+              style="max-width: 69px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Husqvarha</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/triumph.png"
+              alt="Hero"
+              style="max-width: 100px"
+            />
+            <p style="font-size: 15px; font-weight: 700">Triumph Bikes</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/vesppa.jpg"
+              alt="Honda"
+              style="max-width: 100px"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 24px">
+              Vespa
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/jawa.jpg"
+              alt="Honda"
+              style="max-width: 100px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Jawa</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/aftek.png"
+              alt="Hero"
+              style="max-width: 77px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Aftek</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/cfmoto.png"
+              alt="Honda"
+              style="max-width: 100px"
+            />
+            <p style="font-size: 20px; font-weight: 700">CF Moto</p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/motoguzzi.png"
+              alt="Honda"
+              style="max-width: 100px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Moto Guzzi</p>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>

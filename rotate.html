@@ -1,288 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Selection</title>
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(233, 235, 235);
-      flex-direction: column;
-    }
-    .container {
-      max-width: 400px;
-      border-radius: 12px;
-      margin: 10px;
-      text-align: center;
-    }
-    .img-container {
-      border: 1px solid #ccc;
-      width: 100%;
-      max-width: 640px;
-      height: 480px;
-      margin: 0 auto;
-      padding: 0;
-      cursor: ew-resize;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-    }
-    .img360 {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      line-height: 0;
-    }
-    .car-image {
-      width: 200px;
-      height: 145px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    h3{
-      text-wrap: nowrap;
-      font-size: 17px;
-    }
-    p {
-      margin: 0;
-      font-weight: 600;
-      font-size: 16px;
-      text-align: left;
-    }
-    h2 {
-      text-align: left;
-      font-size: 18px;
-    }
-    .color-image {
-      height: 55px;
-      width: 55px;
-      margin-left: 2px;
-      border-radius: 18px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-    }
-    .view-details {
-      background-color: #4caf50;
-      color: white;
-      padding: 10px 20px;
-      margin: 15px 0;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      max-width: 800px;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-    }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <div
-    style="
-      border: 2px solid black;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-right: 17px;
-      margin-left: 17px;
-      margin-bottom: 15px;
-      padding-bottom: 10px;
-    "
-  >
-    <div class="container" id="car1">
-      <div style="display: flex; justify-content: space-between">
-        <img
-          id="productImage1"
-          class="car-image"
-          src="./assets/image/car3.jpg"
-          alt="Car 1"
-          onclick="openModal('productImage1', 'car1', 'Exterior')"
-        />
-        <div style="width: 70%; margin-left: 20px">
-          <h2 style="margin-bottom: 10px">Exterior</h2>
-          <h3 style="margin: 0">Vehicle Model 1</h3>
-          <p>$20000-30000</p>
-          <p>Variant Name 1</p>
-        </div>
-      </div>
-
-      <div class="colors" id="colors1">
-        <img
-          class="color-image img-container"
-          id="imgContainer"
-          src="./assets/images/external2.jpeg"
-          onclick="changeCar(this, 'productImage1', 'car1')"
-        />
-        <img
-          class="color-image"
-          src="./assets/image/car2.jpg"
-          onclick="changeCar(this, 'productImage1', 'car1')"
-        />
-        <img
-          class="color-image"
-          src="./assets/image/car3.jpg"
-          onclick="changeCar(this, 'productImage1', 'car1')"
-        />
-        <img
-          class="color-image"
-          src="./assets/image/car1.jpg"
-          onclick="changeCar(this, 'productImage1', 'car1')"
-        />
-        <img
-          class="color-image"
-          src="./assets/image/sliderimg1.jpg"
-          onclick="changeCar(this, 'productImage1', 'car1')"
-        />
-      </div>
-    </div>
-
-    <div style="display: flex; justify-content: center; align-items: center">
-      <img
-        src="./assets/images/Line 1.png"
-        alt="Line"
-        style="width: 20%; height: 5px"
-      />
-      <h3 style="text-align: center">Vs</h3>
-      <img
-        src="./assets/images/Line 2.png"
-        alt="Line"
-        style="width: 20%; height: 5px"
-      />
-    </div>
-
-    <div class="container" id="car2">
-      <div style="display: flex; justify-content: space-between">
-        <img
-          id="productImage2"
-          class="car-image"
-          src="./assets/images/external2.jpeg"
-          alt="Car 2"
-          onclick="openModal('productImage2', 'car2', 'Exterior')"
-        />
-        <div style="width: 70%; margin-left: 20px">
-          <h2 style="margin-bottom: 10px">Exterior</h2>
-          <h3 style="margin: 0">Vehicle Model 2</h3>
-          <p>$20000-30000</p>
-          <p>Variant Name 2</p>
-        </div>
-      </div>
-      <div class="colors" id="colors2">
-        <img
-          class="color-image"
-          src="./assets/images/external1.jpeg"
-          onclick="changeCar(this, 'productImage2', 'car2')"
-        />
-        <img
-          class="color-image"
-          src="./assets/images/external2.jpeg"
-          onclick="changeCar(this, 'productImage2', 'car2')"
-        />
-        <img
-          class="color-image"
-          src="./assets/images/external3.jpeg"
-          onclick="changeCar(this, 'productImage2', 'car2')"
-        />
-        <img
-          class="color-image"
-          src="./assets/image/car2.jpg"
-          onclick="changeCar(this, 'productImage2', 'car2')"
-        />
-        <img
-          class="color-image"
-          src="./assets/image/car1.jpg"
-          onclick="changeCar(this, 'productImage2', 'car2')"
-        />
-      </div>
-    </div>
-    <div style="border-top: 2px solid black; padding-top: 10px;padding-bottom: 10px;">
-      <!-- Interior section -->
-      <div class="container" id="car1-interior">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Selection</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(233, 235, 235);
+        flex-direction: column;
+      }
+      .container {
+        max-width: 400px;
+        border-radius: 12px;
+        margin: 10px;
+        text-align: center;
+      }
+      .img-container {
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: 640px;
+        height: 480px;
+        margin: 0 auto;
+        padding: 0;
+        cursor: ew-resize;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+      }
+      .img360 {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+      }
+      .car-image {
+        width: 200px;
+        height: 145px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      h3 {
+        text-wrap: nowrap;
+        font-size: 17px;
+      }
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: left;
+      }
+      h2 {
+        text-align: left;
+        font-size: 15px;
+      }
+      .color-image {
+        height: 55px;
+        width: 55px;
+        margin-left: 2px;
+        border-radius: 18px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      .view-details {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        margin: 15px 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-content img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        border: 2px solid black;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-right: 17px;
+        margin-left: 17px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+      "
+    >
+      <div class="container" id="car1">
         <div style="display: flex; justify-content: space-between">
           <img
-            id="interiorImage1"
+            id="productImage1"
             class="car-image"
-            src="./assets/images/interorimg2.jpg"
-            alt="Car 1 Interior"
-            onclick="openModal('interiorImage1', 'car1', 'Interior')"
+            src="./assets/image/car3.jpg"
+            alt="Car 1"
+            onclick="openModal('productImage1', 'car1', 'Exterior')"
           />
           <div style="width: 70%; margin-left: 20px">
-            <h2 style="margin-bottom: 10px">Interior</h2>
+            <h2 style="margin-bottom: 10px">Exterior</h2>
             <h3 style="margin: 0">Vehicle Model 1</h3>
             <p>$20000-30000</p>
             <p>Variant Name 1</p>
           </div>
         </div>
 
-        <div class="colors" id="colors1-interior">
+        <div class="colors" id="colors1">
           <img
-            class="color-image"
-            src="./assets/images/interorimg2.jpg"
-            onclick="changeCar(this, 'interiorImage1', 'car1')"
+            class="color-image img-container"
+            id="imgContainer"
+            src="./assets/images/external2.jpeg"
+            onclick="changeCar(this, 'productImage1', 'car1')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg3.jpg"
-            onclick="changeCar(this, 'interiorImage1', 'car1')"
+            src="./assets/image/car2.jpg"
+            onclick="changeCar(this, 'productImage1', 'car1')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg1.jpg"
-            onclick="changeCar(this, 'interiorImage1', 'car1')"
+            src="./assets/image/car3.jpg"
+            onclick="changeCar(this, 'productImage1', 'car1')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg3.jpg"
-            onclick="changeCar(this, 'interiorImage1', 'car1')"
+            src="./assets/image/car1.jpg"
+            onclick="changeCar(this, 'productImage1', 'car1')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg1.jpg"
-            onclick="changeCar(this, 'interiorImage1', 'car1')"
+            src="./assets/image/sliderimg1.jpg"
+            onclick="changeCar(this, 'productImage1', 'car1')"
           />
         </div>
       </div>
@@ -301,92 +195,206 @@
         />
       </div>
 
-      <div class="container" id="car2-interior">
+      <div class="container" id="car2">
         <div style="display: flex; justify-content: space-between">
           <img
-            id="interiorImage2"
+            id="productImage2"
             class="car-image"
-            src="./assets/images/interorimg1.jpg"
-            alt="Car 2 Interior"
-            onclick="openModal('interiorImage2', 'car2', 'Interior')"
+            src="./assets/images/external2.jpeg"
+            alt="Car 2"
+            onclick="openModal('productImage2', 'car2', 'Exterior')"
           />
           <div style="width: 70%; margin-left: 20px">
-            <h2 style="margin-bottom: 10px">Interior</h2>
+            <h2 style="margin-bottom: 10px">Exterior</h2>
             <h3 style="margin: 0">Vehicle Model 2</h3>
             <p>$20000-30000</p>
             <p>Variant Name 2</p>
           </div>
         </div>
-        <div class="colors" id="colors2-interior">
+        <div class="colors" id="colors2">
           <img
             class="color-image"
-            src="./assets/images/interorimg1.jpg"
-            onclick="changeCar(this, 'interiorImage2', 'car2')"
+            src="./assets/images/external1.jpeg"
+            onclick="changeCar(this, 'productImage2', 'car2')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg2.jpg"
-            onclick="changeCar(this, 'interiorImage2', 'car2')"
+            src="./assets/images/external2.jpeg"
+            onclick="changeCar(this, 'productImage2', 'car2')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg3.jpg"
-            onclick="changeCar(this, 'interiorImage2', 'car2')"
+            src="./assets/images/external3.jpeg"
+            onclick="changeCar(this, 'productImage2', 'car2')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg1.jpg"
-            onclick="changeCar(this, 'interiorImage2', 'car2')"
+            src="./assets/image/car2.jpg"
+            onclick="changeCar(this, 'productImage2', 'car2')"
           />
           <img
             class="color-image"
-            src="./assets/images/interorimg2.jpg"
-            onclick="changeCar(this, 'interiorImage2', 'car2')"
+            src="./assets/image/car1.jpg"
+            onclick="changeCar(this, 'productImage2', 'car2')"
           />
         </div>
       </div>
+      <div
+        style="
+          border-top: 2px solid black;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        "
+      >
+        <!-- Interior section -->
+        <div class="container" id="car1-interior">
+          <div style="display: flex; justify-content: space-between">
+            <img
+              id="interiorImage1"
+              class="car-image"
+              src="./assets/images/interorimg2.jpg"
+              alt="Car 1 Interior"
+              onclick="openModal('interiorImage1', 'car1', 'Interior')"
+            />
+            <div style="width: 70%; margin-left: 20px">
+              <h2 style="margin-bottom: 10px">Interior</h2>
+              <h3 style="margin: 0">Vehicle Model 1</h3>
+              <p>$20000-30000</p>
+              <p>Variant Name 1</p>
+            </div>
+          </div>
+
+          <div class="colors" id="colors1-interior">
+            <img
+              class="color-image"
+              src="./assets/images/interorimg2.jpg"
+              onclick="changeCar(this, 'interiorImage1', 'car1')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg3.jpg"
+              onclick="changeCar(this, 'interiorImage1', 'car1')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg1.jpg"
+              onclick="changeCar(this, 'interiorImage1', 'car1')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg3.jpg"
+              onclick="changeCar(this, 'interiorImage1', 'car1')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg1.jpg"
+              onclick="changeCar(this, 'interiorImage1', 'car1')"
+            />
+          </div>
+        </div>
+
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <img
+            src="./assets/images/Line 1.png"
+            alt="Line"
+            style="width: 20%; height: 5px"
+          />
+          <h3 style="text-align: center">Vs</h3>
+          <img
+            src="./assets/images/Line 2.png"
+            alt="Line"
+            style="width: 20%; height: 5px"
+          />
+        </div>
+
+        <div class="container" id="car2-interior">
+          <div style="display: flex; justify-content: space-between">
+            <img
+              id="interiorImage2"
+              class="car-image"
+              src="./assets/images/interorimg1.jpg"
+              alt="Car 2 Interior"
+              onclick="openModal('interiorImage2', 'car2', 'Interior')"
+            />
+            <div style="width: 70%; margin-left: 20px">
+              <h2 style="margin-bottom: 10px">Interior</h2>
+              <h3 style="margin: 0">Vehicle Model 2</h3>
+              <p>$20000-30000</p>
+              <p>Variant Name 2</p>
+            </div>
+          </div>
+          <div class="colors" id="colors2-interior">
+            <img
+              class="color-image"
+              src="./assets/images/interorimg1.jpg"
+              onclick="changeCar(this, 'interiorImage2', 'car2')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg2.jpg"
+              onclick="changeCar(this, 'interiorImage2', 'car2')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg3.jpg"
+              onclick="changeCar(this, 'interiorImage2', 'car2')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg1.jpg"
+              onclick="changeCar(this, 'interiorImage2', 'car2')"
+            />
+            <img
+              class="color-image"
+              src="./assets/images/interorimg2.jpg"
+              onclick="changeCar(this, 'interiorImage2', 'car2')"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      <!-- The cloned image will be inserted here -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <!-- The cloned image will be inserted here -->
+      </div>
     </div>
-  </div>
 
-  <script>
-    function openModal(imageId, carId, type) {
-      var modal = document.getElementById("myModal");
-      var modalContent = document.querySelector(".modal-content");
-      modal.style.display = "flex"; // Use flex to center the content
-      modalContent.innerHTML = ""; // Clear previous content
+    <script>
+      function openModal(imageId, carId, type) {
+        var modal = document.getElementById("myModal");
+        var modalContent = document.querySelector(".modal-content");
+        modal.style.display = "flex"; // Use flex to center the content
+        modalContent.innerHTML = ""; // Clear previous content
 
-      // Clone the image and set it as the content of the modal
-      var img = document.getElementById(imageId);
-      var clone = img.cloneNode();
-      clone.style.width = "100%"; // Make the image take full width
+        // Clone the image and set it as the content of the modal
+        var img = document.getElementById(imageId);
+        var clone = img.cloneNode();
+        clone.style.width = "100%"; // Make the image take full width
 
-      modalContent.appendChild(clone);
-    }
+        modalContent.appendChild(clone);
+      }
 
-    function closeModal() {
-      var modal = document.getElementById("myModal");
-      modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-      var modal = document.getElementById("myModal");
-      if (event.target === modal) {
+      function closeModal() {
+        var modal = document.getElementById("myModal");
         modal.style.display = "none";
       }
-    };
 
-    function changeCar(colorImage, mainImageId, carId) {
-      var mainImage = document.getElementById(mainImageId);
-      mainImage.src = colorImage.src;
-    }
-  </script>
-</body>
+      window.onclick = function (event) {
+        var modal = document.getElementById("myModal");
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      function changeCar(colorImage, mainImageId, carId) {
+        var mainImage = document.getElementById(mainImageId);
+        mainImage.src = colorImage.src;
+      }
+    </script>
+  </body>
 </html>

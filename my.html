@@ -1,230 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Swiper Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Demo styles -->
-  <style>
-    body {
-      background: #eee;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper Demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Demo styles -->
+    <style>
+      body {
+        background: #eee;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
-    section {
-      background: rgb(254, 255, 255);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-      max-width: 370px;
-      padding: 10px;
-      margin: 10px;
-    }
+      section {
+        background: rgb(254, 255, 255);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        max-width: 370px;
+        padding: 10px;
+        margin: 10px;
+      }
 
-    .swiper {
-      width: 100%;
-      height: 300px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    p {
-      margin: 0;
-      font-weight: 700;
-      font-size: 16px;
-      text-align: center;
-      padding: 5px 0;
-    }
-
-    h2 {
-      font-size: 16px;
-      margin: 10px 0;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 14px;
-      margin: 0;
-      text-align: center;
-    }
-
-    .vs-container {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 5px 0;
-    }
-
-    .vs-container img {
-      width: 40px;
-      height: 3px;
-    }
-
-    .vs-container h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: rgb(15, 15, 55);
-      margin: 0 10px;
-    }
-
-    @media (max-width: 400px) {
       .swiper {
-        height: 250px;
+        width: 100%;
+        height: 300px;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
       }
 
       p {
-        font-size: 14px;
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
       }
 
       h2 {
-        font-size: 14px;
+        font-size: 24px;
+        margin-bottom: 0;
+        text-align: center;
       }
 
       h3 {
-        font-size: 12px;
+        font-size: 14px;
+        margin: 0;
+        text-align: center;
+      }
+
+      .vs-container {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
       }
 
       .vs-container img {
-        width: 25px;
+        width: 40px;
         height: 3px;
       }
 
       .vs-container h3 {
-        font-size: 18px;
+        font-size: 20px;
+        font-weight: 700;
+        color: rgb(15, 15, 55);
+        margin: 0 10px;
       }
-    }
-  </style>
-</head>
-<body>
-  <!-- Swiper Section for Exterior -->
-  <div style="border: 2px solid black; border-radius: 13px; max-width: 350px;">
-    <section>
-      <div class="swiper exteriorSwiper" style="margin-top: 0; margin-bottom: 0;">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/image/car1.jpg" alt="Slide 1" />
+
+      @media (max-width: 400px) {
+        .swiper {
+          height: 250px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        h2 {
+          font-size: 20px;
+          margin-top: 5px;
+        }
+
+        h3 {
+          font-size: 12px;
+        }
+
+        .vs-container img {
+          width: 25px;
+          height: 3px;
+        }
+
+        .vs-container h3 {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Swiper Section for Exterior -->
+     <h2>Exterior</h2>
+    <div style="border: 2px solid black; border-radius: 13px; max-width: 350px">
+      <section>
+        <div
+          class="swiper exteriorSwiper"
+          style="margin-top: 0; margin-bottom: 0"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/image/car1.jpg" alt="Slide 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car2.jpg" alt="Slide 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car3.jpg" alt="Slide 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external2.jpeg" alt="Slide 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 6" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 8" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 9" />
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="./assets/image/car2.jpg" alt="Slide 2" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/image/car3.jpg" alt="Slide 3" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external1.jpeg" alt="Slide 4" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external2.jpeg" alt="Slide 5" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external3.jpeg" alt="Slide 6" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external1.jpeg" alt="Slide 7" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external3.jpeg" alt="Slide 8" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external1.jpeg" alt="Slide 9" />
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <h2 style="font-size: 14px; font-weight: 500;">Vehicle Model</h2>
+          <h2 style="font-size: 15px; font-weight: 700;">Vehicle Model</h2>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <p>Price:</p>
+          <p style="font-size: 15px; font-weight: 700;">$20000-30000</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <p>Variant Name</p>
+          <p style="font-size: 15px; font-weight: 700;">Variant Name</p>
+        </div>
+        <p style="padding-top: 5px;">Sun Roof | Wheel Cover | Power Antenna | Fog Light Front</p>
+      </section>
+      <div class="vs-container">
+        <img src="./assets/images/Line 1.png" alt="Line" />
+        <h3>Vs</h3>
+        <img src="./assets/images/Line 2.png" alt="Line" />
       </div>
-      <p>Sun Roof | Wheel Cover | Power Antenna | Fog Light Front</p>
-    </section>
-    <div class="vs-container">
-      <img src="./assets/images/Line 1.png" alt="Line" />
-      <h3>Vs</h3>
-      <img src="./assets/images/Line 2.png" alt="Line" />
+      <!-- Swiper Section for Comparison -->
+      <section>
+        <div
+          class="swiper comparisonSwiper"
+          style="margin-top: 0; margin-bottom: 0"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/image/car2.jpg" alt="Slide 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car2.jpg" alt="Slide 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car3.jpg" alt="Slide 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external2.jpeg" alt="Slide 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 6" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 8" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 9" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <h2 style="font-size: 14px; font-weight: 500;">Vehicle Model</h2>
+        <h2 style="font-size: 15px; font-weight: 700;">Vehicle Model</h2>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <p>Price:</p>
+        <p style="font-size: 15px; font-weight: 700;">$20000-30000</p>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <p>Variant Name</p>
+        <p style="font-size: 15px; font-weight: 700;">Variant Name</p>
+      </div>
+        <p style="padding-top: 5px">
+          Sun Roof | Wheel Cover | Power Antenna | Fog Light Rear
+        </p>
+      </section>
     </div>
-    <!-- Swiper Section for Comparison -->
-    <section>
-      <div class="swiper comparisonSwiper" style="margin-top: 0; margin-bottom: 0;">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/image/car2.jpg" alt="Slide 1" />
+    <h2>Interior</h2>
+    <div style="border: 2px solid black; border-radius: 13px; max-width: 350px">
+      <section>
+        <div
+          class="swiper exteriorSwiper"
+          style="margin-top: 0; margin-bottom: 0"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/image/car1.jpg" alt="Slide 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car2.jpg" alt="Slide 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car3.jpg" alt="Slide 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external2.jpeg" alt="Slide 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 6" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 8" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 9" />
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="./assets/image/car2.jpg" alt="Slide 2" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/image/car3.jpg" alt="Slide 3" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external1.jpeg" alt="Slide 4" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external2.jpeg" alt="Slide 5" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external3.jpeg" alt="Slide 6" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external1.jpeg" alt="Slide 7" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external3.jpeg" alt="Slide 8" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/external1.jpeg" alt="Slide 9" />
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <h2 style="font-size: 14px; font-weight: 500;">Vehicle Model</h2>
+          <h2 style="font-size: 15px; font-weight: 700;">Vehicle Model</h2>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <p>Price:</p>
+          <p style="font-size: 15px; font-weight: 700;">$20000-30000</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <p>Variant Name</p>
+          <p style="font-size: 15px; font-weight: 700;">Variant Name</p>
+        </div>
+        <p style="padding-top: 5px;">Sun Roof | Wheel Cover | Power Antenna | Fog Light Front</p>
+      </section>
+      <div class="vs-container">
+        <img src="./assets/images/Line 1.png" alt="Line" />
+        <h3>Vs</h3>
+        <img src="./assets/images/Line 2.png" alt="Line" />
       </div>
-      <p>Sun Roof | Wheel Cover | Power Antenna | Fog Light Rear</p>
-    </section>
-  </div>
+      <!-- Swiper Section for Comparison -->
+      <section>
+        <div
+          class="swiper comparisonSwiper"
+          style="margin-top: 0; margin-bottom: 0"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/image/car2.jpg" alt="Slide 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car2.jpg" alt="Slide 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/car3.jpg" alt="Slide 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external2.jpeg" alt="Slide 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 6" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external3.jpeg" alt="Slide 8" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/external1.jpeg" alt="Slide 9" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <h2 style="font-size: 14px; font-weight: 500;">Vehicle Model</h2>
+        <h2 style="font-size: 15px; font-weight: 700;">Vehicle Model</h2>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <p>Price:</p>
+        <p style="font-size: 15px; font-weight: 700;">$20000-30000</p>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <p>Variant Name</p>
+        <p style="font-size: 15px; font-weight: 700;">Variant Name</p>
+      </div>
+        <p style="padding-top: 5px">
+          Sun Roof | Wheel Cover | Power Antenna | Fog Light Rear
+        </p>
+      </section>
+    </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Initialize Swiper -->
-  <script>
-    // Initialize exteriorSwiper
-    var exteriorSwiper = new Swiper(".exteriorSwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      // Initialize exteriorSwiper
+      var exteriorSwiper = new Swiper(".exteriorSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
 
-    // Initialize comparisonSwiper
-    var comparisonSwiper = new Swiper(".comparisonSwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
-</body>
+      // Initialize comparisonSwiper
+      var comparisonSwiper = new Swiper(".comparisonSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
 </html>
