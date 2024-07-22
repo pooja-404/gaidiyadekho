@@ -1,154 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vehicle Deals</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
 
-        .container {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+      .container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-        h2 {
-            font-size: 20px;
-            margin: 0;
-            color: #333;
-        }
+      h2 {
+        font-size: 20px;
+        margin: 0;
+        color: #333;
+      }
 
-        section {
-            margin-bottom: 20px;
-            background-color: #fff;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
+      section {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
 
-        .recommended-section, .recently-added-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .recommended-section,
+      .recently-added-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .view-more, .more-details {
-            color: #ff5733;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
-        }
+      .view-more,
+      .more-details {
+        color: #ff5733;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+      }
 
-        .recommended-cars img {
-            width: 80px;
-            height: auto;
-            margin-right: 10px;
-        }
+      .recommended-cars img {
+        width: 80px;
+        height: auto;
+        margin-right: 10px;
+      }
 
-        .expert-section {
-            text-align: center;
-            background-color: #ffe6e6;
-            padding: 20px;
-            border-radius: 10px;
-        }
+      .expert-section {
+        text-align: center;
+        background-color: #ffe6e6;
+        padding: 20px;
+        border-radius: 10px;
+      }
 
-        .expert-section h2 {
-            color: #e63946;
-            font-size: 18px;
-        }
+      .expert-section h2 {
+        color: #e63946;
+        font-size: 18px;
+      }
 
-        .expert-section p {
-            margin: 10px 0;
-            color: #555;
-        }
+      .expert-section p {
+        margin: 10px 0;
+        color: #555;
+      }
 
-        .learn-more button {
-            background-color: #ff5733;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-size: 14px;
-            border-radius: 5px;
-        }
+      .learn-more button {
+        background-color: #ff5733;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 11px;
+        border-radius: 5px;
+      }
 
-        .recently-added-car {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      .recently-added-car {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .recently-added-car p {
-            margin: 5px 0;
-            font-size: 16px;
-            font-weight: bold;
-            color: #333;
-        }
+      .recently-added-car p {
+        margin: 5px 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
 
-        .deals-section {
-            background-color: #e6f7ff;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-        }
+      .deals-section {
+        background-color: #e6f7ff;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+      }
 
-        .deals p {
-            margin: 10px 0;
-            font-size: 16px;
-            color: #333;
-        }
+      .deals p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #333;
+      }
 
-        .deals img {
-            width: 80px;
-            height: auto;
-        }
+      .deals img {
+        width: 80px;
+        height: auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Recommended Section -->
-        <section class="recommended-section">
-            <h2>Recommended</h2>
-            <a href="#" class="view-more">View More &rarr;</a>
-        </section>
-        <div class="recommended-cars">
-            <img src="./assets/images/external1.jpeg" alt="Red Swift">
-            <img src="./assets/images/external2-removebg-preview.png" alt="Car Model">
-        </div>
+      <!-- Recommended Section -->
+      <section class="recommended-section">
+        <h2>Recommended</h2>
+        <a href="#" class="view-more">View More &rarr;</a>
+      </section>
+      <div class="recommended-cars">
+        <img src="./assets/images/external1.jpeg" alt="Red Swift" />
+        <img
+          src="./assets/images/external2-removebg-preview.png"
+          alt="Car Model"
+        />
+      </div>
 
-        <!-- Be a Vehicle Expert Section -->
-        <section class="expert-section">
-            <h2>Be a Vehicle Expert</h2>
-            <p>Be an Expert to used Vehicles Now!</p>
-            <a href="#" class="learn-more">
-                <button>Learn More</button>
-            </a>
-        </section>
+      <!-- Be a Vehicle Expert Section -->
+      <section class="expert-section">
+        <h2>Be a Vehicle Expert</h2>
+        <p>Be an Expert to used Vehicles Now!</p>
+        <a href="#" class="learn-more">
+          <button>Learn More</button>
+        </a>
+      </section>
 
-        <!-- Recently Added Section -->
-        <section class="recently-added-section">
-            <h2>Recently Added</h2>
-            <a href="#" class="more-details">More Details &rarr;</a>
-        </section>
-        <div class="recently-added-car">
-            <p>2,000,000</p>
-            <p>Red Swift</p>
-            <img src="./assets/images/external2-removebg-preview.png" alt="Red Swift">
-        </div>
+      <!-- Recently Added Section -->
+      <section class="recently-added-section">
+        <h2>Recently Added</h2>
+        <a href="#" class="more-details">More Details &rarr;</a>
+      </section>
+      <div class="recently-added-car">
+        <p>2,000,000</p>
+        <p>Red Swift</p>
+        <img
+          src="./assets/images/external2-removebg-preview.png"
+          alt="Red Swift"
+        />
+      </div>
 
-        <!-- Deals Section -->
-        <section class="deals-section">
-            <h2>Deals for you</h2>
-            <p>Get best Deals on E-vehicles</p>
-            <img src="./assets/images/external3.jpeg" alt="Car Deal">
-        </section>
+      <!-- Deals Section -->
+      <section class="deals-section">
+        <h2>Deals for you</h2>
+        <p>Get best Deals on E-vehicles</p>
+        <img src="./assets/images/external3.jpeg" alt="Car Deal" />
+      </section>
     </div>
-</body>
+  </body>
 </html>

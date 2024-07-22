@@ -643,7 +643,7 @@
 
         .filter-content span {
             font-weight: 600;
-            font-size: 15px;
+            font-size: 12px;
         }
 
 
@@ -985,7 +985,7 @@
         }
 
         .off {
-            font-size: 14px;
+             font-size: 11px;
             position: relative;
             bottom: 5px;
         }

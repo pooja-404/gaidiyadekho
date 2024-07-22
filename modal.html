@@ -18,6 +18,7 @@
         justify-content: space-around;
         align-items: flex-start;
         width: 100%;
+        gap: 10px;
       }
 
       .car-card {
@@ -40,12 +41,12 @@
       }
 
       .car-details {
-        padding: 15px;
+        padding: 10px;
         text-align: center;
         background: linear-gradient(
           to right,
           #111112,
-          #0a6c9e
+          #b4b8b9
         ); /* Unique gradient background */
       }
 
@@ -57,7 +58,7 @@
       }
 
       .price {
-        font-size: 14px;
+        font-size: 11px;
         color: white;
         font-weight: 500;
         margin-top: 5px;
@@ -88,7 +89,7 @@
 
       .variant {
         margin: 0;
-        font-size: 13px;
+        font-size: 12px;
         color: black;
         text-align: center;
         font-weight: 900;
@@ -96,7 +97,7 @@
 
       .price {
         margin: 0;
-        font-size: 13px;
+        font-size: 12px;
         color: black;
         text-align: center;
         margin-top: 2px;
@@ -106,7 +107,10 @@
   </head>
   <body>
     <h2 style="text-align: center">Suzuki Two Wheeler</h2>
-    <div class="container" style="display: flex; justify-content: center">
+    <div
+      class="container"
+      style="display: flex; justify-content: center; gap: 10px"
+    >
       <div class="car-comparison">
         <div class="car-card">
           <img
@@ -118,11 +122,12 @@
             <h2
               class="variant"
               style="
-                font-size: 15px;
+                font-size: 12px;
                 margin: 0;
                 font-weight: 600;
                 color: white;
-
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                -1px -1px 2px rgba(255, 255, 255, 0.4);
                 text-wrap: nowrap;
               "
             >
@@ -131,12 +136,12 @@
             <p
               class="price"
               style="
-                font-size: 14px;
+                font-size: 11px;
                 color: white;
                 font-weight: 500;
                 margin-top: 5px;
-                /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
-                  -1px -1px 2px rgba(255, 255, 255, 0.4); */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                  -1px -1px 2px rgba(255, 255, 255, 0.4);
                 text-wrap: nowrap;
               "
             >
@@ -150,7 +155,7 @@
             <h2
               class="variant"
               style="
-                font-size: 15px;
+                font-size: 12px;
                 margin: 0;
                 font-weight: 600;
                 color: white;
@@ -164,7 +169,40 @@
             <p
               class="price"
               style="
-                font-size: 14px;
+                font-size: 11px;
+                color: white;
+                font-weight: 500;
+                margin-top: 5px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                  -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                text-wrap: nowrap;
+              "
+            >
+              Price: $40,000
+            </p>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="./assets/images/Hero-Super-Splendor-Canvas-Black-1-2.avif" alt="Car 2" class="car-image" />
+          <div class="car-details">
+            <h2
+              class="variant"
+              style="
+                font-size: 12px;
+                margin: 0;
+                font-weight: 600;
+                color: white;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                  -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                text-wrap: nowrap;
+              "
+            >
+              Variant: Model X
+            </h2>
+            <p
+              class="price"
+              style="
+                font-size: 11px;
                 color: white;
                 font-weight: 500;
                 margin-top: 5px;
@@ -179,7 +217,7 @@
         </div>
       </div>
     </div>
-    <div class="container" style="display: flex; justify-content: center">
+    <div class="container" style="display: flex; justify-content: center; padding-top: 10px;">
       <div class="card">
         <img src="./assets/images/bgbike.jpg" alt="Model X" />
         <div class="card-info">
