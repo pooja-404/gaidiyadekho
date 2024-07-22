@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        background: #f0f8f7;
+      }
+      .container {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        /* background-color: #f5f3f3; */
+        background-color: white;
+        margin-bottom: 50px;
+      }
+
+      .man-card {
+        width: 95%;
+        height: 100%;
+        margin-bottom: 80px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        background: #fbf7f7;
+        padding-top: 13px;
+        margin-top: 20px;
+        padding-bottom: 0;
+      }
+
+      .bg-img-vechile {
+        background-image: url(./assets/images/nxo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bg-img-vechile2 {
+        background-image: url(./assets/images/yakuza.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bg-img-vechile3 {
+        background-image: url(./assets/images/bahubali.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: white !important;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        color: rgb(210, 17, 17);
+        text-transform: capitalize;
+        text-align: left;
+      }
+      .slide-card {
+        height: 100px;
+        width: 350px;
+        box-shadow: 0 0px 8px rgba(74, 4, 4, 0.2);
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: #fbf7f7;
+        margin-bottom: 30px;
+      }
+      .slide-card2 {
+       
+        height: 167px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: linear-gradient(to right, #393cfc, #a6e0f5);
+      }
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+        text-align: left;
+      }
+      .learn-btn {
+        background-color: rgb(210, 17, 17);
+        color: white;
+        width: 87px;
+        height: 32px;
+        border-radius: 30px;
+        border: 0;
+        font-weight: 600;
+        margin-left: 178px;
+        transform: translateY(-111%);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Swiper -->
+    <div class="container">
+      <div style="display: flex; justify-content: center">
+        <div class="man-card">
+          <div>
+            <h2 style="color: rgb(210, 17, 17)">be a vechile expert</h2>
+
+            <p>
+              be an expert to used <br />
+              vechiles now!
+            </p>
+            <button class="learn-btn">learn more</button>
+          </div>
+          <div>
+            <img
+              src="./assets/images/carimg-removebg-preview.png"
+              alt="car"
+              style="max-width: 110px"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="man-card"
+        style="
+          background: linear-gradient(
+            to right,
+            #f1565b,
+            #6d0202
+          ); /* Add linear gradient */
+        "
+      >
+        <div>
+          <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+            bajaj CNG bike
+          </h2>
+
+          <p style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+            frist bajaj CNG bike <br />
+            look
+          </p>
+          <button class="learn-btn">Veiw Detail</button>
+        </div>
+        <div>
+          <img
+            src="./assets/images/why_freedom_bike.webp"
+            alt="car"
+            style="max-width: 110px"
+          />
+        </div>
+      </div>
+      <div class="swiper mySwiper" style="margin-bottom: 50px">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-card2">
+              <div style="display: flex; justify-content: space-between">
+                <div style="padding-left: 10px">
+                  <h2
+                    style="
+                      color: rgb(210, 17, 17);
+                      font-weight: 700;
+                      font-size: 40px;
+
+                      margin-bottom: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    "
+                  >
+                    Nxo
+                  </h2>
+                  <p
+                    style="
+                      font-weight: 700;
+                      font-size: 24px;
+                      color: white;
+                      margin-top: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                      margin-bottom: 0;
+                    "
+                  >
+                    best EV vechile
+                  </p>
+                </div>
+                <img
+                  src="./assets/images/nxo-removebg-preview.png"
+                  alt="y"
+                  style="
+                    max-width: 168px;
+                    border-radius: 12px;
+                    object-fit: contain;
+                    margin-top: 20px;
+                    margin-left: 5px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card2">
+              <div style="display: flex; justify-content: space-between">
+                <div>
+                  <h2
+                    style="
+                      color: rgb(210, 17, 17);
+                      font-weight: 700;
+                      font-size: 40px;
+
+                      margin-bottom: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    "
+                  >
+                    Yakuza
+                  </h2>
+                  <p
+                    style="
+                      font-weight: 700;
+                      font-size: 24px;
+                      color: white;
+                      margin-top: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                      margin-bottom: 0;
+                    "
+                  >
+                    best EV <br />vechile
+                  </p>
+                </div>
+                <img
+                  src="./assets/images/yakuza-removebg-preview.png"
+                  alt="y"
+                  style="
+                    max-width: 95px;
+                    border-radius: 12px;
+                    object-fit: cover;
+                    margin-top: 10px;
+                  "
+                />
+                <img
+                  src="./assets/images/yakuja2-removebg-preview.png"
+                  alt="y"
+                  style="
+                    max-width: 95px;
+                    border-radius: 12px;
+                    object-fit: cover;
+                    margin-top: 10px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card2">
+              <div style="display: flex; justify-content: space-between">
+                <div style="padding-left: 10px">
+                  <h2
+                    style="
+                      color: rgb(210, 17, 17);
+                      font-weight: 700;
+                      font-size: 40px;
+
+                      margin-bottom: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    "
+                  >
+                    Bahubali
+                  </h2>
+                  <p
+                    style="
+                      font-weight: 700;
+                      font-size: 24px;
+                      color: white;
+                      margin-top: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                      margin-bottom: 0;
+                    "
+                  >
+                    best EV vechile
+                  </p>
+                </div>
+                <img
+                  src="./assets/images/bahubali-removebg-preview.png"
+                  alt="y"
+                  style="
+                    max-width: 168px;
+                    border-radius: 12px;
+                    object-fit: contain;
+                    margin-top: 20px;
+                    margin-left: 5px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card2">
+              <div style="display: flex; justify-content: space-between">
+                <div style="padding-left: 10px">
+                  <h2
+                    style="
+                      color: rgb(210, 17, 17);
+                      font-weight: 700;
+                      font-size: 40px;
+
+                      margin-bottom: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    "
+                  >
+                    Yakuza
+                  </h2>
+                  <p
+                    style="
+                      font-weight: 700;
+                      font-size: 24px;
+                      color: white;
+                      margin-top: 0;
+                      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                      margin-bottom: 0;
+                    "
+                  >
+                    best EV <br />vechile
+                  </p>
+                </div>
+                <img
+                  src="./assets/images/yakuza-removebg-preview.png"
+                  alt="y"
+                  style="
+                    max-width: 95px;
+                    border-radius: 12px;
+                    object-fit: cover;
+                    margin-top: 10px;
+                  "
+                />
+                <img
+                  src="./assets/images/yakuja2-removebg-preview.png"
+                  alt="y"
+                  style="
+                    max-width: 95px;
+                    border-radius: 12px;
+                    object-fit: cover;
+                    margin-top: 10px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper mySwiper" style="margin-top: 50px">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 120px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <h2>
+                get best deals on <span style="display: block">E-category</span>
+              </h2>
+              <img
+                src="./assets/images/logo.png"
+                alt="image"
+                style="max-width: 100px; height: 100px; object-fit: contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        autoplay: {
+          delay: 3000, // Delay between slides in milliseconds
+          disableOnInteraction: false, // Do not disable autoplay on user interactions
+        },
+        centeredSlides: true,
+        Autoplay: true,
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+    </script>
+  </body>
+</html>
