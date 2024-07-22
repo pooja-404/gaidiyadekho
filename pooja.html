@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Color Change</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+     
+      .product-highlights {
+        text-align: center;
+      }
+
+      .car-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .color-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        padding: 5px 0;
+        white-space: nowrap;
+      }
+
+      .color-image {
+        height: 63px;
+        width: 70px;
+        margin: 2px;
+        border-radius: 4px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+
+      .swiper-container {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <div id="exteriorCar1" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                id="exteriorProductImage1"
+                class="car-image"
+                src="./assets/image/car3.jpg"
+                alt="Car 1 Exterior"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="colors" id="exteriorColors1">
+          <div class="color-scroll-container">
+            <img
+              class="color-image"
+              src="./assets/images/external2.jpeg"
+              onclick="changeCar(this, 'exteriorProductImage1')"
+            />
+            <img
+              class="color-image"
+              src="./assets/image/car3.jpg"
+              onclick="changeCar(this, 'exteriorProductImage1')"
+            />
+            <img
+              class="color-image"
+              src="./assets/image/car1.jpg"
+              onclick="changeCar(this, 'exteriorProductImage1')"
+            />
+            <img
+              class="color-image"
+              src="./assets/image/sliderimg1.jpg"
+              onclick="changeCar(this, 'exteriorProductImage1')"
+            />
+          </div>
+         
+        </div>
+      </div>
+     
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      function changeCar(element, imgId) {
+        document.getElementById(imgId).src = element.src;
+      }
+
+      new Swiper("#exteriorCar1", {
+        pagination: { el: ".swiper-pagination", clickable: true },
+      });
+
+      new Swiper("#exteriorCar2", {
+        pagination: { el: ".swiper-pagination", clickable: true },
+      });
+    </script>
+  </body>
+</html>
