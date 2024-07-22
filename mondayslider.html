@@ -91,11 +91,13 @@
       background-color: #fff;
       color: #000;
       border: 1px solid #000;
+      border-radius: 8px;
     }
 
     .buy-now {
       background-color: #f0c14b;
       color: #000;
+      border-radius: 8px;
     }
     .product-highlights {
       text-align: center;
@@ -194,48 +196,46 @@
         <button class="buy-now">Buy now</button>
       </div>
 
-      <div class="container">
-        <div id="exteriorCar1" class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                id="exteriorProductImage1"
-                class="car-image"
-                src="./assets/images/proimg1.jpg"
-                alt="Car 1 Exterior"
-              />
-            </div>
+      <div id="exteriorCar1" class="swiper-container" style="padding-top: 20px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              id="exteriorProductImage1"
+              class="car-image"
+              src="./assets/images/proimg1.jpg"
+              alt="Car 1 Exterior"
+            />
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-        <div class="colors" id="exteriorColors1">
-          <div class="color-scroll-container">
-            <img
-              class="color-image"
-              src="./assets/images/procar2.jpg"
-              onclick="changeCar(this, 'exteriorProductImage1')"
-            />
-            <img
-              class="color-image"
-              src="./assets/images/procar3.jpg"
-              onclick="changeCar(this, 'exteriorProductImage1')"
-            />
-            <img
-              class="color-image"
-              src="./assets/images/procar4.jpg"
-              onclick="changeCar(this, 'exteriorProductImage1')"
-            />
-            <img
-              class="color-image"
-              src="./assets/images/procar5.jpg"
-              onclick="changeCar(this, 'exteriorProductImage1')"
-            />
-            <img
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="colors" id="exteriorColors1">
+        <div class="color-scroll-container">
+          <img
+            class="color-image"
+            src="./assets/images/procar2.jpg"
+            onclick="changeCar(this, 'exteriorProductImage1')"
+          />
+          <img
+            class="color-image"
+            src="./assets/images/procar3.jpg"
+            onclick="changeCar(this, 'exteriorProductImage1')"
+          />
+          <img
+            class="color-image"
+            src="./assets/images/procar4.jpg"
+            onclick="changeCar(this, 'exteriorProductImage1')"
+          />
+          <img
+            class="color-image"
+            src="./assets/images/procar5.jpg"
+            onclick="changeCar(this, 'exteriorProductImage1')"
+          />
+          <img
             class="color-image"
             src="./assets/images/procar6.jpg"
             onclick="changeCar(this, 'exteriorProductImage1')"
           />
-          </div>
         </div>
       </div>
     </div>
