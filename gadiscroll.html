@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories UI</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+     .btn-link:hover{
+    border:2px solid white !important;
+}
+      .accordion-button::after {
+        margin-left: auto;
+      }
+
+      .category-item {
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 2px solid #ddd;
+      }
+
+      .category-item:hover {
+        background-color: #f8f8f8;
+      }
+
+      .sub-category {
+        padding-left: 20px;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .accordion-button:not(.collapsed) {
+        color: #0d6efd;
+        background-color: #e7f1ff;
+      }
+
+      .accordion-button .icon {
+        margin-right: 10px;
+      }
+
+      .accordion-button.collapsed .icon {
+        transform: rotate(0deg);
+      }
+
+      .accordion-button:not(.collapsed) .icon {
+        transform: rotate(90deg);
+      }
+
+      .icon {
+        transition: transform 0.3s ease;
+      }
+      .btn {
+        padding: 0 !important;
+      }
+      .list-group-item {
+        padding: 10px !important;
+        border: 2px solid black;
+      }
+      .list-group-item:hover{
+        border: 0 !important;
+
+      }
+      .list-group-item+.list-group-item :active {
+    border: 0 !important;
+}
+      h3 {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        color: darkblue !important;
+        text-align: left !important;
+        padding-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="d-flex">
+      <aside class="bg-black p-3 flex-shrink-0" style="width: 25%;background: #000;">
+        <ul class="list-unstyled">
+          <li
+            class="my-2 category-item "
+            data-toggle="collapse"
+            data-target="#groceriesSubCategories"
+            aria-expanded="true"
+            aria-controls="groceriesSubCategories"
+          >
+        <a href="" style="font-size:20px; font-weight: bold; color: darkblue; color: white; "> Brand</a>
+          </li>
+          <li
+            class="my-2 category-item"
+            data-toggle="collapse"
+            data-target="#premiumFruitsSubCategories"
+            aria-expanded="false"
+            aria-controls="premiumFruitsSubCategories"
+          >
+          <a href="" >
+            <img src="./assets/images/hero-logo.png" alt="here" style="max-width: 50px; text-align: center; border-radius: 100%;">
+            <p class="text-center text-white" >Hero</p>
+            </a>
+          </li>
+          <li
+            class="my-2 category-item"
+            data-toggle="collapse"
+            data-target="#homeKitchenSubCategories"
+            aria-expanded="false"
+            aria-controls="homeKitchenSubCategories"
+          >
+          <a href="" >
+            <img src="./assets/images/bajaj-logo.png" alt="here" style="max-width: 50px; text-align: center; border-radius: 100%;">
+            <p class="text-center text-white" >Bajaj</p>
+            </a>
+          </li>
+          <li
+            class="my-2 category-item"
+            data-toggle="collapse"
+            data-target="#fashionSubCategories"
+            aria-expanded="false"
+            aria-controls="fashionSubCategories"
+          >
+          <a href="" >
+            <img src="./assets/images/mahindra.jpg" alt="here" style="max-width: 50px; text-align: center; border-radius: 100%;">
+            <p class="text-center text-white" >mahindra</p>
+            </a>
+          </li>
+          <li
+            class="my-2 category-item "
+            data-toggle="collapse"
+            data-target="#groceriesSubCategories"
+            aria-expanded="true"
+            aria-controls="groceriesSubCategories"
+          >
+        <a href="" style="font-size:20px; font-weight: bold; color: darkblue; color: white; "> Brand</a>
+          </li>
+          <li
+            class="my-2 category-item"
+            data-toggle="collapse"
+            data-target="#premiumFruitsSubCategories"
+            aria-expanded="false"
+            aria-controls="premiumFruitsSubCategories"
+          >
+          <a href="" >
+            <img src="./assets/images/hero-logo.png" alt="here" style="max-width: 50px; text-align: center; border-radius: 100%;">
+            <p class="text-center text-white" >Hero</p>
+            </a>
+          </li>
+          <li
+            class="my-2 category-item"
+            data-toggle="collapse"
+            data-target="#homeKitchenSubCategories"
+            aria-expanded="false"
+            aria-controls="homeKitchenSubCategories"
+          >
+          <a href="" >
+            <img src="./assets/images/bajaj-logo.png" alt="here" style="max-width: 50px; text-align: center; border-radius: 100%;">
+            <p class="text-center text-white" >Bajaj</p>
+            </a>
+          </li>
+          <li
+            class="my-2 category-item"
+            data-toggle="collapse"
+            data-target="#fashionSubCategories"
+            aria-expanded="false"
+            aria-controls="fashionSubCategories"
+          >
+          <a href="" >
+            <img src="./assets/images/mahindra.jpg" alt="here" style="max-width: 50px; text-align: center; border-radius: 100%;">
+            <p class="text-center text-white" >mahindra</p>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="flex-grow-1 p-3">
+        <div class="accordion" id="categoriesAccordion">
+          <div class="card">
+            <div class="card-header" id="headingGroceries" style="background-color: black !important;">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link" style="color: white; font-weight: bold; font-size: 24px;"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#groceriesSubCategories"
+                  aria-expanded="true"
+                  aria-controls="groceriesSubCategories"
+                >
+                  <!-- <i class="fas fa-chevron-right icon"> -->
+
+                  </i> Modal
+                </button>
+              </h5>
+            </div>
+            <div
+              id="groceriesSubCategories"
+              class="collapse show"
+              aria-labelledby="headingGroceries"
+              data-parent="#categoriesAccordion"
+            >
+              <div class="card-body" style="border: 2px solid black;">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#biscuitsSubCategory"
+                      aria-expanded="false"
+                      aria-controls="biscuitsSubCategory"
+                    >
+                      <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Hero Modal</h3>
+                      </div>
+                      <!-- <i class="fas fa-chevron-right icon me-5"></i> -->
+                    </button>
+                    <div id="biscuitsSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Digestive Biscuits</li>
+                        <li class="list-group-item">Chocolate Biscuits</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#chipsSubCategory"
+                      aria-expanded="false"
+                      aria-controls="chipsSubCategory"
+                    >
+                    <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Honda Modal</h3>
+                      </div>
+                    </button>
+                    <div id="chipsSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Potato Chips</li>
+                        <li class="list-group-item">Corn Chips</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#cookiesSubCategory"
+                      aria-expanded="false"
+                      aria-controls="cookiesSubCategory"
+                    >
+                    <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Hero Modal</h3>
+                      </div>
+                    </button>
+                    <div id="cookiesSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Oatmeal Cookies</li>
+                        <li class="list-group-item">Chocolate Chip Cookies</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#chocolatesSubCategory"
+                      aria-expanded="false"
+                      aria-controls="chocolatesSubCategory"
+                    >
+                    <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Hero Modal</h3>
+                      </div>
+                    </button>
+                    <div id="chocolatesSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Milk Chocolate</li>
+                        <li class="list-group-item">Dark Chocolate</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#sweetsSubCategory"
+                      aria-expanded="false"
+                      aria-controls="sweetsSubCategory"
+                    >
+                    <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Hero Modal</h3>
+                      </div>
+                    </button>
+                    <div id="sweetsSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Gulab Jamun</li>
+                        <li class="list-group-item">Jalebi</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#drinksSubCategory"
+                      aria-expanded="false"
+                      aria-controls="drinksSubCategory"
+                    >
+                    <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Hero Modal</h3>
+                      </div>
+                    </button>
+                    <div id="drinksSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Orange Juice</li>
+                        <li class="list-group-item">Apple Juice</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#cerealsSubCategory"
+                      aria-expanded="false"
+                      aria-controls="cerealsSubCategory"
+                    >
+                    <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Hero Modal</h3>
+                      </div>
+                    </button>
+                    <div id="cerealsSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Cornflakes</li>
+                        <li class="list-group-item">Oats</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#noodlesSubCategory"
+                      aria-expanded="false"
+                      aria-controls="noodlesSubCategory"
+                    >
+                    <div class="d-flex">
+                        <img
+                          src="./assets/images/herotry.png"
+                          alt="hero"
+                          style="max-width: 50%; border-radius: 8px"
+                        />
+                        <h3 class="my-auto pe-2">Hero Modal</h3>
+                      </div>
+                    </button>
+                    <div id="noodlesSubCategory" class="collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item">Instant Noodles</li>
+                        <li class="list-group-item">Spaghetti</li>
+                        <!-- Add more items here -->
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
