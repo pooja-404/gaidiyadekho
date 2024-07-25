@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volkswagen Four Wheeler</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef7f9;
+        margin: 0;
+        padding: 10px;
+      }
+
+      .car-comparison {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .car-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+          4px 4px 8px rgba(0, 0, 0, 0.15), 6px 6px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 45%;
+        transition: transform 0.3s;
+      }
+
+      .car-card:hover {
+        transform: scale(1.05);
+      }
+
+      .car-image {
+        width: 100%;
+        height: 100px;
+        display: block;
+      }
+
+      .car-details {
+        padding: 10px;
+        text-align: center;
+        background: white;
+        height: 42px;
+      }
+
+      .variant {
+        font-size: 11px !important;
+        margin: 0;
+        font-weight: 700 !important;
+        color: black !important;
+        text-shadow: none !important;
+      }
+
+      .price {
+        font-size: 12px !important;
+        color: black !important;
+        font-weight: 700 !important;
+        margin-top: 5px;
+        text-shadow: none !important;
+      }
+      h2 {
+        font-weight: 900;
+        font-size: 25px;
+      }
+
+      .card img {
+        width: 100%;
+        height: 110px;
+      }
+
+      .card-info {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h2 style="text-align: center">Volkswagen Four Wheeler</h2>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                Volkswagen Taigun 
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero2.png"
+                alt="Car 2"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                  "
+                >
+                Volkswagen Taigun Sport
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                    text-wrap: nowrap;
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero3.png"
+                alt="Car 2"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                  "
+                >
+                Volkswagen Virtus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero4.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                Volkswagen Virtus GT Edge
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero5.png"
+                alt="Car 2"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                  "
+                >
+                Volkswagen Taigun GT Edge
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                    text-wrap: nowrap;
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero6.png"
+                alt="Car 2"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                  "
+                >
+                Volkswagen Tiguan
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4); /* Unique text shadow */
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+  </body>
+</html>
