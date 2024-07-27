@@ -1,0 +1,3383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eicher Bus</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef7f9;
+        margin: 0;
+        padding: 10px;
+      }
+
+      .car-comparison {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .car-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+          4px 4px 8px rgba(0, 0, 0, 0.15), 6px 6px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 45%;
+        transition: transform 0.3s;
+      }
+
+      .car-card:hover {
+        transform: scale(1.05);
+      }
+
+      .car-image {
+        width: 100%;
+        height: 87px;
+        display: block;
+      }
+
+      .car-details {
+        padding: 6px;
+        text-align: center;
+        background: white;
+        height: 64px;
+      }
+
+      .variant {
+        font-size: 11px !important;
+        margin: 0;
+        font-weight: 700 !important;
+        color: black !important;
+        text-shadow: none !important;
+      }
+
+      .price {
+        font-size: 12px !important;
+        color: black !important;
+        font-weight: 700 !important;
+        margin-top: 5px;
+        text-shadow: none !important;
+      }
+      h2 {
+        font-weight: 900;
+        font-size: 25px;
+      }
+
+      .card img {
+        width: 100%;
+        height: 110px;
+      }
+
+      .card-info {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h2 style="text-align: center">Eicher Bus</h2>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3009H School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3009H AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3010L School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3010L AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011H School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011K School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011L School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2075H School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2075H AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2090L School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2090L AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2112M School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2050C School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2050D School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2050D AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2070E School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2070E AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2070E CNG School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H CNG School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H CNG AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L CNG School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L CNG AC School Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 6016M LPO Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 6016N LPO Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3009H Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3010L Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3010L AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011H Wider Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011K Wider Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011L Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011L AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011L Wider Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2075H Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2075H AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline 2090L Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2050C Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2050D Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2050D AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2050D Supermaxx AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2070E Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2070E AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2070E CNG Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2070E CNG AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H CNG Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2075H CNG AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L CNG Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline 2090L CNG AC Staff Bus
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3009H Route Permit
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3010L Route Permit
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline Pro 3011L Route Permit
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Skyline RP 2112M
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline RP 2075H
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Starline RP 2090L
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 6016H LP
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 6016 M LP
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 6016 M LPO
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 6016 N LPO
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 6016 R LPO
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2050 Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2050D Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2070E AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2075G AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2075H AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2075H Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2090L AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2090L Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2112M AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher 2112M Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Pro 3009H AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Pro 3009H Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Pro 3009K AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Pro 3010 L AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Pro 3011H Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Pro 3011L AC Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Pro 3011L Chassis
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Coach
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="car-comparison">
+            <div class="car-card">
+              <img
+                src="./assets/images/hero1.png"
+                alt="Car 1"
+                class="car-image"
+              />
+              <div class="car-details">
+                <h2
+                  class="variant"
+                  style="
+                    font-size: 11px;
+                    margin: 0;
+                    font-weight: 600;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Eicher Sleeper
+                </h2>
+                <p
+                  class="price"
+                  style="
+                    font-size: 11px;
+                    color: white;
+                    font-weight: 500;
+                    margin-top: 5px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                      -1px -1px 2px rgba(255, 255, 255, 0.4);
+                  "
+                >
+                  Price: $40,000
+                </p>
+              </div>
+            </div>
+            <div class="car-card"></div>
+            <div class="car-card"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
