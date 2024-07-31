@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Categories</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+      }
+
+      .sidebar {
+        width: 250px;
+        background-color: #fff;
+        padding: 20px;
+        border-right: 1px solid #ddd;
+      }
+
+      .sidebar h2 {
+        margin-top: 0;
+        font-size: 1.2em;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .sidebar li {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .sidebar li:hover {
+        background-color: #f0f0f0;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .main-content h2 {
+        font-size: 1.5em;
+        margin-top: 0;
+      }
+
+      .brands,
+      .models {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .brands div,
+      .models div {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        text-align: center;
+      }
+      .brands div img,
+      .models div img {
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 5px;
+      }
+      .brands div:hover,
+      .models div:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Categories</h2>
+        <ul id="category-list">
+          <li data-category="cars">
+            <img
+              src="./assets/images/hero-logo.png"
+              alt="hero"
+              style="max-width: 80px"
+            />
+            <p
+              style="
+                text-align: center;
+                max-width: 80px;
+                font-weight: 600;
+                font-size: 20px;
+              "
+            >
+              Hero
+            </p>
+          </li>
+          <li data-category="bikes">
+            <img
+              src="./assets/images/bajaj-logo.png"
+              alt="hero"
+              style="margin-left: 18px; max-width: 40px"
+            />
+            <p
+              style="
+                text-align: center;
+                max-width: 80px;
+                font-weight: 600;
+                font-size: 20px;
+              "
+            >
+              Bajaj
+            </p>
+          </li>
+          <li data-category="trucks">
+            <img
+              src="./assets/images/mahindra.jpg"
+              alt="hero"
+              style="max-width: 80px"
+            />
+            <p
+              style="
+                text-align: center;
+                max-width: 80px;
+                font-weight: 600;
+                font-size: 20px;
+              "
+            >
+              Mahindra
+            </p>
+          </li>
+          <!-- Add more categories as needed -->
+        </ul>
+      </aside>
+      <main class="main-content">
+        <h2 id="selected-category">Select a category</h2>
+        <div id="brands" class="brands">
+          <!-- Brands will be loaded here -->
+        </div>
+        <div id="models" class="models">
+          <!-- Models will be loaded here -->
+        </div>
+      </main>
+    </div>
+    <script>
+      const categories = {
+        cars: {
+          brands: {
+            Toyota: {
+              models: ["Camry", "Corolla", "Prius"],
+              image: "./assets/images/hero1.png", // Update with the correct image path
+            },
+            Honda: {
+              models: ["Civic", "Accord", "Fit"],
+              image: "./assets/images/hero2.png", // Update with the correct image path
+            },
+            Ford: {
+              models: ["Mustang", "Fusion", "Focus"],
+              image: "./assets/images/hero3.png", // Update with the correct image path
+            },
+          },
+        },
+        bikes: {
+          brands: {
+            Yamaha: {
+              models: ["YZF-R3", "MT-07", "FZ-09"],
+              image: "path/to/yamaha-image.jpg", // Update with the correct image path
+            },
+            Suzuki: {
+              models: ["GSX-R750", "SV650", "V-Strom 650"],
+              image: "path/to/suzuki-image.jpg", // Update with the correct image path
+            },
+            Ducati: {
+              models: ["Panigale V2", "Scrambler", "Monster"],
+              image: "path/to/ducati-image.jpg", // Update with the correct image path
+            },
+          },
+        },
+        trucks: {
+          brands: {
+            Ford: {
+              models: ["F-150", "Ranger", "Super Duty"],
+              image: "path/to/ford-truck-image.jpg", // Update with the correct image path
+            },
+            Ram: {
+              models: ["1500", "2500", "3500"],
+              image: "path/to/ram-image.jpg", // Update with the correct image path
+            },
+            Chevrolet: {
+              models: ["Silverado", "Colorado", "Avalanche"],
+              image: "path/to/chevrolet-image.jpg", // Update with the correct image path
+            },
+          },
+        },
+      };
+
+      const categoryList = document.getElementById("category-list");
+      const selectedCategoryElem = document.getElementById("selected-category");
+      const brandsDiv = document.getElementById("brands");
+      const modelsDiv = document.getElementById("models");
+
+      categoryList.addEventListener("click", (e) => {
+        if (e.target.tagName === "LI") {
+          const selectedCategory = e.target.dataset.category;
+          displayBrands(selectedCategory);
+          selectedCategoryElem.textContent = e.target.textContent;
+          modelsDiv.innerHTML = "";
+        }
+      });
+
+      function displayBrands(category) {
+        const brands = Object.keys(categories[category].brands);
+        brandsDiv.innerHTML = "";
+        brands.forEach((brand) => {
+          const brandDiv = document.createElement("div");
+          const brandImg = document.createElement("img");
+          const brandName = document.createElement("div");
+
+          brandImg.src = categories[category].brands[brand].image;
+          brandName.textContent = brand;
+
+          brandDiv.appendChild(brandImg);
+          brandDiv.appendChild(brandName);
+          brandDiv.addEventListener("click", () =>
+            displayModels(category, brand)
+          );
+          brandsDiv.appendChild(brandDiv);
+        });
+      }
+
+      function displayModels(category, brand) {
+        const models = categories[category].brands[brand].models;
+        modelsDiv.innerHTML = "";
+        models.forEach((model) => {
+          const modelDiv = document.createElement("div");
+          modelDiv.textContent = model;
+          modelsDiv.appendChild(modelDiv);
+        });
+      }
+    </script>
+  </body>
+</html>

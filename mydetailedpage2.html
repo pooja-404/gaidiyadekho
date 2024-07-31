@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scooter Detailed Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1a1a1a;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        /* display: flex; */
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .scooter-details {
+        flex: 1;
+        padding-right: 20px;
+      }
+
+      .scooter-details h1 {
+        font-size: 36px;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+
+      .scooter-details .price {
+        font-size: 24px;
+        color: #4caf50;
+        font-weight: 600;
+      }
+
+      .scooter-details .specs {
+        margin-top: 20px;
+      }
+
+      .spec-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .spec-item span {
+        margin-left: 10px;
+        font-size: 18px;
+      }
+
+      .scooter-image-container {
+        flex: 1;
+        text-align: center;
+      }
+
+      .scooter-image {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      .color-options {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .color-option {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+
+      .color-option.active {
+        border-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="scooter-details">
+        <h1 id="scooter-name"></h1>
+        <div class="scooter-image-container">
+          <img
+            id="scooter-image"
+            src=""
+            alt="Scooter Image"
+            class="scooter-image"
+          />
+        </div>
+        <div class="price" id="scooter-price"></div>
+
+        <div class="specs">
+          <div class="spec-item">
+            <span>55 km</span>
+            <span>Certified Range</span>
+          </div>
+          <div class="spec-item">
+            <span>25 km/h</span>
+            <span>Top Speed</span>
+          </div>
+          <div class="spec-item">
+            <span>6-8 Hrs</span>
+            <span>Charging Time</span>
+          </div>
+          <div class="spec-item">
+            <span>✔️</span>
+            <span>BLDC Motor (250 watt)</span>
+          </div>
+          <div class="spec-item">
+            <span>✔️</span>
+            <span>Branded Tubeless Tyre</span>
+          </div>
+          <div class="spec-item">
+            <span>✔️</span>
+            <span>Hydraulic Suspension</span>
+          </div>
+          <div class="spec-item">
+            <span>✔️</span>
+            <span>Regenerating Breaking System</span>
+          </div>
+        </div>
+        <div class="color-options">
+          <div
+            class="color-option"
+            data-color="white"
+            style="background-color: #fff"
+            onclick="changeColor('white')"
+          ></div>
+          <div
+            class="color-option"
+            data-color="black"
+            style="background-color: #000"
+            onclick="changeColor('black')"
+          ></div>
+          <div
+            class="color-option"
+            data-color="red"
+            style="background-color: #ff0000"
+            onclick="changeColor('red')"
+          ></div>
+          <div
+            class="color-option"
+            data-color="gray"
+            style="background-color: #808080"
+            onclick="changeColor('gray')"
+          ></div>
+          <div
+            class="color-option"
+            data-color="blue"
+            style="background-color: #0000ff"
+            onclick="changeColor('blue')"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const scooterName = params.get("scooter");
+
+        const scooterData = {
+          Amber: {
+            name: "Amber",
+            baseImage: "./assets/images/yakuza.jpg",
+            price: "₹53,500.00",
+            colors: {
+              white: "./assets/images/yakuja3.jpg",
+              black: "./assets/images/yakuza_black.jpg",
+              red: "./assets/images/red.jpg",
+              gray: "./assets/images/gray.jpg",
+              blue: "./assets/images/blue.jpg",
+            },
+            details: [
+              "55 km Certified Range",
+              "25 km/h Top Speed",
+              "6-8 Hrs Charging Time",
+              "BLDC Motor (250 watt)",
+              "Branded Tubeless Tyre",
+              "Hydraulic Suspension",
+              "Regenerating Breaking System",
+            ],
+          },
+          AQABA: {
+            name: "AQABA",
+            baseImage: "./assets/images/yakuja2.jpg",
+            price: "₹60,000.00",
+            colors: {
+              white: "./assets/images/yakuja2_white.jpg",
+              black: "./assets/images/yakuja2_black.jpg",
+              red: "./assets/images/yakuja2_red.jpg",
+              gray: "./assets/images/yakuja2_gray.jpg",
+              blue: "./assets/images/yakuja2_blue.jpg",
+            },
+            details: [
+              "55 km Certified Range",
+              "25 km/h Top Speed",
+              "6-8 Hrs Charging Time",
+              "BLDC Motor (250 watt)",
+              "Branded Tubeless Tyre",
+              "Hydraulic Suspension",
+              "Regenerating Breaking System",
+            ],
+          },
+        };
+
+        if (scooterData[scooterName]) {
+          const scooter = scooterData[scooterName];
+          document.getElementById("scooter-name").textContent = scooter.name;
+          document.getElementById("scooter-image").src = scooter.baseImage;
+          document.getElementById("scooter-price").textContent = scooter.price;
+
+          const colorOptions = document.querySelectorAll(".color-option");
+          colorOptions.forEach((option) => {
+            if (option.getAttribute("data-color") === "white") {
+              option.classList.add("active");
+            }
+            option.addEventListener("click", () => {
+              colorOptions.forEach((opt) => opt.classList.remove("active"));
+              option.classList.add("active");
+            });
+          });
+        } else {
+          document.getElementById("scooter-name").textContent =
+            "Scooter not found";
+        }
+      });
+
+      function changeColor(color) {
+        const params = new URLSearchParams(window.location.search);
+        const scooterName = params.get("scooter");
+
+        const scooterData = {
+          Amber: {
+            colors: {
+              white: "./assets/images/yakuja3.jpg",
+              black: "./assets/images/black.jpg",
+              red: "./assets/images/red.jpg",
+              gray: "./assets/images/gray.jpg",
+              blue: "./assets/images/blue.jpg",
+            },
+          },
+          AQABA: {
+            colors: {
+              white: "./assets/images/yakuja2_white.jpg",
+              black: "./assets/images/yakuja2_black.jpg",
+              red: "./assets/images/yakuja2_red.jpg",
+              gray: "./assets/images/yakuja2_gray.jpg",
+              blue: "./assets/images/yakuja2_blue.jpg",
+            },
+          },
+        };
+
+        const scooter = scooterData[scooterName];
+        document.getElementById("scooter-image").src = scooter.colors[color];
+      }
+    </script>
+  </body>
+</html>

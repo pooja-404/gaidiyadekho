@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Design</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .category-card {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      width: 200px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    .category-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .category-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 15px 0;
+    }
+    .category-description {
+      font-size: 14px;
+      color: #666;
+      padding: 0 10px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center">Categories</h1>
+    <div class="category-container">
+      <div class="category-card">
+        <img src="https://via.placeholder.com/200x150" alt="Category 1" class="category-image">
+        <div class="category-title">Category 1</div>
+        <div class="category-description">Description of Category 1</div>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/200x150" alt="Category 2" class="category-image">
+        <div class="category-title">Category 2</div>
+        <div class="category-description">Description of Category 2</div>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/200x150" alt="Category 3" class="category-image">
+        <div class="category-title">Category 3</div>
+        <div class="category-description">Description of Category 3</div>
+      </div>
+      <!-- Add more categories as needed -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
