@@ -12,38 +12,57 @@
       }
       .compare-card {
         display: flex;
-        justify-content: space-between;
-        margin: 5px;
+        flex-direction: column;
+        margin: 10px;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         position: relative;
       }
+      .card-details {
+        text-align: left;
+        font-size: 13px;
+        font-weight: 600;
+      }
       .card {
-        flex: 1;
+        display: flex;
+        flex-direction: column;
         padding: 10px;
-        box-sizing: border-box;
+        border-bottom: 1px solid #c7c4c4;
+        position: relative;
       }
-      .card:first-child {
-        border-right: 1px solid #f0f0f0;
-      }
-      .card-title {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 8px;
+      .card:last-child {
+        border-bottom: none;
       }
       .card-thumb {
         position: relative;
-        height: 100px;
-        overflow: hidden;
-        border-radius: 10px;
-        margin-bottom: 15px;
+        width: 160px;
+        height: 133px;
+        margin-bottom: 10px;
       }
       .card-thumb img {
         width: 100%;
-        height: 100%;
+        height: 88%;
+        border-radius: 10px;
         object-fit: cover;
+      }
+      .card-title {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .price {
+        font-size: 13px;
+        font-weight: 600;
+        /* color: red; */
+        text-wrap: nowrap;
+      }
+      .price-text {
+        color: red;
+        font-weight: 600;
+        font-size: 14px;
+        text-wrap: nowrap;
       }
       .vs {
         width: 38px;
@@ -55,57 +74,13 @@
         align-items: center;
         color: #fff;
         position: absolute;
-        top: 34%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 3;
       }
-      .card-content {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      p {
-        margin: 0;
-      }
-      h2 {
-        margin: 0;
-      }
-      .price,
-      .on-road-price,
-      .details {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 10px;
-        font-size: 600 !important;
-        margin: 0 !important;
-      }
-      .price span,
-      .on-road-price span {
-        font-size: 12px;
-        font-weight: 700;
-        margin: 0 !important;
-        color: red;
-      }
-      .details p {
-        margin: 0;
-        color: #666;
-        font-weight: 600;
-        font-size: 10px;
-        margin: 0;
-      }
-      .details select {
-        padding: 1px;
-        font-size: 12px;
-        /* background: linear-gradient(45deg, #1d07e4, #05226d); */
-        width: 67px;
-        border-radius: 4px;
-        font-weight: 600;
-      }
-
       .accordion {
-        margin-top: 20px;
+        margin: 20px 10px;
         padding: 15px;
         box-shadow: 0 0 4px 4px #ccc;
         border-radius: 12px;
@@ -153,98 +128,89 @@
         color: #fff;
       }
       .table {
-        width: 100%;
         display: flex;
         justify-content: space-between;
         border-bottom: 2px solid #ccc;
         padding: 10px 0;
-        margin-bottom: 0;
       }
       .table p {
         font-size: 13px;
         font-weight: 700;
-        margin-bottom: 0px;
+        margin: 0;
       }
+      .card-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        margin-bottom: -15px;
+      }
+      .detailed {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+      }
+      /* .card-main-detailed{
+        margin-left: 20px;
+      } */
+       .cards{
+      display: flex;
+       }
     </style>
   </head>
   <body>
     <div class="compare-card">
       <div class="card">
-        <div class="card-thumb">
-          <img src="./assets/images/external1.jpeg" alt="mahindra" />
+        <div class="card-flex">
+          <div class="card-thumb">
+            <img src="./assets/images/external1.jpeg" alt="Mahindra XUV 500" />
+          </div>
+          <div class="card-main-detailed">
+            <div class="card-title">Mahindra XUV 500</div>
+            <div class="price">
+              Price: <span class="price-text">₹8.50 Lakh</span>
+            </div>
+            <div class="price">
+              On-Road Price: <span class="price-text">₹9.00 Lakh</span>
+            </div>
+          </div>
         </div>
-        <div class="card-title">Mahindra XUV 500</div>
-        <div class="card-content">
-          <div class="price">
-            <p style="margin: 0; font-weight: 600">Price</p>
-            <span>₹8.50 Lakh</span>
+        <div class="card-details">
+          <div class="detailed">
+            <div>Fuel Type: Diesel</div>
+            <div>Transmission: Manual</div>
           </div>
-          <div class="on-road-price">
-            <p style="font-weight: 600">On-Road Price</p>
-            <span>₹9.20 Lakh</span>
-          </div>
-          <div class="details">
-            <p>Fuel Type</p>
-            <select>
-              <option>Petrol</option>
-              <option>Diesel</option>
-            </select>
-          </div>
-          <div class="details">
-            <p>Transmission</p>
-            <select>
-              <option>Manual</option>
-              <option>Automatic</option>
-            </select>
-          </div>
-          <div class="details">
-            <p>Engine Displacement (cc)</p>
-            <span>2179 cc</span>
-          </div>
-
-          <div class="details">
-            <p>Mileage</p>
-            <span>15 km/l</span>
+          <div class="detailed">
+            <div>Engine Capacity: 2179cc</div>
+            <div>Mileage: 15 kmpl</div>
           </div>
         </div>
       </div>
       <span class="vs">VS</span>
       <div class="card">
-        <div class="card-thumb">
-          <img src="./assets/images/external2.jpeg" alt="mahindra" />
+        <div class="card-flex">
+          <div class="card-thumb">
+            <img src="./assets/images/external2.jpeg" alt="Maruti Wagon R" />
+          </div>
+          <div>
+            <div class="card-title">Maruti Wagon R</div>
+            <div class="price">
+              Price: <span class="price-text">₹5.50 Lakh</span>
+            </div>
+            <div class="price">
+              On-Road Price: <span class="price-text">₹6.00 Lakh</span>
+            </div>
+          </div>
         </div>
-        <div class="card-title">Maruti Wagon R</div>
-        <div class="card-content">
-          <div class="price">
-            <p style="margin: 0; font-weight: 600">Price</p>
-            <span>₹8.50 Lakh</span>
+        <div class="card-details">
+          <div class="detailed">
+            <div>Fuel Type: Petrol</div>
+            <div>Transmission: Automatic</div>
           </div>
-          <div class="on-road-price">
-            <p style="font-weight: 600">On-Road Price</p>
-            <span>₹9.20 Lakh</span>
-          </div>
-          <div class="details">
-            <p>Fuel Type</p>
-            <select>
-              <option>Petrol</option>
-              <option>Diesel</option>
-            </select>
-          </div>
-          <div class="details">
-            <p>Transmission</p>
-            <select>
-              <option>Manual</option>
-              <option>Automatic</option>
-            </select>
-          </div>
-          <div class="details">
-            <p>Engine Displacement (cc)</p>
-            <span>2179 cc</span>
-          </div>
-
-          <div class="details">
-            <p>Mileage</p>
-            <span>15 km/l</span>
+          <div class="detailed">
+            <div>Engine Capacity: 1197cc</div>
+            <div>Mileage: 21 kmpl</div>
           </div>
         </div>
       </div>
@@ -257,54 +223,50 @@
         </div>
         <div class="accordion-item-body">
           <div class="accordion-item-body-content">
-            <h3 style="padding-bottom: 10px; font-size: 16px; font-weight: 700">
-              ENGINE AND GEAR
-            </h3>
-            <div style="width: 100%; height: 200px; overflow-y: scroll">
-              <div class="table">
-                <p>Engine Type</p>
-                <p>mDi Tech, BS-VI (With EGR + SCR Technology)</p>
-              </div>
-              <div class="table">
-                <p>Engine Power</p>
-                <p>103 kW @ 2400 r/min</p>
-              </div>
-              <div class="table">
-                <p>Engine Capacity</p>
-                <p>3500cc</p>
-              </div>
-              <div class="table">
-                <p>No of Cylinders</p>
-                <p>4</p>
-              </div>
-              <div class="table">
-                <p>Torque</p>
-                <p>525 Nm @ 1250 - 1800 r/min (with multi-mode)</p>
-              </div>
-              <div class="table">
-                <p>Gear Box</p>
-                <p>6-Speed</p>
-              </div>
-              <div class="table">
-                <p>Transmission</p>
-                <p>Manual</p>
-              </div>
-              <div class="table">
-                <p>Clutch type</p>
-                <p>Diameter organic clutch</p>
-              </div>
-              <div class="table">
-                <p>Clutch</p>
-                <p>362 mm</p>
-              </div>
-              <div class="table">
-                <p>Emission Type</p>
-                <p>BS6</p>
-              </div>
-              <div class="table">
-                <p>Fuel Type</p>
-                <p>Diesel</p>
-              </div>
+            <h3>ENGINE AND GEAR</h3>
+            <div class="table">
+              <p>Engine Type</p>
+              <p>mDi Tech, BS-VI (With EGR + SCR Technology)</p>
+            </div>
+            <div class="table">
+              <p>Engine Power</p>
+              <p>103 kW @ 2400 r/min</p>
+            </div>
+            <div class="table">
+              <p>Engine Capacity</p>
+              <p>3500cc</p>
+            </div>
+            <div class="table">
+              <p>No of Cylinders</p>
+              <p>4</p>
+            </div>
+            <div class="table">
+              <p>Torque</p>
+              <p>525 Nm @ 1250 - 1800 r/min (with multi-mode)</p>
+            </div>
+            <div class="table">
+              <p>Gear Box</p>
+              <p>6-Speed</p>
+            </div>
+            <div class="table">
+              <p>Transmission</p>
+              <p>Manual</p>
+            </div>
+            <div class="table">
+              <p>Clutch type</p>
+              <p>Diameter organic clutch</p>
+            </div>
+            <div class="table">
+              <p>Clutch</p>
+              <p>362 mm</p>
+            </div>
+            <div class="table">
+              <p>Emission Type</p>
+              <p>BS6</p>
+            </div>
+            <div class="table">
+              <p>Fuel Type</p>
+              <p>Diesel</p>
             </div>
           </div>
         </div>
@@ -316,46 +278,42 @@
         </div>
         <div class="accordion-item-body">
           <div class="accordion-item-body-content">
-            <h3 style="padding-bottom: 10px; font-size: 18px; font-weight: 700">
-              DIMENSIONS
-            </h3>
-            <div style="width: 100%; height: 200px; overflow-y: scroll">
-              <div class="table">
-                <p>Overall Lenght</p>
-                <p>5796 mm / 6100 mm / 6711 mm / 7320 mm</p>
-              </div>
-              <div class="table">
-                <p>Overall Width</p>
-                <p>2135 mm / 2288 mm</p>
-              </div>
-              <div class="table">
-                <p>Overall Height</p>
-                <p>1900 mm</p>
-              </div>
-              <div class="table">
-                <p>Loading Area Length</p>
-                <p>Na</p>
-              </div>
-              <div class="table">
-                <p>Wheel Base</p>
-                <p>4500 mm</p>
-              </div>
-              <div class="table">
-                <p>Kerb Weight</p>
-                <p>Na</p>
-              </div>
-              <div class="table">
-                <p>Gross Weight</p>
-                <p>14050kg</p>
-              </div>
-              <div class="table">
-                <p>Fuel Tank Capacity</p>
-                <p>190 L (160 litre Optional)</p>
-              </div>
-              <div class="table">
-                <p>Chassis Frame</p>
-                <p>Ladder Type</p>
-              </div>
+            <h3>DIMENSIONS</h3>
+            <div class="table">
+              <p>Overall Length</p>
+              <p>5796 mm / 6100 mm / 6711 mm / 7320 mm</p>
+            </div>
+            <div class="table">
+              <p>Overall Width</p>
+              <p>2135 mm / 2288 mm</p>
+            </div>
+            <div class="table">
+              <p>Overall Height</p>
+              <p>1900 mm</p>
+            </div>
+            <div class="table">
+              <p>Loading Area Length</p>
+              <p>Na</p>
+            </div>
+            <div class="table">
+              <p>Wheel Base</p>
+              <p>4500 mm</p>
+            </div>
+            <div class="table">
+              <p>Kerb Weight</p>
+              <p>Na</p>
+            </div>
+            <div class="table">
+              <p>Gross Weight</p>
+              <p>14050kg</p>
+            </div>
+            <div class="table">
+              <p>Fuel Tank Capacity</p>
+              <p>190 L (160 litre Optional)</p>
+            </div>
+            <div class="table">
+              <p>Chassis Frame</p>
+              <p>Ladder Type</p>
             </div>
           </div>
         </div>
@@ -367,214 +325,84 @@
         </div>
         <div class="accordion-item-body">
           <div class="accordion-item-body-content">
-            <h3 style="padding-bottom: 10px; font-size: 18px; font-weight: 700">
-              TYRES
-            </h3>
-            <div style="width: 100%; height: 200px; overflow-y: scroll">
-              <div class="table">
-                <p>No of Tyres</p>
-                <p>6</p>
-              </div>
-              <div class="table">
-                <p>Front Tyre</p>
-                <p>8.25 R 20</p>
-              </div>
-              <div class="table">
-                <p>Rear Tyre</p>
-                <p>8.25 R 20</p>
-              </div>
-              <div class="table">
-                <p>Tyre Type</p>
-                <p>Tube/Radial</p>
-              </div>
-              <div class="table">
-                <p>Wheel Size</p>
-                <p>20 Inch</p>
-              </div>
+            <h3>TYRES</h3>
+            <div class="table">
+              <p>No of Tyres</p>
+              <p>6</p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header" onclick="toggleAccordion(this)">
-          Brakes and Steering
-          <span>+</span>
-        </div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            <h3 style="padding-bottom: 10px; font-size: 18px; font-weight: 700">
-              BRAKES AND STEERING
-            </h3>
-            <div style="width: 100%; height: 200px; overflow-y: scroll">
-              <div class="table">
-                <p>Parking Brakes</p>
-                <p>Air brakes and ABS</p>
-              </div>
-              <div class="table">
-                <p>Front Brakes</p>
-                <p>Air brakes and ABS</p>
-              </div>
-              <div class="table">
-                <p>Rear Brakes</p>
-                <p>Air brakes and ABS</p>
-              </div>
-              <div class="table">
-                <p>Service Brakes</p>
-                <p>Na</p>
-              </div>
-              <div class="table">
-                <p>Steering</p>
-                <p>Power Steering</p>
-              </div>
+            <div class="table">
+              <p>Front Tyre</p>
+              <p>8.25 R 20</p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header" onclick="toggleAccordion(this)">
-          Axle & Suspension
-          <span>+</span>
-        </div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            <h3 style="padding-bottom: 10px; font-size: 18px; font-weight: 700">
-              AXLE & SUSPENSION
-            </h3>
-            <div style="width: 100%; height: 200px; overflow-y: scroll">
-              <div class="table">
-                <p>Front Axle</p>
-                <p>Forget I Beam-Reverse Elliot Type</p>
-              </div>
-              <div class="table">
-                <p>Rear Axle</p>
-                <p>Na</p>
-              </div>
-              <div class="table">
-                <p>Front Suspension</p>
-                <p>Parabolic leaf spring</p>
-              </div>
-              <div class="table">
-                <p>Rear Suspension</p>
-                <p>Semi Elliptical Leaf Spring</p>
-              </div>
+            <div class="table">
+              <p>Rear Tyre</p>
+              <p>8.25 R 20</p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header" onclick="toggleAccordion(this)">
-          Features
-          <span>+</span>
-        </div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            <h3 style="padding-bottom: 10px; font-size: 18px; font-weight: 700">
-              FEATURES
-            </h3>
-            <div style="width: 100%; height: 200px; overflow-y: scroll">
-              <div class="table">
-                <p>Driver Seat Type</p>
-                <p>Standard</p>
-              </div>
-              <div class="table">
-                <p>AC</p>
-                <p>No</p>
-              </div>
-              <div class="table">
-                <p>Music System</p>
-                <p>No</p>
-              </div>
-              <div class="table">
-                <p>Navigation System</p>
-                <p>No</p>
-              </div>
-              <div class="table">
-                <p>Cruise Control</p>
-                <p>No</p>
-              </div>
-              <div class="table">
-                <p>Mobile Charger Point</p>
-                <p>Yes</p>
-              </div>
-              <div class="table">
-                <p>Battery</p>
-                <p>Na</p>
-              </div>
+            <div class="table">
+              <p>Spare Tyre</p>
+              <p>8.25 R 20</p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header" onclick="toggleAccordion(this)">
-          Compare
-          <span>+</span>
-        </div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            <!-- Compare details -->
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header" onclick="toggleAccordion(this)">
-          Images
-          <span>+</span>
-        </div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            <!-- Images content -->
-            <div class="small-image">
-              <div class="image-wrapper">
-                <img src="./image/truck3.jpg" alt="Truck" />
-              </div>
-              <!-- Add more images as needed -->
+            <div class="table">
+              <p>Front Tyre Pressure</p>
+              <p>110 psi</p>
+            </div>
+            <div class="table">
+              <p>Rear Tyre Pressure</p>
+              <p>110 psi</p>
+            </div>
+            <div class="table">
+              <p>Spare Tyre Pressure</p>
+              <p>110 psi</p>
+            </div>
+            <div class="table">
+              <p>Tyre Size</p>
+              <p>8.25 x 20 16 PR (Optional - 9.00 x 20 16 PR)</p>
+            </div>
+            <div class="table">
+              <p>Wheel Type</p>
+              <p>Na</p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="compare-card">
-      <div class="card">
+      <div class="cards">
         <div class="card-thumb">
           <img src="./assets/images/external1.jpeg" alt="mahindra" />
         </div>
-        <div class="card-title">Mahindra XUV 500</div>
-        <div class="card-content">
-          <div class="price">
-            <p style="margin: 0; font-weight: 600">Price</p>
-            <span>₹8.50 Lakh</span>
-          </div>
+        <div class="card-details">
+          <div class="card-title">Mahindra XUV 500</div>
+          <div class="price">₹8.50 Lakh</div>
         </div>
       </div>
       <span class="vs">VS</span>
-      <div class="card">
+      <div class="cards">
         <div class="card-thumb">
           <img src="./assets/images/external2.jpeg" alt="mahindra" />
         </div>
-        <div class="card-title">Maruti Wagon R</div>
-        <div class="card-content">
-          <div class="price">
-            <p style="margin: 0; font-weight: 600">Price</p>
-            <span>₹8.50 Lakh</span>
-          </div>
-          
+        <div class="card-details">
+          <div class="card-title">Maruti Wagon R</div>
+          <div class="price">₹8.50 Lakh</div>
         </div>
       </div>
     </div>
     <script>
-      document.querySelectorAll(".accordion-item-header").forEach((header) => {
-        header.addEventListener("click", function () {
-          // Close all other accordion items
-          document.querySelectorAll(".accordion-item").forEach((item) => {
-            if (item !== this.parentElement) {
-              item.classList.remove("open");
-            }
-          });
-          // Toggle the clicked accordion item
-          const item = this.parentElement;
-          item.classList.toggle("open");
-        });
-      });
+      function toggleAccordion(element) {
+        const item = element.parentElement;
+        const body = item.querySelector(".accordion-item-body");
+        const plusMinus = item.querySelector(".accordion-item-header span");
+
+        if (item.classList.contains("open")) {
+          body.style.maxHeight = 0;
+          plusMinus.textContent = "+";
+        } else {
+          body.style.maxHeight = body.scrollHeight + "px";
+          plusMinus.textContent = "-";
+        }
+
+        item.classList.toggle("open");
+      }
     </script>
   </body>
 </html>
