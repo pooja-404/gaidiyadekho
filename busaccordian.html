@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .accordion {
+        margin-top: 20px;
+        padding: 15px;
+        box-shadow: 0 0 4px 4px #ccc;
+        border-radius: 12px;
+      }
+      .accordion-item {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .accordion-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: #f4f4f4;
+      }
+      .accordion-item-header:hover {
+        background-color: #e9e9e9;
+      }
+      .accordion-item-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .accordion-item-body-content {
+        padding: 10px;
+      }
+      .accordion-item.open .accordion-item-body {
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      .accordion-item-header span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #000080;
+        color: #fff;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+      }
+      .comparison-table th {
+        background-color: #333;
+        color: #fff;
+        text-align: center !important;
+      }
+      .comparison-table .feature {
+        font-weight: bold;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+      .tick {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      th,
+      td {
+        border: 1px solid #a39b9b;
+        padding: 12px;
+        text-align: center;
+        text-align: center !important;
+      }
+      .td-text {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      th {
+        background-color: #000080;
+        color: white;
+        text-align: center;
+        text-align: center !important;
+      }
+      td span {
+        font-size: 24px;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      @media (max-width: 600px) {
+        th,
+        td {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Bus Wheelers Comparison</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-item-header" onclick="toggleAccordion(this)">
+          Engine and Transmission
+          <span>+</span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            <h3>ENGINE AND TRANSMISSION</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">Airbags</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5 Airbags (Driver, Front Passenger)</td>
+                    <td>2 Airbags (Driver, Front Passenger)</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">CC</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">1197 cc</td>
+                    <td class="td-text">1120 cc</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Mileage</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">23.26 kmpl</td>
+                    <td class="td-text">50.26 kmpl</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Engine Description</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Petrol</td>
+                    <td class="td-text">Desil</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Seating Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">4</td>
+                    <td class="td-text">6</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Transmission Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Manua</td>
+                    <td class="td-text">Automatic</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Brake</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Disc</td>
+                    <td class="td-text">Drum</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Tank Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">37 L</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Acceleration</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Suspension</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Mc Pherson Strut</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header" onclick="toggleAccordion(this)">
+          Dimensions
+          <span>+</span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            <h3>DIMENSIONS</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">Airbags</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5 Airbags (Driver, Front Passenger)</td>
+                    <td>2 Airbags (Driver, Front Passenger)</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">CC</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">1197 cc</td>
+                    <td class="td-text">1120 cc</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Mileage</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">23.26 kmpl</td>
+                    <td class="td-text">50.26 kmpl</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Engine Description</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Petrol</td>
+                    <td class="td-text">Desil</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Seating Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">4</td>
+                    <td class="td-text">6</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Transmission Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Manua</td>
+                    <td class="td-text">Automatic</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Brake</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Disc</td>
+                    <td class="td-text">Drum</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Tank Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">37 L</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Acceleration</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Suspension</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Mc Pherson Strut</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header" onclick="toggleAccordion(this)">
+          Brakes and Tyres
+          <span>+</span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            <h3>BRAKES AND TYRES</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">Airbags</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5 Airbags (Driver, Front Passenger)</td>
+                    <td>2 Airbags (Driver, Front Passenger)</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">CC</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">1197 cc</td>
+                    <td class="td-text">1120 cc</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Mileage</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">23.26 kmpl</td>
+                    <td class="td-text">50.26 kmpl</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Engine Description</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Petrol</td>
+                    <td class="td-text">Desil</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Seating Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">4</td>
+                    <td class="td-text">6</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Transmission Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Manua</td>
+                    <td class="td-text">Automatic</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Brake</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Disc</td>
+                    <td class="td-text">Drum</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Tank Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">37 L</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Acceleration</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Suspension</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Mc Pherson Strut</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header" onclick="toggleAccordion(this)">
+          Suspension
+          <span>+</span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            <h3>SUSPENSIONS</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">Airbags</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5 Airbags (Driver, Front Passenger)</td>
+                    <td>2 Airbags (Driver, Front Passenger)</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">CC</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">1197 cc</td>
+                    <td class="td-text">1120 cc</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Mileage</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">23.26 kmpl</td>
+                    <td class="td-text">50.26 kmpl</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Engine Description</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Petrol</td>
+                    <td class="td-text">Desil</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Seating Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">4</td>
+                    <td class="td-text">6</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Transmission Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Manua</td>
+                    <td class="td-text">Automatic</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Brake</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Disc</td>
+                    <td class="td-text">Drum</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Tank Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">37 L</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Acceleration</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Suspension</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Mc Pherson Strut</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header" onclick="toggleAccordion(this)">
+          Electrical System
+          <span>+</span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            <h3>ELECTRICAL SYSTEM</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">Airbags</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5 Airbags (Driver, Front Passenger)</td>
+                    <td>2 Airbags (Driver, Front Passenger)</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">CC</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">1197 cc</td>
+                    <td class="td-text">1120 cc</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Mileage</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">23.26 kmpl</td>
+                    <td class="td-text">50.26 kmpl</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Engine Description</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Petrol</td>
+                    <td class="td-text">Desil</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Seating Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">4</td>
+                    <td class="td-text">6</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Transmission Type</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Manua</td>
+                    <td class="td-text">Automatic</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Brake</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Disc</td>
+                    <td class="td-text">Drum</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Fuel Tank Capacity</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">37 L</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Acceleration</th>
+                  </tr>
+                  <tr>
+                    <td><span style="color: red">&#10006;</span></td>
+                    <td>
+                      <span class="tick" style="color: #000080">&#10004;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Front Suspension</th>
+                  </tr>
+                  <tr>
+                    <td class="td-text">Mc Pherson Strut</td>
+                    <td class="td-text">45 L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".accordion-item-header").forEach((header) => {
+        header.addEventListener("click", function () {
+          // Close all other accordion items
+          document.querySelectorAll(".accordion-item").forEach((item) => {
+            if (item !== this.parentElement) {
+              item.classList.remove("open");
+            }
+          });
+          // Toggle the clicked accordion item
+          const item = this.parentElement;
+          item.classList.toggle("open");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Comparison</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+      .container {
+        width: 90%;
+        margin: 20px auto;
+        max-width: 1200px;
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .table-container {
+        overflow-x: auto;
+        margin-top: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+      .tick {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+      }
+      .td-text {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      th {
+        background-color: #404140;
+        color: white;
+        text-align: center;
+      }
+      td span {
+        font-size: 24px;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      @media (max-width: 600px) {
+        th,
+        td {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Car Comparison</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Airbags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 Airbags (Driver, Front Passenger)</td>
+              <td>2 Airbags (Driver, Front Passenger)</td>
+            </tr>
+            <tr>
+              <th colspan="2">CC</th>
+            </tr>
+            <tr>
+              <td class="td-text">1197 cc</td>
+              <td class="td-text">1120 cc</td>
+            </tr>
+            <tr>
+              <th colspan="2">Mileage</th>
+            </tr>
+            <tr>
+              <td class="td-text">23.26 kmpl</td>
+              <td class="td-text">50.26 kmpl</td>
+            </tr>
+            <tr>
+              <th colspan="2">Engine Description</th>
+            </tr>
+            <tr>
+              <td><span style="color: red">&#10006;</span></td>
+              <td><span class="tick" style="color: #000080">&#10004;</span></td>
+            </tr>
+            <tr>
+              <th colspan="2">Fuel Type</th>
+            </tr>
+            <tr>
+              <td class="td-text">Petrol</td>
+              <td class="td-text">Desil</td>
+            </tr>
+            <tr>
+              <th colspan="2">Seating Capacity</th>
+            </tr>
+            <tr>
+              <td class="td-text">4</td>
+              <td class="td-text">6</td>
+            </tr>
+            <tr>
+              <th colspan="2">Transmission Type</th>
+            </tr>
+            <tr>
+              <td class="td-text">Manua</td>
+              <td class="td-text">Automatic</td>
+            </tr>
+            <tr>
+              <th colspan="2">Front Brake</th>
+            </tr>
+            <tr>
+              <td class="td-text">Disc</td>
+              <td class="td-text">Drum</td>
+            </tr>
+            <tr>
+              <th colspan="2">Fuel Tank Capacity</th>
+            </tr>
+            <tr>
+              <td class="td-text">37 L</td>
+              <td class="td-text">45 L</td>
+            </tr>
+            <tr>
+              <th colspan="2">Acceleration</th>
+            </tr>
+            <tr>
+              <td><span style="color: red">&#10006;</span></td>
+              <td><span class="tick" style="color: #000080">&#10004;</span></td>
+            </tr>
+            <tr>
+              <th colspan="2">Front Suspension</th>
+            </tr>
+            <tr>
+              <td class="td-text">Mc Pherson Strut</td>
+              <td class="td-text">45 L</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
