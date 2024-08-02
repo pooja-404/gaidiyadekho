@@ -3,353 +3,328 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Car Comparison</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <style>
       body {
         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      .accordion {
-        margin-top: 20px;
-        padding: 15px;
-        box-shadow: 0 0 4px 4px #ccc;
-        border-radius: 12px;
-      }
-      .accordion-item {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        overflow: hidden;
-      }
-      .accordion-item-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 700;
-        background-color: #f4f4f4;
-      }
-      .accordion-item-header:hover {
-        background-color: #e9e9e9;
-      }
-      .accordion-item-body {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-      }
-      .accordion-item-body-content {
-        padding: 10px;
-      }
-      .accordion-item.open .accordion-item-body {
-        max-height: 300px;
-        overflow-y: auto;
-      }
-      .accordion-item-header span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #000080;
-        color: #fff;
-      }
-      .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-      .comparison-table th,
-      .comparison-table td {
-        border: 1px solid #ccc;
-        padding: 8px;
-        text-align: center;
-      }
-      .comparison-table th {
-        background-color: #333;
-        color: #fff;
-        text-align: center !important;
-      }
-      .comparison-table .feature {
-        font-weight: bold;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 10px 0;
-      }
-      .tick {
-        font-size: 16px;
-        font-weight: 700;
-      }
-      th,
-      td {
-        border: 1px solid #a39b9b;
-        padding: 12px;
-        text-align: center;
-        text-align: center !important;
-      }
-      .td-text {
-        font-size: 16px;
-        font-weight: 500;
-      }
-      th {
-        background-color: #000080;
-        color: white;
-        text-align: center;
-        text-align: center !important;
-      }
-      td span {
+
+      .logo {
         font-size: 24px;
+        font-weight: bold;
+        color: #ff0000;
+      }
+
+      .tab-content {
+        display: none;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent line breaks for horizontal scrolling */
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .car-card {
+        display: inline-block; /* Change to inline-block for horizontal scrolling */
+        width: 300px; /* Set width for the car cards */
+        height: 100px; /* Set a fixed height for consistency */
+        vertical-align: top; /* Align the car cards to the top */
+        align-items: center;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 10px; /* Adjust margin as needed */
+      }
+
+      .car-card img {
+        width: 123px;
+        height: 69px;
+        margin-right: 12px;
+        border-radius: 4px;
+      }
+
+      .car-card h2 {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .car-card p {
+        font-size: 14px;
+        color: #777;
+        margin: 0;
+      }
+
+      .compare-button button {
+        padding: 10px 20px;
+        border: 2px solid #ff0000;
+        background-color: #fff;
+        color: #ff0000;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      .tab_content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; /* Align items to the top */
+      }
+
+      /* Custom scrollbar styles */
+      .tab-content::-webkit-scrollbar {
+        height: 10px; /* Change scrollbar height for horizontal scrolling */
+      }
+
+      .tab-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      .tab-content::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+
+      .tab-content::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      .card-flex {
+        display: flex;
+        padding: 10px 0;
       }
       h2 {
-        text-align: center;
-        color: #333;
+        font-weight: 600;
       }
-      @media (max-width: 600px) {
-        th,
-        td {
-          padding: 8px;
-        }
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        color: #f20404 !important;
+      }
+      .vs2 {
+        width: 40px;
+        height: 40px;
+        background: #111;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin: 0 20px;
+        font-size: 16px;
+        text-align: center;
+        transform: translateY(331%);
+        z-index: 3;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .vs {
+        width: 40px;
+        height: 40px;
+        background: #111;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin: 0 20px;
+        font-size: 16px;
+        text-align: center;
+        transform: translateY(-381%);
+        z-index: 3;
+        margin-left: auto;
+        margin-right: auto;
       }
     </style>
   </head>
   <body>
-   <div class="accordion">
-        <div class="accordion-item">
-          <div class="accordion-item-header" onclick="toggleAccordion(this)">
-           Engine and Transmission
-            <span>+</span>
+    <main class="container p-1 my-4">
+      <section class="comparison-section">
+        <h1 class="text-center" style="font-weight: 900; font-size: 22px">
+          Expert Cars Comparison
+        </h1>
+        <span class="vs2">VS</span>
+        <div id="budget" class="tab-content active tab_content scroll-bar">
+          <div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external1.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Mahindra XUV 3XO</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
+                </div>
+              </div>
+            </div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external2.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Tata Nexon</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
+                </div>
+              </div>
+            </div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external3.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Mahindra XUV 3XO</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
-              <h3 style="padding-bottom:20px;">ENGINE AND TRANSMISSION</h3>
-              <div style="width: 100%; height:200px; overflow-y:scroll">
-                <div class="table">
-                  <p>Engine Type</p>
-                  <p>4 Stroke, Single Cylinder, Spark Ignition, Water Cooled Engine BS-VI</p>
+          <div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external2.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Mahindra XUV 3XO</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
                 </div>
-                <div class="table">
-                  <p>Engine Capacity</p>
-                  <p>395 cc</p>
+              </div>
+            </div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external3.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Tata Nexon</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
                 </div>
-                <div class="table">
-                  <p>No of Cylinders</p>
-                  <p>1</p>
+              </div>
+            </div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external1.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Mahindra XUV 3XO</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
                 </div>
-                <div class="table">
-                  <p>Transmission</p>
-                  <p>Constant Mesh</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external1.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Mahindra XUV 3XO</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
                 </div>
-                <div class="table">
-                  <p>Gear Box</p>
-                  <p>4 Forward.1 Reverse</p>
+              </div>
+            </div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external1.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Mahindra XUV 3XO</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
                 </div>
-                <div class="table">
-                  <p>Max Power</p>
-                  <p>7.0 kW at 3400 ± 200 rpm</p>
-                </div>
-                <div class="table">
-                  <p>Max. Torque</p>
-                  <p>23 Nm at 1600 - 2400 rpm</p>
-                </div>
-                <div class="table">
-                  <p>Clutch</p>
-                  <p>Wet Multiplate</p>
-                </div>
-                <div class="table">
-                  <p>Starting</p>
-                  <p>Na</p>
+              </div>
+            </div>
+            <div class="car-card">
+              <div class="card-flex">
+                <img
+                  src="./assets/images/external3.jpeg"
+                  alt="Mahindra XUV 3XO"
+                />
+                <div class="my-auto">
+                  <h2>Mahindra XUV 3XO</h2>
+                  <p>₹ 8.54 Lakh Onwards</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <div class="accordion-item-header" onclick="toggleAccordion(this)">
-            Dimensions
-            <span>+</span>
+        <span class="vs">VS</span>
+        <div id="premium" class="tab-content">
+          <div class="car-card">
+            <div class="card-flex">
+              <img src="./assets/images/external3.jpeg" alt="BMW X1" />
+              <div class="my-auto">
+                <h2>BMW X1</h2>
+                <p>₹ 40 Lakh Onwards</p>
+              </div>
+            </div>
           </div>
-          <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
-              <h3 style="padding-bottom:20px;">DIMENSIONS</h3>
-              <div style="width: 100%; height:200px; overflow-y:scroll">
-                <div class="table">
-                  <p>Overall Lenght</p>
-                  <p>2990 mm</p>
-                </div>
-                <div class="table">
-                  <p>Overall Width</p>
-                  <p>1460 mm</p>
-                </div>
-                <div class="table">
-                  <p>Overall Height</p>
-                  <p>1830 mm</p>
-                </div>
-                <div class="table">
-                  <p>Wheel Base</p>
-                  <p>1925 mm</p>
-                </div>
-                <div class="table">
-                    <p>Kerb Weight</p>
-                    <p>529kg</p>
-                  </div>
-                <div class="table">
-                  <p>Gross Vehicle Weight</p>
-                  <p>849 Kg</p>
-                </div>
-                <div class="table">
-                  <p>Seating Capacity</p>
-                  <p>Na</p>
-                </div>
-                <div class="table">
-                  <p>Loading Capacity</p>
-                  <p>Na</p>
-                </div>
-                <div class="table">
-                  <p>Fuel Type</p>
-                  <p>CNG</p>
-                </div>
-                <div class="table">
-                  <p>Fuel Capacity</p>
-                  <p>40 Litre water capacity 2.8 Litre (Petrol Tank)</p>
-                </div>
+          <div class="car-card">
+            <div class="card-flex">
+              <img src="./assets/images/external2.jpeg" alt="Audi Q3" />
+              <div class="my-auto">
+                <h2>Audi Q3</h2>
+                <p>₹ 44 Lakh Onwards</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <div class="accordion-item-header" onclick="toggleAccordion(this)">
-           Brakes and Tyres
-            <span>+</span>
+        <div id="luxury" class="tab-content">
+          <div class="car-card">
+            <div class="card-flex">
+              <img
+                src="./assets/images/external1.jpeg"
+                alt="Mercedes-Benz S-Class"
+              />
+              <div class="my-auto">
+                <h2>Mercedes-Benz S-Class</h2>
+                <p>₹ 1.5 Crore Onwards</p>
+              </div>
+            </div>
           </div>
-          <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
-              <h3 style="padding-bottom:20px;">BRAKES AND TYRES</h3>
-              <div style="width: 100%; height:200px; overflow-y:scroll">
-                <div class="table">
-                    <p>Front Brake</p>
-                    <p>Drum brake, Dual circuit, Hydraulic, Front & Rear combined with TMC</p>
-                  </div>
-                  <div class="table">
-                    <p>Rear Brake</p>
-                    <p>Drum brake, Dual circuit, Hydraulic, Front & Rear combined with TMC</p>
-                  </div>
-                <div class="table">
-                  <p>Front Tyre Size</p>
-                  <p>4.5” – 10”, 8 PR</p>
-                </div>
-                <div class="table">
-                  <p>Rear Tyre Size</p>
-                  <p>4.5” – 10”, 8 PR</p>
-                </div>
-                <div class="table">
-                  <p>Wheel Size</p>
-                  <p>10 Inch</p>
-                </div>
-                             
+          <div class="car-card">
+            <div class="card-flex">
+              <img
+                src="./assets/images/external2.jpeg"
+                alt="Rolls-Royce Phantom"
+              />
+              <div class="my-auto">
+                <h2>Rolls-Royce Phantom</h2>
+                <p>₹ 9 Crore Onwards</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <div class="accordion-item-header" onclick="toggleAccordion(this)">
-            Suspension
-            <span>+</span>
-          </div>
-          <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
-              <h3 style="padding-bottom:20px;">SUSPENSIONS</h3>
-              <div style="width: 100%; height:200px; overflow-y:scroll">
-                <div class="table">
-                  <p>Front Suspension</p>
-                  <p>Hydraulic Telescopic Double Acting, Helical Compression Spring and Damper</p>
-                </div>
-                <div class="table">
-                  <p>Rear Suspension</p>
-                  <p>Hydraulic Telescopic Double Acting, Heavy duty Spring Rubber Spring and Damper</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-item-header" onclick="toggleAccordion(this)">
-            Electrical System
-            <span>+</span>
-          </div>
-          <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
-              <h3 style="padding-bottom:20px;">ELECTRICAL SYSTEM</h3>
-              <div style="width: 100%; height:200px; overflow-y:scroll">
-                <div class="table">
-                  <p>HeadLight</p>
-                  <p>Na</p>
-                </div>
-                <div class="table">
-                  <p>Tail Light</p>
-                  <p>Na</p>
-                </div>
-                <div class="table">
-                  <p>Turn Signal Light</p>
-                  <p>Na</p>
-                </div>
-                <div class="table">
-                  <p>Battery</p>
-                  <p>12 V 45 AH Multi Plate Lead Acid battery</p>
-                </div>
-                <div class="table">
-                  <p>Altenator</p>
-                  <p>Na</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-item-header" onclick="toggleAccordion(this)">
-            Compare
-            <span>+</span>
-          </div>
-          <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
-              <!-- Compare details -->
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-item-header" onclick="toggleAccordion(this)">
-            Images
-            <span>+</span>
-          </div>
-          <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
-              <!-- Images content -->
-              <div class="small-image">
-                <div class="image-wrapper">
-                  <img src="./image/auto.png" alt="bike" />
-                </div>
-                <!-- Add more images as needed -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
-      document.querySelectorAll(".accordion-item-header").forEach((header) => {
-        header.addEventListener("click", function () {
-          // Close all other accordion items
-          document.querySelectorAll(".accordion-item").forEach((item) => {
-            if (item !== this.parentElement) {
-              item.classList.remove("open");
-            }
-          });
-          // Toggle the clicked accordion item
-          const item = this.parentElement;
-          item.classList.toggle("open");
+      $(document).ready(function () {
+        $(".tab-btn").on("click", function () {
+          var category = $(this).data("category");
+          $(".tab-btn").removeClass("active");
+          $(this).addClass("active");
+          $(".tab-content").removeClass("active");
+          $("#" + category).addClass("active");
         });
       });
     </script>
