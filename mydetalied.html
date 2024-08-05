@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scooter Details</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       body {
-        /* display: flex; */
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -49,10 +52,79 @@
         margin-top: 10px;
         font-weight: 700;
       }
+
+      .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: black;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 8px 5px;
+      }
+
+      .search-icon {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .search-icon i {
+        font-size: 20px;
+        color: white !important;
+        transition: color 0.3s;
+      }
+
+      .search-icon:hover i {
+        color: black;
+      }
+
+      .search-input {
+        width: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: none;
+        outline: none;
+        border-radius: 2px;
+        transition: width 0.4s ease-in-out;
+        opacity: 0;
+      }
+
+      .search-container.active .search-input {
+        width: 177px;
+        opacity: 1;
+        margin-left: 10px;
+      }
+
+      .search-input:focus {
+        width: 200px;
+      }
     </style>
   </head>
-  <body>
-    <div style="display: flex; align-items: center">
+  <body>0
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      "
+    >
+      <h2 style="font-weight: 900; margin: 0; margin-right: 8px">Yakuza</h2>
+      <div class="search-container">
+        <button type="button" class="search-icon">
+          <i class="fas fa-search"></i>
+        </button>
+        <input
+          type="search"
+          class="search-input"
+          placeholder="Search..."
+          style="font-weight: 700"
+        />
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
@@ -72,14 +144,14 @@
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">Amber</div>
+        <div class="scooter-name">VIRAJ</div>
         <div class="scooter-price">$1200000</div>
       </div>
       <div class="scooter-card" onclick="viewDetails('Amber2')">
@@ -88,18 +160,18 @@
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">AQABA</div>
+        <div class="scooter-name">WE4</div>
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">Amber</div>
+        <div class="scooter-name">Atropass</div>
         <div class="scooter-price">$1200000</div>
       </div>
       <div class="scooter-card" onclick="viewDetails('Amber2')">
@@ -108,18 +180,18 @@
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">AQABA</div>
+        <div class="scooter-name">Cyclone Sway</div>
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">Amber</div>
+        <div class="scooter-name">Mountain</div>
         <div class="scooter-price">$1200000</div>
       </div>
       <div class="scooter-card" onclick="viewDetails('Amber2')">
@@ -128,18 +200,18 @@
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">AQABA</div>
+        <div class="scooter-name">NEU</div>
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">Amber</div>
+        <div class="scooter-name">Nova 93</div>
         <div class="scooter-price">$1200000</div>
       </div>
       <div class="scooter-card" onclick="viewDetails('Amber2')">
@@ -148,18 +220,18 @@
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">AQABA</div>
+        <div class="scooter-name">Parinda</div>
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">Amber</div>
+        <div class="scooter-name">Rubie</div>
         <div class="scooter-price">$1200000</div>
       </div>
       <div class="scooter-card" onclick="viewDetails('Amber2')">
@@ -168,18 +240,18 @@
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">AQABA</div>
+        <div class="scooter-name">Sophie</div>
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">Amber</div>
+        <div class="scooter-name">Sparrow</div>
         <div class="scooter-price">$1200000</div>
       </div>
       <div class="scooter-card" onclick="viewDetails('Amber2')">
@@ -188,18 +260,18 @@
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">AQABA</div>
+        <div class="scooter-name">Sparrow Pro</div>
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center; justify-content: center">
       <div class="scooter-card" onclick="viewDetails('Amber')">
         <img
           src="./assets/images/yakuza.jpg"
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">Amber</div>
+        <div class="scooter-name">Unique</div>
         <div class="scooter-price">$1200000</div>
       </div>
       <div class="scooter-card" onclick="viewDetails('Amber2')">
@@ -208,14 +280,29 @@
           alt="Scooter"
           class="scooter-image"
         />
-        <div class="scooter-name">AQABA</div>
+        <div class="scooter-name">Utility Pro</div>
         <div class="scooter-price">$1200000</div>
       </div>
     </div>
+    <!-- Repeat other scooter cards as needed -->
     <script>
       function viewDetails(scooterName) {
-        location.href = `mydetailedpage2.html?scooter=${scooterName}`;
+        location.href = `truckdetails.html?scooter=${scooterName}`;
       }
+
+      document
+        .querySelector(".search-icon")
+        .addEventListener("click", function () {
+          const searchContainer = document.querySelector(".search-container");
+          const searchInput = document.querySelector(".search-input");
+
+          searchContainer.classList.toggle("active");
+          if (searchContainer.classList.contains("active")) {
+            searchInput.focus();
+          } else {
+            searchInput.value = ""; // Clear the search input when closing
+          }
+        });
     </script>
   </body>
 </html>

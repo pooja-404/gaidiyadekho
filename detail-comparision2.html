@@ -115,6 +115,8 @@
 
       .zoomed {
         transform: scale(1.5);
+        z-index: 10;
+        position: relative;
       }
 
       h4 {
@@ -186,188 +188,6 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 offset-md-3 my-3">
-          <div class="vehicle-card">
-            <div style="display: flex">
-              <img
-                src="./assets/images/external1.jpeg"
-                alt="Vehicle Image"
-                data-toggle="modal"
-                data-target="#vehicleModal"
-              />
-              <div class="vehicle-info">
-                <h3>Vehicle Model</h3>
-                <p>
-                  Expected Price:
-                  <span style="color: rgb(231, 25, 25)">₹10000</span>
-                </p>
-                <p>Year: 20XX</p>
-                <p>Fuel Type: Diesel</p>
-              </div>
-            </div>
-            <div class="additional-info">
-              <p><img src="./assets/images/yard.svg" alt="svg" /> Yard Name</p>
-              <p><img src="./assets/images/user.svg" alt="svg" /> City</p>
-              <p>
-                <img src="./assets/images/fuelflash.svg" alt="svg" /> Yes/No
-              </p>
-              <p><img src="./assets/images/share.svg" alt="svg" /> Share</p>
-            </div>
-            <div
-              style="
-                width: 100%;
-                background-color: white;
-                display: flex;
-                border: 2px solid black;
-                color: white;
-                border-radius: 4px;
-                margin-top: 5px;
-              "
-              class="mx-1"
-            >
-              <input
-                type="number"
-                class="input-field py-1 border-0 w-100"
-                placeholder="Offer Your Price"
-                style="border-radius: 4px; font-weight: 600"
-              />
-              <button
-                style="
-                  border: 0;
-                  font-size: 14px;
-                  font-weight: 600;
-                  color: white;
-                  background-color: rgb(203, 6, 6);
-                "
-                class="py-1 px-4"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 offset-md-3 my-3">
-          <div class="vehicle-card">
-            <div style="display: flex">
-              <img
-                src="./assets/images/external1.jpeg"
-                alt="Vehicle Image"
-                data-toggle="modal"
-                data-target="#vehicleModal"
-              />
-              <div class="vehicle-info">
-                <h3>Vehicle Model</h3>
-                <p>
-                  Expected Price:
-                  <span style="color: rgb(231, 25, 25)">₹10000</span>
-                </p>
-                <p>Year: 20XX</p>
-                <p>Fuel Type: Diesel</p>
-              </div>
-            </div>
-            <div class="additional-info">
-              <p><img src="./assets/images/yard.svg" alt="svg" /> Yard Name</p>
-              <p><img src="./assets/images/user.svg" alt="svg" /> City</p>
-              <p>
-                <img src="./assets/images/fuelflash.svg" alt="svg" /> Yes/No
-              </p>
-              <p><img src="./assets/images/share.svg" alt="svg" /> Share</p>
-            </div>
-            <div
-              style="
-                width: 100%;
-                background-color: white;
-                display: flex;
-                border: 2px solid black;
-                color: white;
-                border-radius: 4px;
-                margin-top: 5px;
-              "
-              class="mx-1"
-            >
-              <input
-                type="number"
-                class="input-field py-1 border-0 w-100"
-                placeholder="Offer Your Price"
-                style="border-radius: 4px; font-weight: 600"
-              />
-              <button
-                style="
-                  border: 0;
-                  font-size: 14px;
-                  font-weight: 600;
-                  color: white;
-                  background-color: rgb(203, 6, 6);
-                "
-                class="py-1 px-4"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 offset-md-3 my-3">
-          <div class="vehicle-card">
-            <div style="display: flex">
-              <img
-                src="./assets/images/external1.jpeg"
-                alt="Vehicle Image"
-                data-toggle="modal"
-                data-target="#vehicleModal"
-              />
-              <div class="vehicle-info">
-                <h3>Vehicle Model</h3>
-                <p>
-                  Expected Price:
-                  <span style="color: rgb(231, 25, 25)">₹10000</span>
-                </p>
-                <p>Year: 20XX</p>
-                <p>Fuel Type: Diesel</p>
-              </div>
-            </div>
-            <div class="additional-info">
-              <p><img src="./assets/images/yard.svg" alt="svg" /> Yard Name</p>
-              <p><img src="./assets/images/user.svg" alt="svg" /> City</p>
-              <p>
-                <img src="./assets/images/fuelflash.svg" alt="svg" /> Yes/No
-              </p>
-              <p><img src="./assets/images/share.svg" alt="svg" /> Share</p>
-            </div>
-            <div
-              style="
-                width: 100%;
-                background-color: white;
-                display: flex;
-                border: 2px solid black;
-                color: white;
-                border-radius: 4px;
-                margin-top: 5px;
-              "
-              class="mx-1"
-            >
-              <input
-                type="number"
-                class="input-field py-1 border-0 w-100"
-                placeholder="Offer Your Price"
-                style="border-radius: 4px; font-weight: 600"
-              />
-              <button
-                style="
-                  border: 0;
-                  font-size: 14px;
-                  font-weight: 600;
-                  color: white;
-                  background-color: rgb(203, 6, 6);
-                "
-                class="py-1 px-4"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        
       </div>
     </div>
     <!-- Modal -->
@@ -471,9 +291,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-      document.querySelectorAll(".zoomable").forEach((img) => {
-        img.addEventListener("click", function () {
-          this.classList.toggle("zoomed");
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".zoomable").forEach((img) => {
+          img.addEventListener("click", function () {
+            this.classList.toggle("zoomed");
+          });
+        });
+        // Close zoomed image when clicking outside of it
+        document.addEventListener("click", function (event) {
+          const zoomedImages = document.querySelectorAll(".zoomable.zoomed");
+          zoomedImages.forEach((img) => {
+            if (!img.contains(event.target)) {
+              img.classList.remove("zoomed");
+            }
+          });
         });
       });
     </script>
