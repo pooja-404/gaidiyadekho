@@ -1,79 +1,2505 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Category Design</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-    .category-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-    .category-card {
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-      overflow: hidden;
-      width: 200px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-    }
-    .category-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    }
-    .category-image {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-    .category-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin: 15px 0;
-    }
-    .category-description {
-      font-size: 14px;
-      color: #666;
-      padding: 0 10px 15px;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Design with Cards</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
 
-  <div class="container">
-    <h1 class="text-center">Categories</h1>
-    <div class="category-container">
-      <div class="category-card">
-        <img src="https://via.placeholder.com/200x150" alt="Category 1" class="category-image">
-        <div class="category-title">Category 1</div>
-        <div class="category-description">Description of Category 1</div>
-      </div>
-      <div class="category-card">
-        <img src="https://via.placeholder.com/200x150" alt="Category 2" class="category-image">
-        <div class="category-title">Category 2</div>
-        <div class="category-description">Description of Category 2</div>
-      </div>
-      <div class="category-card">
-        <img src="https://via.placeholder.com/200x150" alt="Category 3" class="category-image">
-        <div class="category-title">Category 3</div>
-        <div class="category-description">Description of Category 3</div>
-      </div>
-      <!-- Add more categories as needed -->
+      .filters {
+        display: flex;
+        padding: 10px;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .filter-button {
+        background-color: darkblue;
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .filter-button:hover {
+        background-color: #3a25f3;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+        width: 100%;
+        /* max-width: 300px; */
+        margin: 10px;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+
+      .card-title {
+        font-size: 28px;
+        margin: 0;
+        font-weight: 700;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+      }
+      .card-title2 {
+        font-size: 30px;
+        margin: 0;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 15px;
+        color: #312f2f;
+        font-weight: 600;
+        margin: 0;
+        padding-top: 2px;
+        margin-bottom: 5px;
+      }
+
+      .card-text span {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .variant-button {
+        background-color: rgb(209, 8, 8);
+        color: #fff;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        font-weight: 600;
+      }
+
+      .variant-button:hover {
+        background-color: #0056b3;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 60px;
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .extra-card {
+        visibility: hidden;
+        margin: 10px;
+      }
+
+      .brand-cards {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="filters">
+      <button class="filter-button" onclick="toggleModal('categoryModal')">
+        Categories <i class="icon-chevron-down"></i>
+      </button>
+      <button class="filter-button" onclick="toggleModal('brandModal')">
+        Brands <i class="icon-chevron-down"></i>
+      </button>
+      <button class="filter-button" onclick="toggleModal('sortModal')">
+        Sort By <i class="icon-chevron-down"></i>
+      </button>
+      <button class="filter-button" onclick="toggleModal('fuelModal')">
+        Fuel Type <i class="icon-chevron-down"></i>
+      </button>
     </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <!-- Category Modal -->
+    <div id="categoryModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="toggleModal('categoryModal')"
+          >&times;</span
+        >
+        <h2>Select a Category</h2>
+        <button class="filter-button">Sedans</button>
+        <button class="filter-button">SUVs</button>
+        <button class="filter-button">Hatchbacks</button>
+      </div>
+    </div>
+
+    <!-- Brand Modal -->
+    <div id="brandModal" class="modal scroll my-3">
+      <div class="modal-content">
+        <span class="close" onclick="toggleModal('brandModal')">&times;</span>
+        <h2>Select a Brand</h2>
+        <button class="filter-button" onclick="showBrand('Maruti')">
+          Maruti
+        </button>
+        <button class="filter-button" onclick="showBrand('Mahindra')">
+          Mahindra
+        </button>
+        <button class="filter-button" onclick="showBrand('Tata')">Tata</button>
+        <button class="filter-button" onclick="showBrand('Honda')">
+          Honda
+        </button>
+        <button class="filter-button" onclick="showBrand('Nissan')">
+          Nissan
+        </button>
+        <button class="filter-button" onclick="showBrand('Hyundai')">
+          Hyundai
+        </button>
+        <button class="filter-button" onclick="showBrand(' Toyota')">
+          Toyota
+        </button>
+        <button class="filter-button" onclick="showBrand('Renault')">
+          Renault
+        </button>
+        <button class="filter-button" onclick="showBrand('Volkswagen')">
+          Volkswagen
+        </button>
+        <button class="filter-button" onclick="showBrand('Kia')">Kia</button>
+        <button class="filter-button" onclick="showBrand('MG')">MG</button>
+        <button class="filter-button" onclick="showBrand('Skoda')">
+          Skoda
+        </button>
+        <button class="filter-button" onclick="showBrand('BMW')">BMW</button>
+        <button class="filter-button" onclick="showBrand('Audi')">Audi</button>
+        <button class="filter-button" onclick="showBrand('Mercedes')">
+          Mercedes
+        </button>
+        <button class="filter-button" onclick="showBrand('Benteley')">
+          Benteley
+        </button>
+        <button class="filter-button" onclick="showBrand('Force')">
+          Force
+        </button>
+        <button class="filter-button" onclick="showBrand('Lamborghini')">
+          Lamborghini
+        </button>
+        <button class="filter-button" onclick="showBrand('Mitsubishi')">
+          Mitsubishi
+        </button>
+        <button class="filter-button" onclick="showBrand('Volvo')">
+          Volvo
+        </button>
+        <button class="filter-button" onclick="showBrand('Jeep')">Jeep</button>
+        <button class="filter-button mb-5" onclick="showBrand('Citroen')">
+          Citroen
+        </button>
+      </div>
+    </div>
+    <!-- Sort Modal -->
+    <div id="sortModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="toggleModal('sortModal')">&times;</span>
+        <h2>Sort Options</h2>
+        <button class="filter-button">Price: Low to High</button>
+        <button class="filter-button">Price: High to Low</button>
+        <button class="filter-button">Newest First</button>
+      </div>
+    </div>
+    <!-- Fuel Type Modal -->
+    <div id="fuelModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="toggleModal('fuelModal')">&times;</span>
+        <h2>Select Fuel Type</h2>
+        <button class="filter-button">Petrol</button>
+        <button class="filter-button">Diesel</button>
+        <button class="filter-button">Electric</button>
+      </div>
+    </div>
+    <!-- Brand Content for Each Brand -->
+    <div id="Maruti" class="brand-cards">
+      <h3 class="card-title">Maruti</h3>
+      <div class="cards">
+        <div class="card Maruti">
+          <img src="./assets/images/hero11.png" alt="Swift Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Swift</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">4,00,000-5,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 2</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1200 cc</p>
+                <p>Mileage: 22 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Maruti cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Mahindra">
+          <img src="./assets/images/hero13.png" alt="Mahindra Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Maruti Dzire</h3>
+              <p style="font-size: 16px !important; margin-bottom: 0">
+                Price: <span style="color: red">8,00,000-10,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Diesel</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2200 cc</p>
+                <p>Mileage: 15 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Mahindra cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Mahindra">
+          <img src="./assets/images/hero13.png" alt="Mahindra Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Maruti Ertiga</h3>
+              <p style="font-size: 16px !important; margin-bottom: 0">
+                Price: <span style="color: red">8,00,000-10,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Diesel</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2200 cc</p>
+                <p>Mileage: 15 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Mahindra cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Mahindra">
+          <img src="./assets/images/hero13.png" alt="Mahindra Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Maruti Brezza</h3>
+              <p style="font-size: 16px !important; margin-bottom: 0">
+                Price: <span style="color: red">8,00,000-10,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Diesel</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2200 cc</p>
+                <p>Mileage: 15 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Mahindra cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Mahindra">
+          <img src="./assets/images/hero13.png" alt="Mahindra Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Maruti Eeco</h3>
+              <p style="font-size: 16px !important; margin-bottom: 0">
+                Price: <span style="color: red">8,00,000-10,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Diesel</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2200 cc</p>
+                <p>Mileage: 15 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Mahindra cards as needed -->
+      </div>
+    </div>
+    <div id="Mahindra" class="brand-cards">
+      <h3 class="card-title2">Mahindra</h3>
+      <div class="cards">
+        <div class="card Mahindra">
+          <img src="./assets/images/hero13.png" alt="Mahindra Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">scorpio</h3>
+              <p
+                style="font-size: 16px !important; margin-bottom: 0 !important"
+              >
+                Price: <span style="color: red">8,00,000-10,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Diesel</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2200 cc</p>
+                <p>Mileage: 15 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Mahindra cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Mahindra">
+          <img src="./assets/images/hero13.png" alt="Mahindra Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Thar</h3>
+              <p style="font-size: 16px !important; margin-bottom: 0">
+                Price: <span style="color: red">8,00,000-10,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Diesel</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2200 cc</p>
+                <p>Mileage: 15 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Mahindra cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Mahindra">
+          <img src="./assets/images/hero13.png" alt="Mahindra Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Maruti Alto k10</h3>
+              <p style="font-size: 16px !important; margin-bottom: 0">
+                Price: <span style="color: red">8,00,000-10,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Diesel</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2200 cc</p>
+                <p>Mileage: 15 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Mahindra cards as needed -->
+      </div>
+    </div>
+    <div id="Tata" class="brand-cards">
+      <h3 class="card-title2">Tata</h3>
+      <div class="cards">
+        <div class="card Tata">
+          <img src="./assets/images/nexontata.png" alt="Tata Image" />
+          <div class="card-content">
+            <h3 class="card-title">Nexon</h3>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <p style="font-size: 16px !important">
+                <span style="color: red">⟨₹⟩7,00,000-8,50,000</span>
+              </p>
+              <div style="display: flex; align-items: center; gap: 5px">
+                <img
+                  src="./assets/images/fuel-pump.svg"
+                  alt="fuel-pump"
+                  style="width: 20px; height: 20px"
+                />
+                <p>Petrol</p>
+              </div>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Manual/Automatic</p>
+                <p>Airbags: 4</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Mileage: 19 km/l</p>
+
+                <div style="display: flex; align-items: center; gap: 5px">
+                  <img
+                    src="./assets/images/myengine.svg"
+                    alt="engine"
+                    style="width: 20px; height: 20px"
+                  />
+                  <p>1500 cc</p>
+                </div>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Tata cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Tata">
+          <img src="./assets/images/harier.png" alt="Tata Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Harrie</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">7,00,000-8,50,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 4</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1500 cc</p>
+                <p>Mileage: 19 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Tata cards as needed -->
+      </div>
+    </div>
+    <div id="Honda" class="brand-cards">
+      <h3 class="card-title2">Honda</h3>
+      <div class="cards">
+        <div class="card Honda">
+          <img src="./assets/images/elevate.png" alt="Honda Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">elevate</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">9,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 4</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1500 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Honda cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Honda">
+          <img src="./assets/images/Amaze.png" alt="Honda Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">amaze</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">9,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 4</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1500 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Honda cards as needed -->
+      </div>
+    </div>
+    <div id="Nissan" class="brand-cards">
+      <h3 class="card-title2">Nissan</h3>
+      <div class="cards">
+        <div class="card Nissan">
+          <img src="./assets/images/mignite.png" alt="Nissan Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">magnite</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,50,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2500 cc</p>
+                <p>Mileage: 14 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Nissan cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Nissan">
+          <img src="./assets/images/hero1.png" alt="Nissan Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Altima</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,50,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 2500 cc</p>
+                <p>Mileage: 14 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Nissan cards as needed -->
+      </div>
+    </div>
+    <div id="Hyundai" class="brand-cards">
+      <h3 class="card-title2">Hyundai</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/creta.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Creta</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/verna.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Verna</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id=" Toyota" class="brand-cards">
+      <h3 class="card-title2">Toyota</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/fortuner.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Fortuner</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/inova.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Innova</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Renault" class="brand-cards">
+      <h3 class="card-title2">Renault</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero16.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Kwid</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero12.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Triber</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Volkswagen" class="brand-cards">
+      <h3 class="card-title2">Volkswagen</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/taigun.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Taigun</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/tiguan.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Tiguan</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Kia" class="brand-cards">
+      <h3 class="card-title2">Kia</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero9.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Sonet</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Seltos</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="MG" class="brand-cards">
+      <h3 class="card-title2">MG</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero15.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Hector</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Astor</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Skoda" class="brand-cards">
+      <h3 class="card-title2">Skoda</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/kushaq.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Kushaq</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/kodiaq.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Kodiaq</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="BMW" class="brand-cards">
+      <h3 class="card-title2">BMW</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero1.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">BMWX7</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">M34oi</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                ">
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Audi" class="brand-cards">
+      <h3 class="card-title2">Audi</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Q3</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">A8L</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Mercedes" class="brand-cards">
+      <h3 class="card-title2">Mercedes</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">GLS</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">GLA</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Benteley" class="brand-cards">
+      <h3 class="card-title2">Benteley</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Bentayga</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Continental GT</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Force" class="brand-cards">
+      <h3 class="card-title2">Force</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Cruiser</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Urbania</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Lamborghini" class="brand-cards">
+      <h3 class="card-title2">Lamborghinii</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Urus</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Huracan</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Mitsubishi" class="brand-cards">
+      <h3 class="card-title2">Mitsubishi</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Outlander</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Pajero</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Volvo" class="brand-cards">
+      <h3 class="card-title2">Volvo</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">XC90</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">S90</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Jeep" class="brand-cards">
+      <h3 class="card-title2">Jeep</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Compass Night Gogle</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">Wrangler</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <div id="Citroen" class="brand-cards">
+      <h3 class="card-title2">Hyundai</h3>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">C3 Aircross</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+      <div class="cards">
+        <div class="card Hyundai">
+          <img src="./assets/images/hero11.png" alt="Hyundai Image" />
+          <div class="card-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+              "
+            >
+              <h3 class="card-title">C5 Aircross</h3>
+              <p style="font-size: 16px !important">
+                Price: <span style="color: red">10,00,000-12,00,000</span>
+              </p>
+            </div>
+            <div class="card-text">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Fuel Type: Petrol</p>
+                <p>Airbags: 6</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p>Engine Capacity: 1600 cc</p>
+                <p>Mileage: 17 km/l</p>
+              </div>
+            </div>
+            <button class="variant-button">View Variant</button>
+          </div>
+        </div>
+        <!-- Add more Hyundai cards as needed -->
+      </div>
+    </div>
+    <script>
+      function toggleModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display =
+          modal.style.display === "block" ? "none" : "block";
+      }
+      function showBrand(brand) {
+        // Hide all brand cards
+        document
+          .querySelectorAll(".brand-cards")
+          .forEach(function (cardContainer) {
+            cardContainer.style.display = "none";
+          });
+
+        // Show selected brand cards
+        var selectedBrand = document.getElementById(brand);
+        if (selectedBrand) {
+          selectedBrand.style.display = "block";
+        }
+      }
+    </script>
+  </body>
 </html>

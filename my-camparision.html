@@ -7,11 +7,11 @@
     <style>
       body {
         margin: 0;
-        /* font-family: Arial, sans-serif;
-        background-color: #f4f4f4; */
+         font-family: Arial, sans-serif;
+        /* background-color: #f4f4f4; */
       }
       .compare-card {
-        display: flex;
+        display: none; /* Initially hide the comparison cards */
         flex-direction: column;
         margin: 10px;
         background-color: #fff;
@@ -116,7 +116,6 @@
         justify-content: space-around;
         margin: 10px;
       }
-
       .car-card {
         border: 1px solid #ddd;
         text-align: center;
@@ -124,14 +123,12 @@
         height: 100%;
         border-radius: 8px;
       }
-
       .car-image {
         width: 100%;
         height: 107px;
         cursor: pointer;
         border-radius: 8px;
       }
-
       .close {
         color: #fff;
         position: absolute;
@@ -141,7 +138,6 @@
         font-weight: bold;
         cursor: pointer;
       }
-
       .caption {
         margin: 10px auto;
         text-align: center;
@@ -165,14 +161,12 @@
         transform: translate(-50%, -50%);
         z-index: 3;
       }
-
       /* Responsive Design */
       @media (min-width: 768px) {
         .compare-card {
           flex-direction: row;
         }
       }
-
       @media (max-width: 767px) {
         .compare-card {
           flex-direction: column;
@@ -208,17 +202,19 @@
       </div>
     </div>
     <button
+      id="compareButton"
       class="show-more-btn"
       style="
         width: 90%;
         margin: 0 20px;
         background-color: rgb(180, 6, 6) !important;
-      ">
-      compare
+      "
+    >
+      Compare
     </button>
     <!-- Modal for First Car -->
     <span class="vs2">VS</span>
-    <div class="compare-card">
+    <div id="comparisonCards" class="compare-card">
       <div class="card">
         <div class="card-thumb">
           <img src="./assets/images/external1.jpeg" alt="mahindra" />
@@ -266,7 +262,7 @@
           </div>
         </div>
       </div>
-      <span class="vs">VS</span>
+
       <div class="card">
         <div class="card-thumb">
           <img src="./assets/images/external2.jpeg" alt="mahindra" />
@@ -329,27 +325,21 @@
           button.textContent = "View More";
         }
       }
-    </script>
-    <script src="scripts.js">
-            function openModal(modalId) {
-          var modal = document.getElementById(modalId);
-          modal.style.display = "block";
-      }
-
-      function closeModal(modalId) {
-          var modal = document.getElementById(modalId);
-          modal.style.display = "none";
-      }
-
-      // Close modal when clicking outside of the modal content
-      window.onclick = function(event) {
-          var modals = document.getElementsByClassName("modal");
-          for (var i = 0; i < modals.length; i++) {
-              if (event.target == modals[i]) {
-                  modals[i].style.display = "none";
-              }
+      document
+        .getElementById("compareButton")
+        .addEventListener("click", function () {
+          const comparisonCards = document.getElementById("comparisonCards");
+          if (
+            comparisonCards.style.display === "none" ||
+            comparisonCards.style.display === ""
+          ) {
+            comparisonCards.style.display = "flex";
+            this.textContent = "Hide Comparison";
+          } else {
+            comparisonCards.style.display = "none";
+            this.textContent = "Compare";
           }
-      }
+        });
     </script>
   </body>
 </html>

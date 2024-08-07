@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Comparison</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .car-image-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      .car-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+      .upload-btn {
+        display: none;
+      }
+      .plus-sign {
+        position: absolute;
+        font-size: 36px;
+        color: #888;
+        z-index: 2;
+      }
+      .vs-sign {
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        width: 35px;
+        height: 35px;
+        background: #000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 22%;
+        left: 47%;
+        z-index: 2;
+      }
+      .upload-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.3
+        ); /* Adjust opacity for better visibility */
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        z-index: 3;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+      .upload-overlay.hidden {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Compare Both</h1>
+    <div class="container">
+      <div class="car-image-container" id="car1-container">
+        <input
+          type="file"
+          id="car1-input"
+          class="upload-btn"
+          accept="image/*"
+        />
+        <img id="car1-image" src="./assets/images/external1.jpeg" alt="Car 1" />
+        <span class="plus-sign"></span>
+        <div class="upload-overlay" id="car1-overlay">Click to Upload</div>
+      </div>
+      <div class="vs-sign">VS</div>
+      <div class="car-image-container" id="car2-container">
+        <input
+          type="file"
+          id="car2-input"
+          class="upload-btn"
+          accept="image/*"
+        />
+        <img id="car2-image" src="./assets/images/external2.jpeg" alt="Car 2" />
+        <span class="plus-sign"></span>
+        <div class="upload-overlay" id="car2-overlay">Click to Upload</div>
+      </div>
+    </div>
+    <script>
+      function handleImageUpload(inputId, imgId, overlayId) {
+        document
+          .getElementById(inputId)
+          .addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                document.getElementById(imgId).src = e.target.result;
+                document.getElementById(overlayId).classList.add("hidden");
+              };
+              reader.readAsDataURL(file);
+            }
+          });
+      }
+
+      document
+        .getElementById("car1-container")
+        .addEventListener("click", function () {
+          document.getElementById("car1-input").click();
+        });
+
+      document
+        .getElementById("car2-container")
+        .addEventListener("click", function () {
+          document.getElementById("car2-input").click();
+        });
+
+      handleImageUpload("car1-input", "car1-image", "car1-overlay");
+      handleImageUpload("car2-input", "car2-image", "car2-overlay");
+    </script>
+  </body>
+</html>

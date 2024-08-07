@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Background Animation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #f0f0f0; /* Fallback background color */
+      }
+
+      .bg-img {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url("./assets/images/school.jpg2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .bus {
+        position: absolute;
+        bottom: 10%;
+        left: -20%;
+        animation: busEnter 6s linear infinite;
+        width: 20%;
+      }
+      .buss{
+        width: 20%;
+      }
+
+      .child {
+        position: absolute;
+        width: 10%;
+        animation: childRun 8s linear infinite;
+        bottom: 0;
+      }
+
+      @keyframes busEnter {
+        0% {
+          transform: translateX(-20%);
+        }
+        50% {
+          transform: translateX(50%);
+        }
+        100% {
+          transform: translateX(20%);
+        }
+      }
+
+      @keyframes childRun {
+        0% {
+          transform: translate(100%);
+        }
+        25% {
+          transform: translate(-100%);
+        }
+        50% {
+          transform: translate(-100%);
+        }
+        75% {
+          transform: translate(100%);
+        }
+        100% {
+          transform: translate(100%,);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-img">
+    <img src="./assets/images/schoolbus.jpg" alt="Bus" class="bus" />
+    <img src="./assets/images/schoolbus.jpg" alt="Bus" class="buss" />
+    <img src="./assets/images/schoolbus.jpg" alt="Bus" class="buss" style="position: absolute; right: 0;" />
+    <img
+      src="./assets/images/child1-removebg-preview.png"
+      alt="Child"
+      class="child"
+    />
+  </body>
+</html>
