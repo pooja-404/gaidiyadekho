@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCB Details</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
+
+      .ncb-section {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .ncb-header {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        color: black;
+      }
+
+      .ncb-card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        background:linear-gradient(135deg, #eeeff6, rgb(138 176 215));
+      }
+
+      .ncb-card h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: darkblue;
+      }
+
+      .ncb-card p {
+        font-size: 14px;
+        color: black;
+      }
+
+      .ncb-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      .ncb-table th,
+      .ncb-table td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        
+      }
+
+      .ncb-table th {
+        background-color: darkblue;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .ncb-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      @media (max-width: 600px) {
+        .ncb-header {
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        .ncb-card h4 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .ncb-card p {
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .ncb-table th,
+        .ncb-table td {
+          padding: 8px;
+          font-weight: 700;
+        }
+        .ncb-table th {
+          background-color: darkblue;
+          color: #fff;
+          font-weight: 600;
+          padding: 10px;
+        }
+
+        /* Apply border-radius to the first and last header cells */
+        .ncb-table th:first-child {
+          border-top-left-radius: 10px;
+        }
+
+        .ncb-table th:last-child {
+          border-top-right-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ncb-section">
+      <div class="ncb-header">NO CLAIM BONUS (NCB)</div>
+
+      <div class="ncb-card">
+        <h4>A) NCB is given to the insurance holder, not to the vehicle.</h4>
+        <p>
+          NCB (No Claim Bonus) is a discount given by the insurance company for
+          not making any claim in the previous year.
+        </p>
+      </div>
+
+      <div class="ncb-card">
+        <h4>B) After selling vehicle...</h4>
+        <p>
+          If the insurance holder sells the vehicle, the policy can be
+          transferred to the new vehicle, and the NCB benefit can be retained.
+        </p>
+      </div>
+
+      <div class="ncb-card">
+        <h4>C) On vehicle transfer...</h4>
+        <p>
+          The policy can be transferred to the new owner, but the NCB is not
+          given to the new owner.
+        </p>
+      </div>
+
+      <div class="ncb-card">
+        <h4>D) Transfer of NCB on changing insurance company...</h4>
+        <p>
+          Yes, the NCB benefit can be obtained from the new company upon
+          providing proof of the NCB certificate from the old insurer.
+        </p>
+      </div>
+
+      <table class="ncb-table">
+        <tr>
+          <th>Time</th>
+          <th>NCB Offered on Premium</th>
+        </tr>
+        <tr>
+          <td>After 1 Year</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>After 2 Years</td>
+          <td>25%</td>
+        </tr>
+        <tr>
+          <td>After 3 Years</td>
+          <td>35%</td>
+        </tr>
+        <tr>
+          <td>After 4 Years</td>
+          <td>45%</td>
+        </tr>
+        <tr>
+          <td>After 5 Years and so on</td>
+          <td>50%</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
