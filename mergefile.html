@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Information</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+      :root {
+        --purple: #603f8b;
+        --aqua: #b4fee7;
+        --violet: #a16ae8;
+        --fuchsia: #fd49a0;
+        --white: #efefef;
+        --black: #222;
+        --trueBlack: #000;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--black);
+        color: var(--white);
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .cards {
+        display: grid;
+        list-style: none;
+        padding: 0;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 0 10px;
+      }
+
+      .cards_item {
+        display: flex;
+      }
+
+      .card_image {
+        display: flex;
+        height: 250px;
+        box-shadow: 0 50px 100px 0 var(--violet);
+      }
+
+      .card_image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--purple);
+        border-radius: 5px 25px 5px 50px;
+        transition: transform 0.1s linear, box-shadow 0.2s;
+        height: 491px;
+      }
+
+      .card:focus,
+      .card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+      }
+
+      .circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #f4efef;
+        padding: 5px;
+        /* margin-top: 10px 2px !important; */
+        margin: 14px;
+      }
+
+      .card_content {
+        padding: 8px;
+        overflow: hidden;
+        height: calc(162% - 250px);
+      }
+
+      .card_text {
+        font-family: " Segoe UI, Frutiger", "Frutiger Linotype, Dejavu Sans",
+          Helvetica, Helvetica Neue, Arial, sans-serif;
+        line-height: 1.5;
+        padding: 0;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
+      .card_text::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .card_text::-webkit-scrollbar-track {
+        background: var(--violet);
+      }
+
+      .card_text::-webkit-scrollbar-thumb {
+        background-color: var(--aqua);
+      }
+
+      .card_text p:first-of-type:first-letter {
+        font-size: 1.8em;
+        font-family: Georgia, Times, serif;
+        margin-right: 0.05em;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .card_title {
+        font-family: Georgia, Times, serif;
+        font-weight: 600;
+        font-size: 1.325rem;
+        background-color: rgba(253, 73, 160, 0.75);
+        color: var(--black);
+        padding: 7px;
+        border-radius: 5px 0 0 5px;
+        transform: rotate(-3.3deg);
+        transform-origin: left top;
+        margin: 0;
+        margin-top: 16px;
+        text-transform: capitalize;
+      }
+
+      .upcharge {
+        position: relative;
+        font-weight: 600;
+        background-color: var(--violet);
+        padding: 0.5rem 0.75rem;
+        color: var(--trueBlack);
+        border-radius: 0 10px;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .upcharge::after,
+      .upcharge::before {
+        content: "+";
+        display: block;
+        line-height: 0;
+        font-size: 3rem;
+        position: absolute;
+        color: var(--purple);
+        z-index: -1;
+        opacity: 0.3;
+      }
+
+      .upcharge::before {
+        left: 0;
+        top: 0.5rem;
+      }
+
+      .upcharge::after {
+        right: 0;
+        bottom: 1.25rem;
+      }
+
+      .note {
+        display: block;
+        text-align: center;
+        padding: 0.5rem;
+        font-weight: 900;
+        background-image: linear-gradient(
+          -45deg,
+          transparent 10%,
+          var(--aqua) 10.5%,
+          var(--aqua) 90%,
+          transparent 90.5%
+        );
+        color: var(--black);
+        font-size: 1.3em;
+        font-style: italic;
+        margin-top: 1rem;
+      }
+
+      .container {
+        border-radius: 8px;
+        margin: 20px 0;
+        padding: 10px;
+        background: linear-gradient(135deg, #b1e6eb, #e2f2f8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .company-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .company-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 14px;
+        transition: transform 0.3s, background-color 0.3s;
+        color: darkblue;
+        font-weight: 600;
+      }
+
+      .company-card:nth-child(odd) {
+        align-self: flex-start;
+      }
+
+      .company-card:nth-child(even) {
+        align-self: flex-end;
+      }
+
+      .company-card:hover {
+        transform: scale(1.03);
+        background-color: #f9f9f9;
+      }
+
+      h2 {
+        text-align: center;
+        color: var(--white);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <ul class="cards">
+        <li class="cards_item">
+          <div class="card" tabindex="0">
+            <div class="card_image">
+              <img
+                src="./assets/images/cenceelation.jpg"
+                alt="mixed vegetable salad in a mason jar."
+              />
+            </div>
+            <div class="card_content scroll">
+              <h2 class="card_title">Cancellation of insurance</h2>
+              <div class="card_text">
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    The policy can be cancelled by insurance company. The
+                    company sends the seven days notice to the insurance holder.
+                    The insurance company will refund the premium for remaining
+                    period if there is no claim under the policy.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    A policy can be cancelled only after ensuring that the
+                    vehicle is insured with any other company. The original
+                    certificate of insurance must be submitted to the company.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    The insurance company should inform RTA (regional transport
+                    authority) for such cancellation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card" tabindex="0">
+            <div class="card_image">
+              <img
+                src="./assets/images/insaurance2.jpg"
+                alt="mixed vegetable salad in a mason jar."
+              />
+            </div>
+            <div class="card_content scroll">
+              <h2 class="card_title">Importance Of IRDA In Insurance Sector</h2>
+              <div class="card_text">
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    The policy can be cancelled by insurance company. The
+                    company sends the seven days notice to the insurance holder.
+                    The insurance company will refund the premium for remaining
+                    period if there is no claim under the policy.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    A policy can be cancelled only after ensuring that the
+                    vehicle is insured with any other company. The original
+                    certificate of insurance must be submitted to the company.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    The insurance company should inform RTA (regional transport
+                    authority) for such cancellation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card" tabindex="0">
+            <div class="card_image">
+              <img
+                src="./assets/images/cenceelation.jpg"
+                alt="mixed vegetable salad in a mason jar."
+              />
+            </div>
+            <div class="card_content scroll">
+              <h2 class="card_title">Cancellation of insurance</h2>
+              <div class="card_text">
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    The policy can be cancelled by insurance company. The
+                    company sends the seven days notice to the insurance holder.
+                    The insurance company will refund the premium for remaining
+                    period if there is no claim under the policy.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    A policy can be cancelled only after ensuring that the
+                    vehicle is insured with any other company. The original
+                    certificate of insurance must be submitted to the company.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 10px">
+                  <div class="circle"></div>
+                  <p>
+                    The insurance company should inform RTA (regional transport
+                    authority) for such cancellation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div>
+        <div class="container" style="flex-direction: column">
+          <h2 style="text-align: center; margin-top: 50px; color: black">
+            INSURANCE COMPANIES NAME
+          </h2>
+          <div class="company-grid">
+            <div class="company-card">
+              Bajaj Allianz General Insurance Co. Ltd.
+            </div>
+            <div class="company-card">
+              Bharti Axa General Insurance Co. Ltd.
+            </div>
+            <div class="company-card">
+              Cholamandalam MS General Insurance Co. Ltd.
+            </div>
+            <div class="company-card">HDFC ERGO General Insurance Co. Ltd.</div>
+            <div class="company-card">
+              ICICI Lombard General Insurance Co. Ltd.
+            </div>
+            <div class="company-card">
+              IFFCO Tokio General Insurance Co. Ltd.
+            </div>
+            <div class="company-card">L&T General Insurance Co. Ltd.</div>
+            <div class="company-card">The New India Assurance Co. Ltd.</div>
+            <div class="company-card">The Oriental Insurance Co. Ltd.</div>
+            <div class="company-card">UNITED INDIA INSURANCE Co. Ltd.</div>
+            <div class="company-card">Reliance General Insurance Co. Ltd.</div>
+            <div class="company-card">Religare Health Insurance Co. Ltd.</div>
+            <div class="company-card">
+              Royal Sundaram Alliance Insurance Co. Ltd.
+            </div>
+            <div class="company-card">SBI General Insurance Co. Ltd.</div>
+            <div class="company-card">Shriram General Insurance Co. Ltd.</div>
+            <div class="company-card">Tata AIG General Insurance Co. Ltd</div>
+            <div class="company-card">
+              Kotak Mahindra General Insurance Co. Ltd.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
