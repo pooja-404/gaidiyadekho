@@ -27,7 +27,7 @@
         font-size: 24px;
       }
 
-      .card-container {
+      .cardslide-slide-container {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -35,41 +35,58 @@
         max-width: 600px;
       }
 
-      .card {
+      .cardslide-slide-role {
         background: #ffffff;
-        border-radius:5px 25px 5px 50px;
+        border-radius: 5px 25px 5px 50px;
         padding: 10px;
         color: #333;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s, box-shadow 0.3s;
-        /* width: 100%; */
         text-align: center;
       }
 
-      .card:hover {
+      .cardslide-slide-complaints {
+        background: #ffffff;
+        border-radius: 5px 25px 5px 50px;
+        padding: 10px;
+        color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+      }
+
+      .cardslide-slide-role:hover,
+      .cardslide-slide-complaints:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
       }
-      .card h3 {
+
+      .cardslide-slide-role h3,
+      .cardslide-slide-complaints h3 {
         margin-bottom: 10px;
         font-size: 20px;
         color: #1a237e;
       }
-      .card p {
+
+      .cardslide-slide-role p,
+      .cardslide-slide-complaints p {
         font-size: 14px;
         line-height: 1.6;
         font-weight: 600;
       }
+
       .contact-info {
         margin-top: 20px;
         font-size: 14px;
         color: #1a237e;
         font-weight: 600;
       }
+
       .contact-info a {
         color: #1a237e;
         text-decoration: none;
       }
+
       .contact-info a:hover {
         text-decoration: underline;
       }
@@ -77,8 +94,8 @@
   </head>
   <body>
     <h2>Importance of IRDA in Insurance Sector</h2>
-    <div class="card-container">
-      <div class="card">
+    <div class="cardslide-slide-container">
+      <div class="cardslide-slide-role">
         <h3>Role of IRDA</h3>
         <p>
           All insurance companies in India operate under the IRDA (Insurance
@@ -87,7 +104,7 @@
           policyholders' rights.
         </p>
       </div>
-      <div class="card">
+      <div class="cardslide-slide-complaints">
         <h3>Filing Complaints</h3>
         <p>
           If you are dissatisfied with an insurance company, you can file a

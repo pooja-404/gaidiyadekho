@@ -15,7 +15,7 @@
         padding: 10px;
       }
 
-      .card {
+      .risk-cardslide-slide {
         background: #ffffff;
         border-radius: 20px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -31,49 +31,10 @@
           /* Peach */ #302e2e 50%,
           /* Orange */ #2b4398 75%,
           /* Gold */ #141414 100% /* Spring Green */
-        ); /* 
-        /* background-image: url(./assets/images/riskbg.avif); */
-        /* background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        clip-path: polygon(
-          0 0,
-          100% 0%,
-          100% calc(100% - 30px),
-          calc(100% - 30px) 100%,
-          0% 100%
-        ); */
-      }
-
-      /* .card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url(./assets/images/riskbg.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 80% !important;
-        z-index: 0; 
-        clip-path: polygon(
-          0 0,
-          100% 0%,
-          100% calc(100% - 30px),
-          calc(100% - 30px) 100%,
-          0% 100%
         );
-        mix-blend-mode: color-burn;
-      } */
-      .card-header,
-      .card-body {
-        position: relative;
-        z-index: 1; /* Ensure the text is above the image */
       }
 
-      .card-header h3 {
+      .risk-cardslide-slide-header h3 {
         font-family: "Roboto", sans-serif;
         font-size: 22px;
         color: black;
@@ -81,7 +42,7 @@
         /* opacity: 0; */
       }
 
-      .card-body {
+      .risk-cardslide-slide-body {
         font-family: "Open Sans", sans-serif;
         color: white;
         line-height: 1.6;
@@ -138,7 +99,7 @@
 
       /* Responsive design */
       @media (max-width: 600px) {
-        .card {
+        .risk-cardslide-slide {
           padding: 15px;
           clip-path: polygon(
             0 0,
@@ -150,7 +111,7 @@
           border-radius: 25px 0px 0px 25px;
         }
 
-        .card-header h3 {
+        .risk-cardslide-slide-header h3 {
           font-size: 20px;
           font-weight: 900 !important;
         }
@@ -167,11 +128,11 @@
     </style>
   </head>
   <body>
-    <div class="card">
-      <div class="card-header">
+    <div class="risk-cardslide-slide">
+      <div class="risk-cardslide-slide-header">
         <h3 style="color: white">RISKS NOT COVERED IN THESE CASES</h3>
       </div>
-      <div class="card-body">
+      <div class="risk-cardslide-slide-body">
         <ul class="risk-list">
           <li>
             <i class="fas fa-ban"></i> If the damage occurs due to war, terror
@@ -188,8 +149,8 @@
             vehicle under the influence of alcohol or drugs, etc.
           </li>
           <li>
-            <i class="fas fa-id-card-alt"></i> If the vehicle is driven by a
-            person without a valid driving license.
+            <i class="fas fa-id-cardslide-slide-alt"></i> If the vehicle is
+            driven by a person without a valid driving license.
           </li>
           <li>
             <i class="fas fa-car-crash"></i> If the damage occurs due to

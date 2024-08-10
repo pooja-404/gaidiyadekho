@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Claim Procedure</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #61d2e8 2%,
+          #2a5298 50%,
+          #61d2e8 100%
+        );
+
+        margin: 0;
+        padding: 10px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .claim-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .claim-cardslide-slide {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 8px 15px rgba(125, 141, 122, 0.2);
+        transition: transform 0.3s, background 0.3s;
+      }
+
+      .claim-cardslide-slide:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .claim-cardslide-slide img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .claim-cardslide-slide h2 {
+        margin: 10px 0;
+        font-size: 22px;
+      }
+
+      .claim-cardslide-slide p {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Insurance Claim Procedure</h1>
+    <div class="cardslide-slide-container">
+      <div class="claim-cardslide-slide">
+        <img src="./assets/images/damage1.avif" alt="Own Damage" />
+        <h2>Own Damage Claim</h2>
+        <p>
+          Inform the insurance company and police as soon as possible. Do not
+          remove the vehicle from the accident site without permission. If you
+          have a cashless policy, park the vehicle at an authorized workshop for
+          repairs.
+        </p>
+      </div>
+      <div class="claim-cardslide-slide">
+        <img src="./assets/images/claim2.jpg" alt="Third Party Claim" />
+        <h2>Third Party Claim</h2>
+        <p>
+          In case of injury to a third party, there is no claim limit. For
+          property damage, the maximum claim limit is ₹7,50,000. Notify the
+          insurance company and police immediately after the accident.
+        </p>
+      </div>
+      <div class="claim-cardslide-slide">
+        <img src="./assets/images/claim3.jpg" alt="Theft Claim" />
+        <h2>Theft Claim</h2>
+        <p>
+          File an FIR for the theft and inform the insurance company
+          immediately. Submit all required documents, including the claim form
+          and vehicle details. If the vehicle is not recovered, the amount will
+          be paid within 7 days after approval.
+        </p>
+      </div>
+      <div class="claim-cardslide-slide">
+        <img src="./assets/images/claim4.avif" alt="Claim Procedure" />
+        <h2>General Claim Procedure</h2>
+        <p>
+          If you are a victim in an accident, gather all information about the
+          insurance policy and notify the insurance holder. Ensure that all
+          relevant details are shared with the insurance company.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

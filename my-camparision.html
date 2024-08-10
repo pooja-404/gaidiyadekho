@@ -31,11 +31,11 @@
         display: block;
       }
 
-      .car-card {
+      .car-cardslide-slide {
         display: inline-block; /* Change to inline-block for horizontal scrolling */
-        width: 300px; /* Set width for the car cards */
+        width: 300px; /* Set width for the car cardslide-slides */
         height: 100px; /* Set a fixed height for consistency */
-        vertical-align: top; /* Align the car cards to the top */
+        vertical-align: top; /* Align the car cardslide-slides to the top */
         align-items: center;
         background-color: #fff;
         padding: 10px;
@@ -44,19 +44,19 @@
         margin: 10px; /* Adjust margin as needed */
       }
 
-      .car-card img {
+      .car-cardslide-slide img {
         width: 123px;
         height: 69px;
         margin-right: 12px;
         border-radius: 4px;
       }
 
-      .car-card h2 {
+      .car-cardslide-slide h2 {
         font-size: 16px;
         margin: 0;
       }
 
-      .car-card p {
+      .car-cardslide-slide p {
         font-size: 14px;
         color: #ff0000;
         margin: 0;
@@ -84,8 +84,8 @@
         width: max-content; /* Allow content to define the width */
       }
 
-      .tab-content .car-card {
-        flex: 0 0 auto; /* Prevent the card from shrinking or growing */
+      .tab-content .car-cardslide-slide {
+        flex: 0 0 auto; /* Prevent the cardslide-slide from shrinking or growing */
         margin: 10px; /* Adjust margin as needed */
       }
 
@@ -123,7 +123,7 @@
       .tab-content::-webkit-scrollbar-thumb:hover {
         background: #555;
       }
-      .card-flex {
+      .cardslide-slide-flex {
         display: flex;
         padding: 10px 0;
       }
@@ -133,12 +133,9 @@
       p {
         font-size: 16px;
         font-weight: 600;
-    
-        
-
       }
 
-      .compare-card {
+      .compare-cardslide-slide {
         display: none;
         flex-direction: column;
         margin: 10px;
@@ -147,13 +144,13 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
       }
-      .card {
+      .cardslide-slide {
         padding: 10px;
         box-sizing: border-box;
- 
+
         position: relative;
       }
-      .card-title {
+      .cardslide-slide-title {
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 10px;
@@ -182,18 +179,18 @@
         transform: translate(310%, 312%);
         z-index: 3;
       }
-      .card-thumb {
+      .cardslide-slide-thumb {
         height: 200px;
         overflow: hidden;
         border-radius: 10px;
         margin-bottom: -22px;
       }
-      .card-thumb img {
+      .cardslide-slide-thumb img {
         width: 100%;
         height: 82%;
         object-fit: cover;
       }
-      .card-content {
+      .cardslide-slide-content {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -242,7 +239,7 @@
         justify-content: space-around;
         margin: 10px;
       }
-      .car-card2 {
+      .car-cardslide-slide2 {
         border: 1px solid #ddd;
         text-align: center;
         width: 300px;
@@ -356,7 +353,6 @@
         position: unset !important;
         z-index: 3;
       }
-    
 
       .vs {
         width: 45px;
@@ -375,12 +371,12 @@
       }
       /* Responsive Design */
       @media (min-width: 768px) {
-        .compare-card {
+        .compare-cardslide-slide {
           flex-direction: row;
         }
       }
       @media (max-width: 767px) {
-        .compare-card {
+        .compare-cardslide-slide {
           flex-direction: column;
         }
       }
@@ -389,7 +385,10 @@
   <body>
     <div>
       <div class="container">
-        <div class="car-card2" style="       border-bottom: 1px solid #918e8e;">
+        <div
+          class="car-cardslide-slide2"
+          style="border-bottom: 1px solid #918e8e"
+        >
           <img
             src="./assets/images/external2.jpeg"
             alt="First Car"
@@ -402,7 +401,7 @@
           <p style="padding-bottom: 10px; color: red">Price: 1,20,000</p>
         </div>
         <span class="vs2">VS</span>
-        <div class="car-card2">
+        <div class="car-cardslide-slide2">
           <img
             src="./assets/images/external1.jpeg"
             alt="Second Car"
@@ -429,13 +428,13 @@
       </button>
 
       <!-- Modal for First Car -->
-      <div id="comparisonCards" class="compare-card">
-        <div class="card">
-          <div class="card-thumb">
+      <div id="comparisoncardslide-slides" class="compare-cardslide-slide">
+        <div class="cardslide-slide">
+          <div class="cardslide-slide-thumb">
             <img src="./assets/images/external1.jpeg" alt="mahindra" />
           </div>
-          <div class="card-title">Mahindra XUV 500</div>
-          <div class="card-content">
+          <div class="cardslide-slide-title">Mahindra XUV 500</div>
+          <div class="cardslide-slide-content">
             <div class="price">
               <p>Price</p>
               <span>₹8.50 Lakh</span>
@@ -477,12 +476,12 @@
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-thumb">
+        <div class="cardslide-slide">
+          <div class="cardslide-slide-thumb">
             <img src="./assets/images/external2.jpeg" alt="mahindra" />
           </div>
-          <div class="card-title">Mahindra XUV 500</div>
-          <div class="card-content">
+          <div class="cardslide-slide-title">Mahindra XUV 500</div>
+          <div class="cardslide-slide-content">
             <div class="price">
               <p>Price</p>
               <span>₹8.50 Lakh</span>
@@ -524,7 +523,6 @@
             </div>
           </div>
         </div>
-    
       </div>
     </div>
     <h1
@@ -538,8 +536,8 @@
         <span class="vs4">VS</span>
         <div id="budget" class="tab-content active tab_content scroll-bar">
           <div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external1.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -550,8 +548,8 @@
                 </div>
               </div>
             </div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external2.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -562,8 +560,8 @@
                 </div>
               </div>
             </div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external3.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -577,8 +575,8 @@
           </div>
 
           <div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external2.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -589,8 +587,8 @@
                 </div>
               </div>
             </div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external3.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -601,8 +599,8 @@
                 </div>
               </div>
             </div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external1.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -616,8 +614,8 @@
           </div>
           <span class="vs3">VS</span>
           <div style="margin-top: -50px">
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external1.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -628,8 +626,8 @@
                 </div>
               </div>
             </div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external1.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -640,8 +638,8 @@
                 </div>
               </div>
             </div>
-            <div class="car-card">
-              <div class="card-flex">
+            <div class="car-cardslide-slide">
+              <div class="cardslide-slide-flex">
                 <img
                   src="./assets/images/external3.jpeg"
                   alt="Mahindra XUV 3XO"
@@ -657,8 +655,8 @@
         <span class="vs">VS</span>
         <span class="vs5">VS</span>
         <div id="premium" class="tab-content">
-          <!-- <div class="car-card">
-            <div class="card-flex">
+          <!-- <div class="car-cardslide-slide">
+            <div class="cardslide-slide-flex">
               <img src="./assets/images/external3.jpeg" alt="BMW X1" />
               <div class="my-auto">
                 <h2>BMW X1</h2>
@@ -666,8 +664,8 @@
               </div>
             </div>
           </div>
-          <div class="car-card">
-            <div class="card-flex">
+          <div class="car-cardslide-slide">
+            <div class="cardslide-slide-flex">
               <img src="./assets/images/external2.jpeg" alt="Audi Q3" />
               <div class="my-auto">
                 <h2>Audi Q3</h2>
@@ -677,8 +675,8 @@
           </div> -->
         </div>
         <div id="luxury" class="tab-content">
-          <!-- <div class="car-card">
-            <div class="card-flex">
+          <!-- <div class="car-cardslide-slide">
+            <div class="cardslide-slide-flex">
               <img
                 src="./assets/images/external1.jpeg"
                 alt="Mercedes-Benz S-Class"
@@ -689,8 +687,8 @@
               </div>
             </div>
           </div>
-          <div class="car-card">
-            <div class="card-flex">
+          <div class="car-cardslide-slide">
+            <div class="cardslide-slide-flex">
               <img
                 src="./assets/images/external2.jpeg"
                 alt="Rolls-Royce Phantom"
@@ -735,15 +733,15 @@
       document
         .getElementById("compareButton")
         .addEventListener("click", function () {
-          const comparisonCards = document.getElementById("comparisonCards");
+          const comparisoncardslide-slides = document.getElementById("comparisoncardslide-slides");
           if (
-            comparisonCards.style.display === "none" ||
-            comparisonCards.style.display === ""
+            comparisoncardslide-slides.style.display === "none" ||
+            comparisoncardslide-slides.style.display === ""
           ) {
-            comparisonCards.style.display = "flex";
+            comparisoncardslide-slides.style.display = "flex";
             this.textContent = "Hide Comparison";
           } else {
-            comparisonCards.style.display = "none";
+            comparisoncardslide-slides.style.display = "none";
             this.textContent = "Compare";
           }
         });

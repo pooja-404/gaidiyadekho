@@ -16,7 +16,7 @@
         padding: 10px;
       }
 
-      .card {
+      .cardslide-slide {
         background: #ffffff;
         border-radius: 20px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@
         );
         opacity: 70%;
       }
-      .card {
+      .cardslide-slide {
         position: relative;
         background: none;
         padding: 20px;
@@ -51,7 +51,7 @@
         overflow: hidden;
       }
 
-      .card::before {
+      .cardslide-slide::before {
         content: "";
         position: absolute;
         top: 0;
@@ -73,13 +73,13 @@
         );
       }
 
-      .card-header,
-      .card-body {
+      .cardslide-slide-header,
+      .cardslide-slide-body {
         position: relative;
         z-index: 1; /* Ensure the text is above the image */
       }
 
-      .card-header h3 {
+      .cardslide-slide-header h3 {
         font-family: "Roboto", sans-serif;
         font-size: 22px;
         color: black;
@@ -88,7 +88,7 @@
         z-index: 1;
       }
 
-      .card-body {
+      .cardslide-slide-body {
         font-family: "Open Sans", sans-serif;
         color: black;
         line-height: 1.6;
@@ -145,7 +145,7 @@
 
       /* Responsive design */
       @media (max-width: 600px) {
-        .card {
+        .cardslide-slide {
           padding: 15px;
           /* margin-top: 420px;
           margin-bottom: 420px; */
@@ -160,7 +160,7 @@
           border-radius: 25px 0px 0px 25px;
         }
 
-        .card-header h3 {
+        .cardslide-slide-header h3 {
           font-size: 20px;
           font-weight: 900 !important;
         }
@@ -177,11 +177,11 @@
     </style>
   </head>
   <body>
-    <div class="card">
-      <div class="card-header">
+    <div class="cardslide-slide">
+      <div class="cardslide-slide-header">
         <h3>RISKS NOT COVER IN THESE CASES</h3>
       </div>
-      <div class="card-body">
+      <div class="cardslide-slide-body">
         <ul class="risk-list">
           <li>
             <i class="fas fa-ban"></i> If the damage occurs due to war, terror
@@ -198,8 +198,8 @@
             vehicle under the influence of alcohol or drugs, etc.
           </li>
           <li>
-            <i class="fas fa-id-card-alt"></i> If the vehicle is driven by a
-            person without a valid driving license.
+            <i class="fas fa-id-cardslide-slide-alt"></i> If the vehicle is
+            driven by a person without a valid driving license.
           </li>
           <li>
             <i class="fas fa-car-crash"></i> If the damage occurs due to

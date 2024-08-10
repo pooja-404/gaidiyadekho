@@ -10,7 +10,7 @@
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
       }
-      .compare-card {
+      .compare-cardslide-slide {
         display: flex;
         flex-direction: column;
         margin: 10px;
@@ -20,34 +20,34 @@
         overflow: hidden;
         position: relative;
       }
-      .card-details {
+      .cardslide-slide-details {
         text-align: left;
         font-size: 13px;
         font-weight: 600;
       }
-      .card {
+      .cardslide-slide {
         display: flex;
         flex-direction: column;
         padding: 10px;
         border-bottom: 1px solid #c7c4c4;
         position: relative;
       }
-      .card:last-child {
+      .cardslide-slide:last-child {
         border-bottom: none;
       }
-      .card-thumb {
+      .cardslide-slide-thumb {
         position: relative;
         width: 160px;
         height: 133px;
         margin-bottom: 10px;
       }
-      .card-thumb img {
+      .cardslide-slide-thumb img {
         width: 100%;
         height: 88%;
         border-radius: 10px;
         object-fit: cover;
       }
-      .card-title {
+      .cardslide-slide-title {
         font-size: 14px;
         font-weight: bold;
         margin-bottom: 8px;
@@ -138,7 +138,7 @@
         font-weight: 700;
         margin: 0;
       }
-      .card-flex {
+      .cardslide-slide-flex {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -151,23 +151,23 @@
         justify-content: space-between;
         gap: 5px;
       }
-      /* .card-main-detailed{
+      /* .cardslide-slide-main-detailed{
         margin-left: 20px;
       } */
-       .cards{
-      display: flex;
-       }
+      .cardslide-slides {
+        display: flex;
+      }
     </style>
   </head>
   <body>
-    <div class="compare-card">
-      <div class="card">
-        <div class="card-flex">
-          <div class="card-thumb">
+    <div class="compare-cardslide-slide">
+      <div class="cardslide-slide">
+        <div class="cardslide-slide-flex">
+          <div class="cardslide-slide-thumb">
             <img src="./assets/images/external1.jpeg" alt="Mahindra XUV 500" />
           </div>
-          <div class="card-main-detailed">
-            <div class="card-title">Mahindra XUV 500</div>
+          <div class="cardslide-slide-main-detailed">
+            <div class="cardslide-slide-title">Mahindra XUV 500</div>
             <div class="price">
               Price: <span class="price-text">₹8.50 Lakh</span>
             </div>
@@ -176,7 +176,7 @@
             </div>
           </div>
         </div>
-        <div class="card-details">
+        <div class="cardslide-slide-details">
           <div class="detailed">
             <div>Fuel Type: Diesel</div>
             <div>Transmission: Manual</div>
@@ -188,13 +188,13 @@
         </div>
       </div>
       <span class="vs">VS</span>
-      <div class="card">
-        <div class="card-flex">
-          <div class="card-thumb">
+      <div class="cardslide-slide">
+        <div class="cardslide-slide-flex">
+          <div class="cardslide-slide-thumb">
             <img src="./assets/images/external2.jpeg" alt="Maruti Wagon R" />
           </div>
           <div>
-            <div class="card-title">Maruti Wagon R</div>
+            <div class="cardslide-slide-title">Maruti Wagon R</div>
             <div class="price">
               Price: <span class="price-text">₹5.50 Lakh</span>
             </div>
@@ -203,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="card-details">
+        <div class="cardslide-slide-details">
           <div class="detailed">
             <div>Fuel Type: Petrol</div>
             <div>Transmission: Automatic</div>
@@ -366,23 +366,23 @@
         </div>
       </div>
     </div>
-    <div class="compare-card">
-      <div class="cards">
-        <div class="card-thumb">
+    <div class="compare-cardslide-slide">
+      <div class="cardslide-slides">
+        <div class="cardslide-slide-thumb">
           <img src="./assets/images/external1.jpeg" alt="mahindra" />
         </div>
-        <div class="card-details">
-          <div class="card-title">Mahindra XUV 500</div>
+        <div class="cardslide-slide-details">
+          <div class="cardslide-slide-title">Mahindra XUV 500</div>
           <div class="price">₹8.50 Lakh</div>
         </div>
       </div>
       <span class="vs">VS</span>
-      <div class="cards">
-        <div class="card-thumb">
+      <div class="cardslide-slides">
+        <div class="cardslide-slide-thumb">
           <img src="./assets/images/external2.jpeg" alt="mahindra" />
         </div>
-        <div class="card-details">
-          <div class="card-title">Maruti Wagon R</div>
+        <div class="cardslide-slide-details">
+          <div class="cardslide-slide-title">Maruti Wagon R</div>
           <div class="price">₹8.50 Lakh</div>
         </div>
       </div>

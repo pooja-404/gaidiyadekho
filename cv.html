@@ -1,115 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ce</title>
     <style>
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
 
-        .container {
-            min-width: 360px;
-            padding-left: 12px;
-            padding-right: 12px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+      .container {
+        min-width: 360px;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-right: auto;
+        margin-left: auto;
+      }
 
-        .card {
-            width: 120px;
-            /* Fixed width for each card */
-            height: 106px;
-            /* Fixed height for each card */
-            background: rgb(255, 253, 253);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            overflow: hidden;
-            /* Ensure no content overflows outside the card */
-            padding: 10px;
-            transition: 300ms linear;
-        }
+      .cardslide-slide {
+        width: 120px;
+        /* Fixed width for each cardslide-slide */
+        height: 106px;
+        /* Fixed height for each cardslide-slide */
+        background: rgb(255, 253, 253);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        /* Ensure no content overflows outside the cardslide-slide */
+        padding: 10px;
+        transition: 300ms linear;
+      }
 
-        p {
-            font-size: 15px !important;
-            text-align: center;
-        }
+      p {
+        font-size: 15px !important;
+        text-align: center;
+      }
 
-        .card img {
-            max-height: 200px;
-            object-fit: contain;
-            /* Maintain aspect ratio */
-            padding-top: 10px;
-        }
+      .cardslide-slide img {
+        max-height: 200px;
+        object-fit: contain;
+        /* Maintain aspect ratio */
+        padding-top: 10px;
+      }
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+      .cardslide-slide:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
     </style>
-</head>
+  </head>
 
-<body style="background: ghostwhite;">
-    <section style="display: flex; justify-content: center;">
-        <div class="container">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-                <div class="card">
-                    <img src="./assets/images/tata motors.png" alt="Honda" style="max-width: 100px; ">
-                    <p style="font-weight: 700;">Tata Motors CV</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/eicher-logo.png" alt="Hero" style="max-width: 100px;">
-                    <p style="font-weight: 700; margin-top: -9px;">Eicher CV</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/bajaj-logo.png" alt="Honda" style="max-width: 77px;">
-                    <p style="font-weight: 700;">BHarat Benz CV</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/SMLISUZU.NS-5cc514af.png" alt="Honda"
-                        style="max-width: 110px; margin-top: 28px;">
-                    <p style="font-weight: 700; margin-top: 21px;">SML Isuza</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/forcemotors.jfif" alt="Hero" style="max-width: 72px;">
-                    <p style="font-size: 20px;font-weight: 700; margin-top: 8px;">Force Motors</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/mahindra.jpg" alt="Honda" style="max-width: 105px;">
-                    <p style="font-size: 20px;font-weight: 700; margin-top: 28px;">Mahindra CV</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/maruti suzuki.jfif" alt="Honda"
-                        style="max-width: 62px; background-color: white; margin-top: 20px;">
-                    <p style="font-weight: 700; margin-top: 13px;">Maruti Suzuki</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/isuzu_logo_icon_145817.webp" alt="Hero" style="max-width: 71px;">
-                    <p style="font-size: 20px;font-weight: 700;">Isuza</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images//toyoto.jfif" alt="Honda" style="max-width: 73px;">
-                    <p style="font-size: 20px;font-weight: 700;">Toyoto CV</p>
-
-                </div>
-            </div>
-           
+  <body style="background: ghostwhite">
+    <section style="display: flex; justify-content: center">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          "
+        >
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/tata motors.png"
+              alt="Honda"
+              style="max-width: 100px"
+            />
+            <p style="font-weight: 700">Tata Motors CV</p>
+          </div>
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/eicher-logo.png"
+              alt="Hero"
+              style="max-width: 100px"
+            />
+            <p style="font-weight: 700; margin-top: -9px">Eicher CV</p>
+          </div>
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/bajaj-logo.png"
+              alt="Honda"
+              style="max-width: 77px"
+            />
+            <p style="font-weight: 700">BHarat Benz CV</p>
+          </div>
         </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/SMLISUZU.NS-5cc514af.png"
+              alt="Honda"
+              style="max-width: 110px; margin-top: 28px"
+            />
+            <p style="font-weight: 700; margin-top: 21px">SML Isuza</p>
+          </div>
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/forcemotors.jfif"
+              alt="Hero"
+              style="max-width: 72px"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 8px">
+              Force Motors
+            </p>
+          </div>
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/mahindra.jpg"
+              alt="Honda"
+              style="max-width: 105px"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 28px">
+              Mahindra CV
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/maruti suzuki.jfif"
+              alt="Honda"
+              style="max-width: 62px; background-color: white; margin-top: 20px"
+            />
+            <p style="font-weight: 700; margin-top: 13px">Maruti Suzuki</p>
+          </div>
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images/isuzu_logo_icon_145817.webp"
+              alt="Hero"
+              style="max-width: 71px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Isuza</p>
+          </div>
+          <div class="cardslide-slide">
+            <img
+              src="./assets/images//toyoto.jfif"
+              alt="Honda"
+              style="max-width: 73px"
+            />
+            <p style="font-size: 20px; font-weight: 700">Toyoto CV</p>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>

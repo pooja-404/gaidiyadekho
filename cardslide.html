@@ -25,7 +25,7 @@
         transform: translateX(0); /* Default position */
       }
 
-      .card {
+      .cardslide {
         width: 100%;
         box-sizing: border-box;
         flex-shrink: 0;
@@ -34,16 +34,16 @@
         align-items: center; /* Centering vertically */
       }
 
-      .card form {
+      .cardslide form {
         display: flex;
         flex-direction: column;
         /* width: 100%; */
         max-width: 600px; /* Adjust based on your design */
       }
 
-      .card form input,
-      .card form select,
-      .card form button {
+      .cardslide form input,
+      .cardslide form select,
+      .cardslide form button {
         margin-bottom: 10px;
         padding: 10px;
         font-size: 16px;
@@ -51,13 +51,13 @@
         border-radius: 4px;
         width: 332px;
       }
-      .card form button {
+      .cardslide form button {
         background-color: darkblue;
         color: white;
         border: none;
         cursor: pointer;
       }
-      .card form button:hover {
+      .cardslide form button:hover {
         background-color: #0056b3;
       }
       .header {
@@ -91,7 +91,6 @@
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
       }
       .accordion {
         width: 100%;
@@ -117,19 +116,13 @@
       .accordion-header.active::after {
         transform: rotate(90deg); /* Rotates the triangle to point down */
       }
-      /* .accordion-content {
-        display: none;
-        padding: 15px;
-      } */
+     
       .accordion-content p,
       .accordion-content ul {
         margin: 0;
+        font-weight: 600;
       }
-      /* table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      } */
+
       table,
       th,
       td {
@@ -139,6 +132,7 @@
       td {
         padding: 10px;
         text-align: left;
+        font-weight: 600;
       }
       .form-section {
         padding: 15px;
@@ -166,7 +160,7 @@
 
       .accordion-content {
         display: none;
-        padding: 15px;
+        padding: 10px;
         max-height: 300px; /* Adjust height as needed */
         overflow: auto; /* Enable both vertical and horizontal scrolling */
       }
@@ -207,7 +201,7 @@
       <div class="container">
         <div class="slider-container">
           <div class="slider" id="slider">
-            <div class="card" id="card1">
+            <div class="cardslide" id="card1">
               <form id="form1">
                 <select required id="regYear">
                   <option value="" disabled selected>
@@ -268,7 +262,7 @@
                 </button>
               </form>
             </div>
-            <div class="card" id="card2">
+            <div class="cardslide" id="card2">
               <form id="form2">
                 <select required id="vehicleBrand">
                   <option value="" disabled selected>
@@ -289,7 +283,7 @@
                 </button>
               </form>
             </div>
-            <div class="card" id="card3">
+            <div class="cardslide" id="card3">
               <form id="form3">
                 <input type="text" placeholder="Name" required id="name" />
                 <input type="email" placeholder="Email" required id="email" />
@@ -308,7 +302,7 @@
         </div>
       </div>
     </div>
-    <div class="container" style="margin: 8px;">
+    <div class="container" style="margin: 8px">
       <div class="accordion">
         <!-- Necessity of Insurance Policy -->
         <div class="accordion-item">
@@ -510,8 +504,8 @@
               that addition can be claimed.
             </p>
             <p>Procedure for recording changes in the policy:</p>
-            <ul>
-              <li>Submit a letter to the company with the proof of change.</li>
+            <ul class="pe-0">
+              <li class="pe-0">Submit a letter to the company with the proof of change.</li>
               <li>
                 Based on the proof of change, the company will modify the
                 policy.
@@ -523,7 +517,7 @@
     </div>
     <script>
       let currentCard = 0;
-      const cards = document.querySelectorAll(".card");
+      const cards = document.querySelectorAll(".cardslide");
 
       function showNextCard(currentFormId, nextCardId) {
         const currentForm = document.getElementById(currentFormId);

@@ -36,7 +36,7 @@
         margin: 0 auto;
       }
 
-      .cards {
+      .cardslide-slides {
         display: grid;
         list-style: none;
         padding: 0;
@@ -45,24 +45,24 @@
         margin: 0 10px;
       }
 
-      .cards_item {
+      .cardslide-slides_item {
         display: flex;
       }
 
-      .card_image {
+      .cardslide-slide_image {
         display: flex;
         height: 250px;
         box-shadow: 0 50px 100px 0 var(--violet);
       }
 
-      .card_image img {
+      .cardslide-slide_image img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .card {
+      .cardslide-slide {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -70,11 +70,11 @@
         background-color: var(--purple);
         border-radius: 5px 25px 5px 50px;
         transition: transform 0.1s linear, box-shadow 0.2s;
-        height: 491px;
+        height: 507px;
       }
 
-      .card:focus,
-      .card:hover {
+      .cardslide-slide:focus,
+      .cardslide-slide:hover {
         transform: scale(1.01);
         box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
       }
@@ -89,13 +89,13 @@
         margin: 14px;
       }
 
-      .card_content {
+      .cardslide-slide_content {
         padding: 8px;
         overflow: hidden;
         height: calc(162% - 250px);
       }
 
-      .card_text {
+      .cardslide-slide_text {
         font-family: " Segoe UI, Frutiger", "Frutiger Linotype, Dejavu Sans",
           Helvetica, Helvetica Neue, Arial, sans-serif;
         line-height: 1.5;
@@ -104,19 +104,19 @@
         overflow-y: auto;
       }
 
-      .card_text::-webkit-scrollbar {
+      .cardslide-slide_text::-webkit-scrollbar {
         width: 8px;
       }
 
-      .card_text::-webkit-scrollbar-track {
+      .cardslide-slide_text::-webkit-scrollbar-track {
         background: var(--violet);
       }
 
-      .card_text::-webkit-scrollbar-thumb {
+      .cardslide-slide_text::-webkit-scrollbar-thumb {
         background-color: var(--aqua);
       }
 
-      .card_text p:first-of-type:first-letter {
+      .cardslide-slide_text p:first-of-type:first-letter {
         font-size: 1.8em;
         font-family: Georgia, Times, serif;
         margin-right: 0.05em;
@@ -126,7 +126,7 @@
         margin: 0;
       }
 
-      .card_title {
+      .cardslide-slide_title {
         font-family: Georgia, Times, serif;
         font-weight: 600;
         font-size: 1.325rem;
@@ -211,7 +211,7 @@
         max-width: 400px;
       }
 
-      .company-card {
+      .company-cardslide-slide {
         background-color: #ffffff;
         border-radius: 10px;
         padding: 15px;
@@ -223,15 +223,15 @@
         font-weight: 600;
       }
 
-      .company-card:nth-child(odd) {
+      .company-cardslide-slide:nth-child(odd) {
         align-self: flex-start;
       }
 
-      .company-card:nth-child(even) {
+      .company-cardslide-slide:nth-child(even) {
         align-self: flex-end;
       }
 
-      .company-card:hover {
+      .company-cardslide-slide:hover {
         transform: scale(1.03);
         background-color: #f9f9f9;
       }
@@ -240,169 +240,1480 @@
         text-align: center;
         color: var(--white);
       }
+      a {
+        text-decoration: none !important;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #333;
+        font-size: 24px;
+      }
+
+      .cardslide-slide-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .cardslide-slide-role {
+        background: #ffffff;
+        border-radius: 5px 25px 5px 50px;
+        padding: 10px;
+        color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+        margin: 12px;
+      }
+
+      .cardslide-slide-complaints {
+        background: #ffffff;
+        border-radius: 5px 25px 5px 50px;
+        padding: 10px;
+        color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+        margin: 12px;
+      }
+
+      .cardslide-slide-role:hover,
+      .cardslide-slide-complaints:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      .cardslide-slide-role h3,
+      .cardslide-slide-complaints h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #1a237e;
+      }
+
+      .cardslide-slide-role p,
+      .cardslide-slide-complaints p {
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 600;
+      }
+
+      .contact-info {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #1a237e;
+        font-weight: 600;
+      }
+
+      .contact-info a {
+        color: #1a237e;
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      /* ncb */
+      .ncb-section {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .ncb-header {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        color: black;
+      }
+
+      .ncb-cardslide-slide {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        background: linear-gradient(135deg, #eeeff6, rgb(138 176 215));
+      }
+
+      .ncb-cardslide-slide h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: darkblue;
+      }
+
+      .ncb-cardslide-slide p {
+        font-size: 14px;
+        color: black;
+      }
+
+      .ncb-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      .ncb-table th,
+      .ncb-table td {
+        padding: 10px;
+        text-align: center;
+
+        border-bottom: 2px solid #4d4988;
+      }
+
+      .ncb-table th {
+        background-color: darkblue;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .ncb-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      /* risk */
+      .risk-cardslide-slide {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        background: linear-gradient(
+          145deg,
+          #111111 0%,
+          /* Coral */ #354283 25%,
+          /* Peach */ #302e2e 50%,
+          /* Orange */ #2b4398 75%,
+          /* Gold */ #141414 100% /* Spring Green */
+        );
+      }
+
+      .risk-cardslide-slide-header h3 {
+        font-family: "Roboto", sans-serif;
+        font-size: 22px;
+        color: black;
+        margin-bottom: 15px;
+        /* opacity: 0; */
+      }
+
+      .risk-cardslide-slide-body {
+        font-family: "Open Sans", sans-serif;
+        color: white;
+        line-height: 1.6;
+      }
+
+      .risk-list,
+      .risk-cover-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .risk-list li,
+      .risk-cover-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 25px;
+        font-weight: 700;
+      }
+
+      .risk-list li::before,
+      .risk-cover-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: white;
+        font-size: 30px;
+      }
+
+      .risk-cover-list li::before {
+        color: white;
+      }
+
+      .risk-list i,
+      .risk-cover-list i {
+        margin-right: 12px;
+        color: inherit;
+        font-size: 18px;
+      }
+
+      .divider {
+        border: none;
+        border-top: 2px solid white;
+        margin: 20px 0;
+      }
+
+      h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: white;
+      }
+      /* factor */
+      .factor-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .factor-cardslide-slide {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, background 0.3s;
+      }
+
+      .factor-cardslide-slide:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .factor-cardslide-slide img {
+        width: 80px;
+        margin-bottom: 20px;
+      }
+
+      .factor-cardslide-slide h2 {
+        margin: 10px 0;
+        font-size: 22px;
+        color: white;
+        text-align: center;
+      }
+
+      .factor-cardslide-slide p {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 600;
+      }
+      /* claim */
+      .claim-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .claim-cardslide-slide {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 8px 15px rgba(125, 141, 122, 0.2);
+        transition: transform 0.3s, background 0.3s;
+      }
+
+      .claim-cardslide-slide:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .claim-cardslide-slide img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .claim-cardslide-slide h2 {
+        margin: 10px 0;
+        font-size: 22px;
+        color: white;
+      }
+
+      .claim-cardslide-slide p {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 600;
+      }
+
+      /* slidecard */
+      .slider-container {
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centering the slider horizontally */
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 300%; /* Adjust based on the number of cards */
+        transform: translateX(0); /* Default position */
+      }
+
+      .cardslide {
+        width: 100%;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center; /* Centering the form content */
+        align-items: center; /* Centering vertically */
+      }
+
+      .cardslide form {
+        display: flex;
+        flex-direction: column;
+        /* width: 100%; */
+        max-width: 600px; /* Adjust based on your design */
+      }
+
+      .cardslide form input,
+      .cardslide form select,
+      .cardslide form button {
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #0f0f0f;
+        border-radius: 4px;
+        width: 332px;
+      }
+      .cardslide form button {
+        background-color: darkblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .cardslide form button:hover {
+        background-color: #0056b3;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0 12px;
+        font-size: 16px !important;
+      }
+      .options {
+        text-align: center;
+      }
+      .options label {
+        margin-right: 10px;
+        color: black;
+        font-weight: 600;
+      }
+      .card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the image */
+      }
+
+      .conatinerm {
+        width: 100%;
+        padding: 10px;
+        margin: auto;
+      }
+      .slide-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 10px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .accordion {
+        width: 100%;
+      }
+      .accordion-item {
+        border-bottom: 1px solid #131212;
+      }
+      .accordion-header {
+        background-color: rgb(231, 249, 255);
+
+        padding: 15px;
+        cursor: pointer;
+        font-weight: bold;
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+      }
+      .accordion-header::after {
+        content: "\25B6"; /* Right-pointing triangle */
+        font-size: 12px;
+        transition: transform 0.3s ease;
+      }
+      .accordion-header.active::after {
+        transform: rotate(90deg); /* Rotates the triangle to point down */
+      }
+
+      .accordion-content p,
+      .accordion-content ul {
+        margin: 0;
+        font-weight: 600;
+        color: black;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #101010;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        font-weight: 600;
+        color: black;
+      }
+      .form-section {
+        padding: 15px;
+        background-color: #f9faff;
+      }
+      .form-section input,
+      .form-section textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #040404;
+        border-radius: 4px;
+      }
+      .form-section button {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .form-section button:hover {
+        background-color: #0056b3;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 10px;
+        max-height: 300px; /* Adjust height as needed */
+        overflow: auto; /* Enable both vertical and horizontal scrolling */
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        table-layout: auto; /* Allow table to expand beyond container width if needed */
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        word-wrap: break-word; /* Handle long words or content */
+      }
+      @media (max-width: 600px) {
+        .ncb-header {
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        .ncb-cardslide-slide h4 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .ncb-cardslide-slide p {
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .ncb-table th,
+        .ncb-table td {
+          padding: 8px;
+          font-weight: 700;
+          color: black;
+        }
+        .ncb-table th {
+          background-color: darkblue;
+          color: #fff;
+          font-weight: 600;
+          padding: 10px;
+        }
+
+        /* Apply border-radius to the first and last header cells */
+        .ncb-table th:first-child {
+          border-top-left-radius: 10px;
+        }
+
+        .ncb-table th:last-child {
+          border-top-right-radius: 10px;
+        }
+        .risk-cardslide-slide {
+          padding: 15px;
+          clip-path: polygon(
+            0 0,
+            100% 0%,
+            100% calc(100% - 8px),
+            calc(100% - -13px) 100%,
+            0% 100%
+          );
+          border-radius: 25px 0px 0px 25px;
+        }
+
+        .risk-cardslide-slide-header h3 {
+          font-size: 20px;
+          font-weight: 900 !important;
+        }
+
+        h4 {
+          font-size: 16px;
+        }
+
+        .risk-list i,
+        .risk-cover-list i {
+          font-size: 16px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="main">
-      <ul class="cards">
-        <li class="cards_item">
-          <div class="card" tabindex="0">
-            <div class="card_image">
-              <img
-                src="./assets/images/cenceelation.jpg"
-                alt="mixed vegetable salad in a mason jar."
-              />
-            </div>
-            <div class="card_content scroll">
-              <h2 class="card_title">Cancellation of insurance</h2>
-              <div class="card_text">
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    The policy can be cancelled by insurance company. The
-                    company sends the seven days notice to the insurance holder.
-                    The insurance company will refund the premium for remaining
-                    period if there is no claim under the policy.
-                  </p>
+      <div style="background-color: white; padding-bottom: 10px">
+        <div class="conatinerm" style="margin: auto">
+          <div class="header">
+            <h2 style="font-size: 16px; color: black">
+              NEED INSURANCE? JUST FILL THE FORM AND WE WILL CONTACT YOU SOON.
+            </h2>
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="insurance" value="renew" /> Renew
+              Insurance
+            </label>
+            <label>
+              <input type="radio" name="insurance" value="new" /> Buy new
+              Insurance
+            </label>
+            <label>
+              <input type="radio" name="insurance" value="expired" /> Policy
+              expired
+            </label>
+          </div>
+          <div class="slide-container">
+            <div class="slider-container">
+              <div class="slider" id="slider">
+                <div class="cardslide" id="card1">
+                  <form id="form1">
+                    <select required id="regYear">
+                      <option value="" disabled selected>
+                        Select Registration Year
+                      </option>
+                      <option value="2024">2024</option>
+                      <option value="2023">2023</option>
+                      <option value="2022">2022</option>
+                      <option value="2021">2021</option>
+                      <option value="2020">2020</option>
+                      <option value="2019">2019</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                      <option value="2011">2011</option>
+                      <option value="2010">2010</option>
+                      <option value="2009">2009</option>
+                      <option value="2008">2008</option>
+                      <option value="2007">2007</option>
+                      <option value="2006">2006</option>
+                      <option value="2005">2005</option>
+                      <option value="2004">2004</option>
+                      <option value="2003">2003</option>
+                      <option value="2002">2002</option>
+                      <option value="2001">2001</option>
+                      <option value="2000">2000</option>
+                      <option value="1999">1999</option>
+                      <option value="1998">1998</option>
+                      <option value="1997">1997</option>
+                      <option value="1996">1996</option>
+                      <option value="1995">1995</option>
+                      <option value="1994">1994</option>
+                      <option value="1993">1993</option>
+                      <option value="1992">1992</option>
+                      <option value="1991">1991</option>
+                      <option value="1990">1990</option>
+                    </select>
+                    <select required id="vehicleModel">
+                      <option value="" disabled selected>
+                        Select Vehicle Model
+                      </option>
+                      <option value="model1">Model 1</option>
+                      <option value="model2">Model 2</option>
+                    </select>
+                    <select required id="vehicleType">
+                      <option value="" disabled selected>
+                        Select Vehicle Type
+                      </option>
+                      <option value="type1">Type 1</option>
+                      <option value="type2">Type 2</option>
+                    </select>
+                    <button
+                      type="button"
+                      onclick="showNextCard('form1', 'card2')"
+                    >
+                      Next
+                    </button>
+                  </form>
                 </div>
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    A policy can be cancelled only after ensuring that the
-                    vehicle is insured with any other company. The original
-                    certificate of insurance must be submitted to the company.
-                  </p>
+                <div class="cardslide" id="card2">
+                  <form id="form2">
+                    <select required id="vehicleBrand">
+                      <option value="" disabled selected>
+                        Select Vehicle Brand
+                      </option>
+                      <option value="brand1">Brand 1</option>
+                      <option value="brand2">Brand 2</option>
+                    </select>
+                    <select required id="regCity">
+                      <option value="" disabled selected>
+                        Select Vehicle Registration City
+                      </option>
+                      <option value="city1">City 1</option>
+                      <option value="city2">City 2</option>
+                    </select>
+                    <button
+                      type="button"
+                      onclick="showNextCard('form2', 'card3')"
+                    >
+                      Next
+                    </button>
+                  </form>
                 </div>
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    The insurance company should inform RTA (regional transport
-                    authority) for such cancellation.
-                  </p>
+                <div class="cardslide" id="card3">
+                  <form id="form3">
+                    <input type="text" placeholder="Name" required id="name" />
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      required
+                      id="email"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Mobile"
+                      required
+                      id="mobile"
+                    />
+                    <select required id="regCity2">
+                      <option value="" disabled selected>
+                        Select Vehicle Registration City
+                      </option>
+                      <option value="city1">City 1</option>
+                      <option value="city2">City 2</option>
+                    </select>
+                    <button type="submit">Submit</button>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-        </li>
-        <li class="cards_item">
-          <div class="card" tabindex="0">
-            <div class="card_image">
-              <img
-                src="./assets/images/insaurance2.jpg"
-                alt="mixed vegetable salad in a mason jar."
-              />
+        </div>
+        <div
+          class="container-slide"
+          style="margin: 8px; background-color: white !important;border-radius: 8px !important;"
+        >
+          <div class="accordion" style="border-radius: 8px !important;">
+            <!-- Necessity of Insurance Policy -->
+            <div class="accordion-item">
+              <div class="accordion-header">Necessity of Insurance Policy</div>
+              <div class="accordion-content">
+                <p>
+                  According to the Motor Vehicle Act 1988, Section 146,
+                  insurance is compulsory for all vehicles running on the road.
+                  Motor insurance provides protection to the vehicle owner
+                  against (i) damages to his/her vehicle and (ii) pays for any
+                  Third Party Liability determined as per law against the owner
+                  of the vehicle. Third Party Insurance is a statutory
+                  requirement. The vehicle owner is legally liable for any
+                  injury or damage to third-party life or property caused by or
+                  arising out of the use of the vehicle in a public place.
+                </p>
+              </div>
             </div>
-            <div class="card_content scroll">
-              <h2 class="card_title">Importance Of IRDA In Insurance Sector</h2>
-              <div class="card_text">
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    The policy can be cancelled by insurance company. The
-                    company sends the seven days notice to the insurance holder.
-                    The insurance company will refund the premium for remaining
-                    period if there is no claim under the policy.
-                  </p>
-                </div>
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    A policy can be cancelled only after ensuring that the
-                    vehicle is insured with any other company. The original
-                    certificate of insurance must be submitted to the company.
-                  </p>
-                </div>
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    The insurance company should inform RTA (regional transport
-                    authority) for such cancellation.
-                  </p>
-                </div>
+            <!-- Depreciation Slab -->
+            <div class="accordion-item">
+              <div class="accordion-header">Depreciation Slab</div>
+              <div class="accordion-content">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Age of Vehicle</th>
+                      <th>% Depreciation</th>
+                      <th>IDV</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Not more than 6 months</td>
+                      <td>5%</td>
+                      <td>95% of showroom price</td>
+                    </tr>
+                    <tr>
+                      <td>6 months to 1 year</td>
+                      <td>15%</td>
+                      <td>85% of showroom price</td>
+                    </tr>
+                    <tr>
+                      <td>1 year up to 2 years</td>
+                      <td>20%</td>
+                      <td>80% of showroom price</td>
+                    </tr>
+                    <tr>
+                      <td>2 years up to 3 years</td>
+                      <td>30%</td>
+                      <td>70% of showroom price</td>
+                    </tr>
+                    <tr>
+                      <td>3 years up to 4 years</td>
+                      <td>40%</td>
+                      <td>60% of showroom price</td>
+                    </tr>
+                    <tr>
+                      <td>4 years up to 5 years</td>
+                      <td>50%</td>
+                      <td>50% of showroom price</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Transfer of Insurance Policy -->
+            <div class="accordion-item">
+              <div class="accordion-header">Transfer of Insurance Policy</div>
+              <div class="accordion-content">
+                <p>
+                  1. On transferring the vehicle, the transfer of insurance is
+                  compulsory within 14 days. If the insurance is not transferred
+                  within 14 days, then the insurance policy is not valid. The
+                  insurance must be in the name of the vehicle owner.
+                </p>
+                <p>
+                  2. On vehicle transfer, the policy can be transferred to the
+                  new vehicle owner, but NCB is not given to them. The new
+                  vehicle owner has to pay the difference of NCB for the
+                  remaining time period. Then the insurance policy transfers to
+                  the new owner.
+                </p>
+                <p>
+                  3. After selling the vehicle, if the insurance holder wants,
+                  the policy can be transferred to another new vehicle, and the
+                  profit of NCB can be received.
+                </p>
+                <p>
+                  4. On transferring, the old certificate of insurance is
+                  required to be surrendered, and a fee of Rs.50/- is to be
+                  submitted for the issue of a new certificate of insurance. If
+                  the old certificate of insurance cannot be submitted, then
+                  full details about the policy should be submitted for issuing
+                  a new certificate of insurance.
+                </p>
+              </div>
+            </div>
+            <!-- Certificate of Insurance and Cover Note -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Certificate of Insurance and Cover Note
+              </div>
+              <div class="accordion-content">
+                <p>
+                  According to the Central Motor Vehicle Act, 1989, the
+                  Certificate of Insurance is a certificate issued by the
+                  insurance company under Form 51.
+                </p>
+                <p>
+                  Whereas the Cover Note is issued under Form 52. A cover note
+                  is valid up to 60 days from the issuing date, and the policy
+                  of insurance is issued before the expiration of the cover
+                  note.
+                </p>
+              </div>
+            </div>
+            <!-- HP (Hypothecation) in Insurance -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                HP (Hypothecation) in Insurance
+              </div>
+              <div class="accordion-content">
+                <p>
+                  When the registered owner enters into an agreement of loan
+                  with the finance company, the name of the finance company is
+                  entered in the registration certificate (RC); this is called
+                  hypothecation. After entering the HP in the RC, the name of
+                  the financer also appears in the insurance policy.
+                </p>
+                <p>
+                  At the time of claim receiving, the finance company has the
+                  first right on the claim money. Any remaining amount (if any)
+                  is given to the policyholder or loan bearer.
+                </p>
+              </div>
+            </div>
+            <!-- Personal Accident (PA) Cover under Motor Policy -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Personal Accident (PA) Cover under Motor Policy
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Personal accident covers the risk in both third party and
+                  comprehensive policies.
+                </p>
+                <p>
+                  1. If the registered owner is driving and has a valid driving
+                  license, cover is provided as an owner-driver.
+                </p>
+                <p>
+                  2. The owner-driver of the insured vehicle receives
+                  compensation from the insurance company in case of death or
+                  injury under the following scale:
+                </p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Type of Vehicle</th>
+                      <th>Insured Amount</th>
+                      <th>Premium</th>
+                      <th>Cover</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2 Wheeler</td>
+                      <td>One Lakh</td>
+                      <td>Rs. 50</td>
+                      <td>
+                        1) 100% for death, loss of two eyes or both limbs and
+                        sight of one eye.<br />
+                        2) 50% for the loss of one limb or sight of one eye.<br />
+                        3) 100% for permanent disablement other than above.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Private Vehicle</td>
+                      <td>Two Lakhs</td>
+                      <td>Rs. 100</td>
+                      <td>Same as above</td>
+                    </tr>
+                    <tr>
+                      <td>Commercial Vehicle</td>
+                      <td>Two Lakhs</td>
+                      <td>Rs. 100</td>
+                      <td>Same as above</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- On Adding Detail to the Vehicle -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                On Adding Detail to the Vehicle
+              </div>
+              <div class="accordion-content">
+                <p>
+                  According to the insurance company, after purchasing a policy,
+                  if there is any change in the vehicle, there is a procedure
+                  for changing the policy by paying an extra premium for that
+                  addition. For example, on the addition of an LPG or CNG kit to
+                  the vehicle, the RTA should be notified for a change in RC.
+                  Then the insurance company should be notified so that by
+                  paying an extra premium, that addition can be claimed.
+                </p>
+                <p>Procedure for recording changes in the policy:</p>
+                <ul class="pe-0">
+                  <li class="pe-0">
+                    Submit a letter to the company with the proof of change.
+                  </li>
+                  <li>
+                    Based on the proof of change, the company will modify the
+                    policy.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </li>
-        <li class="cards_item">
-          <div class="card" tabindex="0">
-            <div class="card_image">
-              <img
-                src="./assets/images/cenceelation.jpg"
-                alt="mixed vegetable salad in a mason jar."
-              />
-            </div>
-            <div class="card_content scroll">
-              <h2 class="card_title">Cancellation of insurance</h2>
-              <div class="card_text">
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    The policy can be cancelled by insurance company. The
-                    company sends the seven days notice to the insurance holder.
-                    The insurance company will refund the premium for remaining
-                    period if there is no claim under the policy.
-                  </p>
-                </div>
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    A policy can be cancelled only after ensuring that the
-                    vehicle is insured with any other company. The original
-                    certificate of insurance must be submitted to the company.
-                  </p>
-                </div>
-                <div style="display: flex; gap: 10px">
-                  <div class="circle"></div>
-                  <p>
-                    The insurance company should inform RTA (regional transport
-                    authority) for such cancellation.
-                  </p>
+        </div>
+      </div>
+      <div style="margin-top: 20px;">
+        <ul class="cardslide-slides">
+          <li class="cardslide-slides_item">
+            <div class="cardslide-slide" tabindex="0">
+              <div class="cardslide-slide_image">
+                <img
+                  src="./assets/images/cenceelation.jpg"
+                  alt="mixed vegetable salad in a mason jar."
+                />
+              </div>
+              <div class="cardslide-slide_content scroll">
+                <h2 class="cardslide-slide_title">Cancellation of insurance</h2>
+                <div class="cardslide-slide_text">
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      The policy can be cancelled by insurance company. The
+                      company sends the seven days notice to the insurance
+                      holder. The insurance company will refund the premium for
+                      remaining period if there is no claim under the policy.
+                    </p>
+                  </div>
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      A policy can be cancelled only after ensuring that the
+                      vehicle is insured with any other company. The original
+                      certificate of insurance must be submitted to the company.
+                    </p>
+                  </div>
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      The insurance company should inform RTA (regional
+                      transport authority) for such cancellation.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+          <li class="cardslide-slides_item">
+            <div class="cardslide-slide" tabindex="0">
+              <div class="cardslide-slide_image">
+                <img
+                  src="./assets/images/insaurance2.jpg"
+                  alt="mixed vegetable salad in a mason jar."
+                />
+              </div>
+              <div class="cardslide-slide_content scroll">
+                <h2 class="cardslide-slide_title">
+                  Importance Of IRDA In Insurance Sector
+                </h2>
+                <div class="cardslide-slide_text">
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      The policy can be cancelled by insurance company. The
+                      company sends the seven days notice to the insurance
+                      holder. The insurance company will refund the premium for
+                      remaining period if there is no claim under the policy.
+                    </p>
+                  </div>
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      A policy can be cancelled only after ensuring that the
+                      vehicle is insured with any other company. The original
+                      certificate of insurance must be submitted to the company.
+                    </p>
+                  </div>
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      The insurance company should inform RTA (regional
+                      transport authority) for such cancellation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="cardslide-slides_item">
+            <div class="cardslide-slide" tabindex="0">
+              <div class="cardslide-slide_image">
+                <img
+                  src="./assets/images/cenceelation.jpg"
+                  alt="mixed vegetable salad in a mason jar."
+                />
+              </div>
+              <div class="cardslide-slide_content scroll">
+                <h2 class="cardslide-slide_title">Cancellation of insurance</h2>
+                <div class="cardslide-slide_text">
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      The policy can be cancelled by insurance company. The
+                      company sends the seven days notice to the insurance
+                      holder. The insurance company will refund the premium for
+                      remaining period if there is no claim under the policy.
+                    </p>
+                  </div>
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      A policy can be cancelled only after ensuring that the
+                      vehicle is insured with any other company. The original
+                      certificate of insurance must be submitted to the company.
+                    </p>
+                  </div>
+                  <div style="display: flex; gap: 10px">
+                    <div class="circle"></div>
+                    <p>
+                      The insurance company should inform RTA (regional
+                      transport authority) for such cancellation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
       <div>
         <div class="container" style="flex-direction: column">
           <h2 style="text-align: center; margin-top: 50px; color: black">
             INSURANCE COMPANIES NAME
           </h2>
           <div class="company-grid">
-            <div class="company-card">
+            <a href="" class="company-cardslide-slide">
               Bajaj Allianz General Insurance Co. Ltd.
-            </div>
-            <div class="company-card">
+            </a>
+            <a href="" class="company-cardslide-slide">
               Bharti Axa General Insurance Co. Ltd.
-            </div>
-            <div class="company-card">
+            </a>
+            <a href="" class="company-cardslide-slide">
               Cholamandalam MS General Insurance Co. Ltd.
-            </div>
-            <div class="company-card">HDFC ERGO General Insurance Co. Ltd.</div>
-            <div class="company-card">
+            </a>
+            <a href="" class="company-cardslide-slide"
+              >HDFC ERGO General Insurance Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide">
               ICICI Lombard General Insurance Co. Ltd.
-            </div>
-            <div class="company-card">
+            </a>
+            <a href="" class="company-cardslide-slide">
               IFFCO Tokio General Insurance Co. Ltd.
-            </div>
-            <div class="company-card">L&T General Insurance Co. Ltd.</div>
-            <div class="company-card">The New India Assurance Co. Ltd.</div>
-            <div class="company-card">The Oriental Insurance Co. Ltd.</div>
-            <div class="company-card">UNITED INDIA INSURANCE Co. Ltd.</div>
-            <div class="company-card">Reliance General Insurance Co. Ltd.</div>
-            <div class="company-card">Religare Health Insurance Co. Ltd.</div>
-            <div class="company-card">
+            </a>
+            <a href="" class="company-cardslide-slide"
+              >L&T General Insurance Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide"
+              >The New India Assurance Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide"
+              >The Oriental Insurance Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide"
+              >UNITED INDIA INSURANCE Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide"
+              >Reliance General Insurance Co. Ltd.</a
+            >
+            <a class="company-cardslide-slide"
+              >Religare Health Insurance Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide">
               Royal Sundaram Alliance Insurance Co. Ltd.
-            </div>
-            <div class="company-card">SBI General Insurance Co. Ltd.</div>
-            <div class="company-card">Shriram General Insurance Co. Ltd.</div>
-            <div class="company-card">Tata AIG General Insurance Co. Ltd</div>
-            <div class="company-card">
+            </a>
+            <a href="" class="company-cardslide-slide"
+              >SBI General Insurance Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide"
+              >Shriram General Insurance Co. Ltd.</a
+            >
+            <a href="" class="company-cardslide-slide"
+              >Tata AIG General Insurance Co. Ltd</a
+            >
+            <a href="" class="company-cardslide-slide">
               Kotak Mahindra General Insurance Co. Ltd.
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- ================ -->
+      <div
+        class="my-4"
+        style="
+          background: linear-gradient(135deg, #f5f5f5, #d1e3f0);
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 30px;
+        "
+      >
+        <h2 style="padding-top: 37px">
+          Importance of IRDA in Insurance Sector
+        </h2>
+        <div class="cardslide-slide-container">
+          <div class="cardslide-slide-role">
+            <h3>Role of IRDA</h3>
+            <p>
+              All insurance companies in India operate under the IRDA (Insurance
+              Regulatory and Development Authority). It regulates the insurance
+              sector, promotes its growth, and ensures the protection of
+              policyholders' rights.
+            </p>
+          </div>
+          <div class="cardslide-slide-complaints">
+            <h3>Filing Complaints</h3>
+            <p>
+              If you are dissatisfied with an insurance company, you can file a
+              complaint with IRDA.
+              <br /><br />
+              1. Contact the grievance redressal officer of the company.
+              <br />2. Submit a written complaint with necessary documents.
+              <br />3. Obtain a written acknowledgment of the complaint with the
+              date. <br />4. If unsatisfied within 15 days, escalate to IRDA.
+              <br /><br />
+              Contact IRDA via:
+            </p>
+            <div class="contact-info">
+              Toll-free: <a href="tel:155255">155255</a> or
+              <a href="tel:18004254732">1800 4254 732</a><br />
+              Email:
+              <a href="mailto:complaints@irda.gov.in">complaints@irda.gov.in</a
+              ><br />
+              Address: <br />
+              Consumer Affairs Department<br />
+              Insurance Regulatory and Development Authority<br />
+              3-5-817/818, United India Towers, 9th Floor<br />
+              Hyderguda, Basheerbagh,<br />
+              Hyderabad - 500029
             </div>
           </div>
         </div>
       </div>
+      <!-- ====================== -->
+      <div
+        style="
+          background: linear-gradient(135deg, #f5f5f5, #d1e3f0);
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          padding-bottom: 30px;
+          margin-top: 30px;
+          padding: 10px;
+        "
+      >
+        <div class="ncb-section">
+          <div class="ncb-header">NO CLAIM BONUS (NCB)</div>
+
+          <div class="ncb-cardslide-slide">
+            <h4>
+              A) NCB is given to the insurance holder, not to the vehicle.
+            </h4>
+            <p>
+              NCB (No Claim Bonus) is a discount given by the insurance company
+              for not making any claim in the previous year.
+            </p>
+          </div>
+
+          <div class="ncb-cardslide-slide">
+            <h4>B) After selling vehicle...</h4>
+            <p>
+              If the insurance holder sells the vehicle, the policy can be
+              transferred to the new vehicle, and the NCB benefit can be
+              retained.
+            </p>
+          </div>
+
+          <div class="ncb-cardslide-slide">
+            <h4>C) On vehicle transfer...</h4>
+            <p>
+              The policy can be transferred to the new owner, but the NCB is not
+              given to the new owner.
+            </p>
+          </div>
+
+          <div class="ncb-cardslide-slide">
+            <h4>D) Transfer of NCB on changing insurance company...</h4>
+            <p>
+              Yes, the NCB benefit can be obtained from the new company upon
+              providing proof of the NCB certificate from the old insurer.
+            </p>
+          </div>
+
+          <table class="ncb-table">
+            <tr>
+              <th>Time</th>
+              <th>NCB Offered on Premium</th>
+            </tr>
+            <tr>
+              <td>After 1 Year</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <td>After 2 Years</td>
+              <td>25%</td>
+            </tr>
+            <tr>
+              <td>After 3 Years</td>
+              <td>35%</td>
+            </tr>
+            <tr>
+              <td>After 4 Years</td>
+              <td>45%</td>
+            </tr>
+            <tr>
+              <td>After 5 Years and so on</td>
+              <td>50%</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div
+        style="
+          background: linear-gradient(135deg, #f5f5f5, #d1e3f0);
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          padding-bottom: 30px;
+          margin-top: 30px;
+          padding: 10px;
+        "
+      >
+        <div class="risk-cardslide-slide">
+          <div class="risk-cardslide-slide-header">
+            <h3 style="color: white">RISKS NOT COVERED IN THESE CASES</h3>
+          </div>
+          <div class="risk-cardslide-slide-body">
+            <ul class="risk-list">
+              <li>
+                <i class="fas fa-ban"></i> If the damage occurs due to war,
+                terror attacks, civil wars, or nuclear attacks.
+              </li>
+              <li>
+                <i class="fas fa-times-circle"></i> If the policy is not valid.
+                The policy must be renewed on time without any break. If the
+                accident happens between the expiration of the old policy and
+                the renewal of the new policy, the loss is not covered.
+              </li>
+              <li>
+                <i class="fas fa-wine-bottle"></i> If the driver is driving the
+                vehicle under the influence of alcohol or drugs, etc.
+              </li>
+              <li>
+                <i class="fas fa-id-cardslide-slide-alt"></i> If the vehicle is
+                driven by a person without a valid driving license.
+              </li>
+              <li>
+                <i class="fas fa-car-crash"></i> If the damage occurs due to
+                violation of car manufacturing guidelines.
+              </li>
+              <li>
+                <i class="fas fa-hand-rock"></i> If the damage occurs due to an
+                accident done intentionally.
+              </li>
+              <li>
+                <i class="fas fa-gavel"></i> If the claim is rejected by the
+                insurance company. The insurance holder can appeal in court
+                within 12 months of the rejection.
+              </li>
+            </ul>
+            <hr class="divider" />
+            <h4>RISK IS COVERED IN THESE CASES</h4>
+            <ul class="risk-cover-list">
+              <li>
+                <i class="fas fa-fire"></i> By fire explosion, self-ignition, or
+                lightning
+              </li>
+              <li><i class="fas fa-theft"></i> By house breaking or theft</li>
+              <li><i class="fas fa-users"></i> By riot and strike</li>
+              <li><i class="fas fa-globe-asia"></i> By earthquake</li>
+              <li>
+                <i class="fas fa-water"></i> By flood, typhoon, hurricane, or
+                storm
+              </li>
+              <li><i class="fas fa-car"></i> By accidental exterior means</li>
+              <li><i class="fas fa-hand-holding-usd"></i> By malicious act</li>
+              <li>
+                <i class="fas fa-mountain"></i> By landslide, or rockslide
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          background: linear-gradient(
+            135deg,
+            #1e3c72 0%,
+            #2a5298 50%,
+            #6190e8 100%
+          );
+          margin: 0;
+          padding: 20px;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <h1 style="text-align: center">
+          Factors Affecting Your Insurance Premium
+        </h1>
+
+        <div class="factor-container">
+          <div class="factor-cardslide-slide">
+            <img
+              src="https://img.icons8.com/ios-filled/100/ffffff/money-bag.png"
+              alt="IDV"
+            />
+            <h2>Insured Declared Value (IDV)</h2>
+            <p>
+              The IDV is the maximum sum assured fixed by the insurer that your
+              insurer will provide if your vehicle is stolen or suffers total
+              damage.
+            </p>
+          </div>
+          <div class="factor-cardslide-slide">
+            <img
+              src="https://img.icons8.com/ios-filled/100/ffffff/engine.png"
+              alt="Cubic Capacity"
+            />
+            <h2>Cubic Capacity (cc of Engine)</h2>
+            <p>
+              The cubic capacity of your vehicle's engine plays a significant
+              role in determining the premium amount. Higher cc usually means
+              higher premium.
+            </p>
+          </div>
+          <div class="factor-cardslide-slide">
+            <img
+              src="https://img.icons8.com/ios-filled/100/ffffff/worldwide-location.png"
+              alt="Geographical Zones"
+            />
+            <h2>Geographical Zones</h2>
+            <p>
+              Your vehicle's location can affect the premium, as areas with
+              higher risk factors (like theft or accidents) usually have higher
+              premiums.
+            </p>
+          </div>
+          <div class="factor-cardslide-slide">
+            <img
+              src="https://img.icons8.com/ios-filled/100/ffffff/calendar.png"
+              alt="Manufacturing Year"
+            />
+            <h2>Vehicle Manufacturing Year</h2>
+            <p>
+              Older vehicles might attract higher premiums due to the potential
+              for more frequent repairs, while newer vehicles could have lower
+              premiums.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- claim -->
+      <div
+        style="
+          background: linear-gradient(
+            135deg,
+            #61d2e8 2%,
+            #2a5298 50%,
+            #61d2e8 100%
+          );
+
+          margin: 0;
+          padding: 10px;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 10px;
+        "
+      >
+        <h1 style="text-align: center">Insurance Claim Procedure</h1>
+        <div class="claim-container">
+          <div class="claim-cardslide-slide">
+            <img src="./assets/images/damage1.avif" alt="Own Damage" />
+            <h2>Own Damage Claim</h2>
+            <p>
+              Inform the insurance company and police as soon as possible. Do
+              not remove the vehicle from the accident site without permission.
+              If you have a cashless policy, park the vehicle at an authorized
+              workshop for repairs.
+            </p>
+          </div>
+          <div class="claim-cardslide-slide">
+            <img src="./assets/images/claim2.jpg" alt="Third Party Claim" />
+            <h2>Third Party Claim</h2>
+            <p>
+              In case of injury to a third party, there is no claim limit. For
+              property damage, the maximum claim limit is ₹7,50,000. Notify the
+              insurance company and police immediately after the accident.
+            </p>
+          </div>
+          <div class="claim-cardslide-slide">
+            <img src="./assets/images/claim3.jpg" alt="Theft Claim" />
+            <h2>Theft Claim</h2>
+            <p>
+              File an FIR for the theft and inform the insurance company
+              immediately. Submit all required documents, including the claim
+              form and vehicle details. If the vehicle is not recovered, the
+              amount will be paid within 7 days after approval.
+            </p>
+          </div>
+          <div class="claim-cardslide-slide">
+            <img src="./assets/images/claim4.avif" alt="Claim Procedure" />
+            <h2>General Claim Procedure</h2>
+            <p>
+              If you are a victim in an accident, gather all information about
+              the insurance policy and notify the insurance holder. Ensure that
+              all relevant details are shared with the insurance company.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script>
+      let currentCard = 0;
+      const cards = document.querySelectorAll(".cardslide");
+
+      function showNextCard(currentFormId, nextCardId) {
+        const currentForm = document.getElementById(currentFormId);
+        if (currentForm.checkValidity()) {
+          // Move to the next card
+          currentCard++;
+          document.querySelector(".slider").style.transform = `translateX(-${
+            currentCard * 100
+          }%)`;
+
+          // Optional: Add additional logic for form validation or submission
+        } else {
+          currentForm.reportValidity(); // Show validation errors if form is not valid
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+        accordionHeaders.forEach((header) => {
+          header.addEventListener("click", () => {
+            const isActive = header.classList.contains("active");
+
+            // Close all accordion items
+            document.querySelectorAll(".accordion-header").forEach((h) => {
+              h.classList.remove("active");
+              h.nextElementSibling.style.display = "none";
+            });
+
+            // Open the clicked accordion item if it was not already active
+            if (!isActive) {
+              header.classList.add("active");
+              header.nextElementSibling.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

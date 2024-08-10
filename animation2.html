@@ -32,7 +32,7 @@
         margin: 0 auto;
       }
 
-      .cards {
+      .cardslide-slides {
         display: grid;
         flex-wrap: wrap;
         list-style: none;
@@ -43,24 +43,24 @@
         margin: 0 10px;
       }
 
-      .cards_item {
+      .cardslide-slides_item {
         display: flex;
       }
 
-      .card_image {
+      .cardslide-slide_image {
         display: flex;
         height: 250px; /* Adjusted height for the image */
         box-shadow: 0 50px 100px 0 var(--violet);
       }
 
-      .card_image img {
+      .cardslide-slide_image img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .card {
+      .cardslide-slide {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -68,16 +68,16 @@
         background-color: var(--purple);
         border-radius: 5px 25px 5px 50px;
         transition: transform 0.1s linear, box-shadow 0.2s;
-        height: 450px; /* Increased card height */
+        height: 450px; /* Increased cardslide-slide height */
       }
 
-      .card_text:focus,
-      .card:focus {
+      .cardslide-slide_text:focus,
+      .cardslide-slide:focus {
         outline: 2px dashed var(--aqua);
       }
 
-      .card:focus,
-      .card:hover {
+      .cardslide-slide:focus,
+      .cardslide-slide:hover {
         transform: scale(1.01);
         box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
       }
@@ -91,7 +91,7 @@
         margin-top: 10px 2px;
       }
 
-      .card_content {
+      .cardslide-slide_content {
         padding: 8px;
         overflow: hidden;
         height: calc(
@@ -99,7 +99,7 @@
         ); /* Adjusted height to fit the remaining space */
       }
 
-      .card_text {
+      .cardslide-slide_text {
         font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans,
           Helvetica, Helvetica Neue, Arial, sans-serif;
         line-height: 1.5;
@@ -110,19 +110,19 @@
       }
 
       /* Scrollbar styles */
-      .card_text::-webkit-scrollbar {
+      .cardslide-slide_text::-webkit-scrollbar {
         width: 12px;
       }
 
-      .card_text::-webkit-scrollbar-track {
+      .cardslide-slide_text::-webkit-scrollbar-track {
         background: var(--violet);
       }
 
-      .card_text::-webkit-scrollbar-thumb {
+      .cardslide-slide_text::-webkit-scrollbar-thumb {
         background-color: var(--aqua);
       }
 
-      .card_text p:first-of-type:first-letter {
+      .cardslide-slide_text p:first-of-type:first-letter {
         font-size: 1.8em;
         font-family: Georgia, Times, serif;
         margin-right: 0.05em;
@@ -132,7 +132,7 @@
         margin: 0;
       }
 
-      .card_title {
+      .cardslide-slide_title {
         font-family: Georgia, Times, serif;
         font-weight: 600;
         font-size: 1.325rem;
@@ -197,37 +197,33 @@
         font-style: italic;
         margin-top: 1rem;
       }
-      .card_text::-webkit-scrollbar {
+      .cardslide-slide_text::-webkit-scrollbar {
         width: 8px; /* Adjusted scrollbar width */
       }
 
-      .card_text::-webkit-scrollbar-track {
+      .cardslide-slide_text::-webkit-scrollbar-track {
         background: var(--violet);
       }
 
-      .card_text::-webkit-scrollbar-thumb {
+      .cardslide-slide_text::-webkit-scrollbar-thumb {
         background-color: var(--aqua);
       }
-
-
-
-
     </style>
   </head>
   <body>
     <div class="main">
-      <ul class="cards">
-        <li class="cards_item">
-          <div class="card" tabindex="0">
-            <div class="card_image">
+      <ul class="cardslide-slides">
+        <li class="cardslide-slides_item">
+          <div class="cardslide-slide" tabindex="0">
+            <div class="cardslide-slide_image">
               <img
                 src="./assets/images/cenceelation.jpg"
                 alt="mixed vegetable salad in a mason jar. "
               />
             </div>
-            <div class="card_content scroll">
-              <h2 class="card_title">Cancellation of insurance</h2>
-              <div class="card_text">
+            <div class="cardslide-slide_content scroll">
+              <h2 class="cardslide-slide_title">Cancellation of insurance</h2>
+              <div class="cardslide-slide_text">
                 <div style="display: flex; gap: 10px">
                   <div class="circle"></div>
                   <p>
@@ -284,16 +280,18 @@
             </div>
           </div>
         </li>
-        <div class="card" tabindex="0">
-          <div class="card_image">
+        <div class="cardslide-slide" tabindex="0">
+          <div class="cardslide-slide_image">
             <img
               src="./assets/images/insaurance2.jpg"
               alt="mixed vegetable salad in a mason jar. "
             />
           </div>
-          <div class="card_content scroll">
-            <h2 class="card_title">Importance Of IRDA In Insurance Sector</h2>
-            <div class="card_text">
+          <div class="cardslide-slide_content scroll">
+            <h2 class="cardslide-slide_title">
+              Importance Of IRDA In Insurance Sector
+            </h2>
+            <div class="cardslide-slide_text">
               <div style="display: flex; gap: 10px">
                 <div class="circle"></div>
                 <p>
@@ -349,17 +347,17 @@
             </div>
           </div>
         </div>
-        <li class="cards_item">
-          <div class="card" tabindex="0">
-            <div class="card_image">
+        <li class="cardslide-slides_item">
+          <div class="cardslide-slide" tabindex="0">
+            <div class="cardslide-slide_image">
               <img
                 src="./assets/images/deprition.jpg"
                 alt="mixed vegetable salad in a mason jar. "
               />
             </div>
-            <div class="card_content scroll">
-              <h2 class="card_title">Description Of Policy</h2>
-              <div class="card_text">
+            <div class="cardslide-slide_content scroll">
+              <h2 class="cardslide-slide_title">Description Of Policy</h2>
+              <div class="cardslide-slide_text">
                 <div style="display: flex; gap: 10px">
                   <div class="circle"></div>
                   <p>

@@ -8,14 +8,14 @@
       body {
         font-family: Arial, Helvetica, sans-serif;
       }
-      .cards {
+      .cardslide-slides {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         margin-top: 10px;
       }
 
-      .card {
+      .cardslide-slide {
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -25,18 +25,18 @@
         position: relative; /* For positioning the expandable content */
       }
 
-      .card:hover {
+      .cardslide-slide:hover {
         transform: scale(1.05);
       }
 
-      .card img {
+      .cardslide-slide img {
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-radius: 10px;
       }
 
-      .card-header {
+      .cardslide-slide-header {
         position: absolute;
         top: 10px;
         right: 10px;
@@ -66,12 +66,12 @@
         background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
       }
 
-      .card-content {
+      .cardslide-slide-content {
         padding: 15px;
         position: relative;
       }
 
-      .card-header {
+      .cardslide-slide-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -80,30 +80,30 @@
         gap: 4px;
       }
 
-      .card-title {
+      .cardslide-slide-title {
         font-size: 28px;
         margin: 0;
         font-weight: 700;
         text-align: center;
         text-transform: capitalize;
-    
+
         margin-top: -15px;
       }
 
-      .card-price {
+      .cardslide-slide-price {
         font-size: 16px;
         color: rgb(205, 10, 10);
         font-weight: 600;
         margin: 0 !important;
       }
 
-      .card-info {
+      .cardslide-slide-info {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
 
-      .card-info p {
+      .cardslide-slide-info p {
         font-size: 15px;
         color: #312f2f;
         font-weight: 600;
@@ -112,7 +112,7 @@
         margin-top: -15px;
       }
 
-      .card-extras {
+      .cardslide-slide-extras {
         margin-top: 15px;
       }
 
@@ -177,9 +177,9 @@
   </head>
   <body>
     <h1 style="text-align: center">Two Wheeler</h1>
-    <div class="cards">
-      <div class="card Hyundai">
-        <div class="card-header">
+    <div class="cardslide-slides">
+      <div class="cardslide-slide Hyundai">
+        <div class="cardslide-slide-header">
           <button class="like-button">
             <img
               src="./assets/images/like2.svg"
@@ -197,8 +197,8 @@
           </button>
         </div>
         <img src="./assets/images/hero14.png" alt="Hyundai Image" />
-        <div class="card-content">
-          <h3 class="card-title">Nexon</h3>
+        <div class="cardslide-slide-content">
+          <h3 class="cardslide-slide-title">Nexon</h3>
           <div
             style="
               display: flex;
@@ -226,7 +226,7 @@
               <p>Petrol</p>
             </div>
           </div>
-          <div class="card-text">
+          <div class="cardslide-slide-text">
             <div
               style="
                 display: flex;
@@ -314,165 +314,169 @@
           <button class="variant-button">View Variant</button>
         </div>
       </div>
-      <!-- Add more Hyundai cards as needed -->
+      <!-- Add more Hyundai cardslide-slides as needed -->
     </div>
-    <div class="cards">
-        <div class="card Hyundai">
-          <div class="card-header">
-            <button class="like-button">
-              <img
-                src="./assets/images/like2.svg"
-                alt="like"
-                style="width: 20px; height: 20px; border-radius: 0"
-              />
-            </button>
-  
-            <button class="share-button">
-              <img
-                src="./assets/images/share.svg"
-                alt="like"
-                style="width: 20px; height: 20px; border-radius: 0"
-              />
-            </button>
-          </div>
-          <img src="./assets/images/hero14.png" alt="Hyundai Image" />
-          <div class="card-content">
-            <h3 class="card-title">Nexon</h3>
+    <div class="cardslide-slides">
+      <div class="cardslide-slide Hyundai">
+        <div class="cardslide-slide-header">
+          <button class="like-button">
+            <img
+              src="./assets/images/like2.svg"
+              alt="like"
+              style="width: 20px; height: 20px; border-radius: 0"
+            />
+          </button>
+
+          <button class="share-button">
+            <img
+              src="./assets/images/share.svg"
+              alt="like"
+              style="width: 20px; height: 20px; border-radius: 0"
+            />
+          </button>
+        </div>
+        <img src="./assets/images/hero14.png" alt="Hyundai Image" />
+        <div class="cardslide-slide-content">
+          <h3 class="cardslide-slide-title">Nexon</h3>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-right: 11px;
+            "
+          >
+            <p style="font-size: 16px !important">
+              <span style="color: red">Rs.7,00,000-8,50,000</span>
+            </p>
             <div
               style="
                 display: flex;
                 align-items: center;
+                gap: 5px;
                 justify-content: space-between;
-                margin-right: 11px;
               "
             >
-              <p style="font-size: 16px !important">
-                <span style="color: red">Rs.7,00,000-8,50,000</span>
-              </p>
+              <img
+                src="./assets/images/fuel-pump.svg"
+                alt="fuel-pump"
+                style="width: 10px; height: 10px"
+              />
+              <p>Petrol</p>
+            </div>
+          </div>
+          <div class="cardslide-slide-text">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <p>Manual/Automatic</p>
               <div
                 style="
                   display: flex;
                   align-items: center;
                   gap: 5px;
-                  justify-content: space-between;
+                  margin-right: 3px;
                 "
               >
                 <img
-                  src="./assets/images/fuel-pump.svg"
-                  alt="fuel-pump"
+                  src="./assets/images/myengine.svg"
+                  alt="engine"
                   style="width: 10px; height: 10px"
                 />
-                <p>Petrol</p>
+                <p>1500 cc</p>
               </div>
             </div>
-            <div class="card-text">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                "
-              >
-                <p>Manual/Automatic</p>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                    margin-right: 3px;
-                  "
-                >
-                  <img
-                    src="./assets/images/myengine.svg"
-                    alt="engine"
-                    style="width: 10px; height: 10px"
-                  />
-                  <p>1500 cc</p>
-                </div>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                "
-              >
-                <p>Mileage: 19 km/l</p>
-                <button class="expand-button" id="expand-button">
-                  More Details
-                </button>
-              </div>
-            </div>
-  
-            <!-- Expandable Content -->
             <div
-              class="expandable-content"
-              style="padding-top: 5px"
-              id="expandable-content"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              "
             >
+              <p>Mileage: 19 km/l</p>
+              <button class="expand-button" id="expand-button">
+                More Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Content -->
+          <div
+            class="expandable-content"
+            style="padding-top: 5px"
+            id="expandable-content"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <p>Battery Type</p>
               <div
                 style="
                   display: flex;
-                  justify-content: space-between;
                   align-items: center;
+                  gap: 5px;
+                  margin-right: 3px;
                 "
               >
-                <p>Battery Type</p>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                    margin-right: 3px;
-                  "
-                >
-                  <p>Seating Capicity</p>
-                </div>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                "
-              >
-                <p>Charging Time</p>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                    margin-right: 3px;
-                  "
-                >
-                  <p>fuel Tank Capicity</p>
-                </div>
+                <p>Seating Capicity</p>
               </div>
             </div>
-  
-            <button class="variant-button">View Variant</button>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <p>Charging Time</p>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  margin-right: 3px;
+                "
+              >
+                <p>fuel Tank Capicity</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <!-- Add more Hyundai cards as needed -->
-      </div>
 
-      <script>
-        document.querySelectorAll(".expand-button").forEach(button => {
-          button.addEventListener("click", function () {
-            const expandableContent = this.closest(".card").querySelector(".expandable-content");
-            const isVisible = expandableContent.style.display === "block";
-      
-            // Close all expandable content sections
-            document.querySelectorAll(".expandable-content").forEach(content => {
+          <button class="variant-button">View Variant</button>
+        </div>
+      </div>
+      <!-- Add more Hyundai cardslide-slides as needed -->
+    </div>
+
+    <script>
+      document.querySelectorAll(".expand-button").forEach((button) => {
+        button.addEventListener("click", function () {
+          const expandableContent = this.closest(
+            ".cardslide-slide"
+          ).querySelector(".expandable-content");
+          const isVisible = expandableContent.style.display === "block";
+
+          // Close all expandable content sections
+          document
+            .querySelectorAll(".expandable-content")
+            .forEach((content) => {
               content.style.display = "none";
             });
-      
-            // If the clicked section was not visible, open it
-            if (!isVisible) {
-              expandableContent.style.display = "block";
-            }
-          });
+
+          // If the clicked section was not visible, open it
+          if (!isVisible) {
+            expandableContent.style.display = "block";
+          }
         });
-      </script>
+      });
+    </script>
   </body>
 </html>
