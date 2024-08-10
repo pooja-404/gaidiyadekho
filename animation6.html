@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Factors</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #6190e8 100%);
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Factors Affecting Your Insurance Premium</h1>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/money-bag.png" alt="IDV">
+            <h2>Insured Declared Value (IDV)</h2>
+            <p>The IDV is the maximum sum assured fixed by the insurer that your insurer will provide if your vehicle is stolen or suffers total damage.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/engine.png" alt="Cubic Capacity">
+            <h2>Cubic Capacity (cc of Engine)</h2>
+            <p>The cubic capacity of your vehicle's engine plays a significant role in determining the premium amount. Higher cc usually means higher premium.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/worldwide-location.png" alt="Geographical Zones">
+            <h2>Geographical Zones</h2>
+            <p>Your vehicle's location can affect the premium, as areas with higher risk factors (like theft or accidents) usually have higher premiums.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/calendar.png" alt="Manufacturing Year">
+            <h2>Vehicle Manufacturing Year</h2>
+            <p>Older vehicles might attract higher premiums due to the potential for more frequent repairs, while newer vehicles could have lower premiums.</p>
+        </div>
+    </div>
+
+</body>
+</html>

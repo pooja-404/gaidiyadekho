@@ -1,107 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cv</title>
     <style>
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
 
-        .container {
-            min-width: 360px;
-            padding-left: 12px;
-            padding-right: 12px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+      .container {
+        min-width: 360px;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-right: auto;
+        margin-left: auto;
+      }
 
-        .card {
-            width: 120px;
-            /* Fixed width for each card */
-            height: 106px;
-            /* Fixed height for each card */
-            background: rgb(255, 253, 253);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            overflow: hidden;
-            /* Ensure no content overflows outside the card */
-            padding: 10px;
-            transition: 300ms linear;
-        }
+      .card {
+        width: 120px;
+        /* Fixed width for each card */
+        height: 106px;
+        /* Fixed height for each card */
+        background: rgb(255, 253, 253);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        /* Ensure no content overflows outside the card */
+        padding: 10px;
+        transition: 300ms linear;
+      }
 
-        p {
-            font-size: 15px !important;
-            text-align: center;
-        }
+      p {
+        font-size: 15px !important;
+        text-align: center;
+      }
 
-        .card img {
-            max-height: 200px;
-            object-fit: contain;
-            /* Maintain aspect ratio */
-            padding-top: 10px;
-        }
+      .card img {
+        max-height: 200px;
+        object-fit: contain;
+        /* Maintain aspect ratio */
+        padding-top: 10px;
+      }
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+     
     </style>
-</head>
+  </head>
 
-<body style="background: ghostwhite;">
-    <section style="display: flex; justify-content: center;">
-        <div class="container">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-                <div class="card">
-                    <img src="./assets/images/JCB.png" alt="Honda" style="max-width: 75px; ">
-                    <p style="font-weight: 700;">JCB</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/LT.jpeg" alt="Hero" style="max-width: 102px;">
-                    <p style="font-weight: 700; margin-top: -9px;">L&T</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/tatahicki.webp" alt="Honda" style="max-width: 97px;">
-                    <p style="font-weight: 700;">Tata Hitachi</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/hundai.jpeg" alt="Honda"
-                        style="max-width: 89px; margin-top: 28px;">
-                    <p style="font-weight: 700; margin-top: -4px;">Hyundai (CF)</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/valvo.jpeg" alt="Hero" style="max-width: 72px; border-radius: 100%;">
-                    <p style="font-size: 20px;font-weight: 700; margin-top: 19px;">Volvo (CF)</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/mahindra.jpg" alt="Honda" style="max-width: 108px;">
-                    <p style="font-size: 20px;font-weight: 700; margin-top: 35px;">Mahindra (CF)</p>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;padding-top: 10px;">
-                <div class="card">
-                    <img src="./assets/images/ace.png 1.png" alt="Honda"
-                        style="max-width: 62px; background-color: white; margin-top: 20px;">
-                    <p style="font-weight: 700; margin-top: 35px;">ACE (CF)</p>
-                </div>
-        
-            </div>
-           
+  <body style="background: ghostwhite">
+    <section style="display: flex; justify-content: center">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/JCB.png"
+              alt="Honda"
+              style="max-width: 75px"
+            />
+            <p style="font-weight: 700">JCB</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/LT.jpeg"
+              alt="Hero"
+              style="max-width: 102px"
+            />
+            <p style="font-weight: 700; margin-top: -9px">L&T</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/tatahicki.webp"
+              alt="Honda"
+              style="max-width: 97px"
+            />
+            <p style="font-weight: 700">Tata Hitachi</p>
+          </div>
         </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/hundai.jpeg"
+              alt="Honda"
+              style="max-width: 89px; margin-top: 28px"
+            />
+            <p style="font-weight: 700; margin-top: -4px">Hyundai (CF)</p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/valvo.jpeg"
+              alt="Hero"
+              style="max-width: 72px; border-radius: 100%"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 19px">
+              Volvo (CF)
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/mahindra.jpg"
+              alt="Honda"
+              style="max-width: 108px"
+            />
+            <p style="font-size: 20px; font-weight: 700; margin-top: 35px">
+              Mahindra (CF)
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 10px;
+          "
+        >
+          <div class="card">
+            <img
+              src="./assets/images/ace.png 1.png"
+              alt="Honda"
+              style="max-width: 62px; background-color: white; margin-top: 20px"
+            />
+            <p style="font-weight: 700; margin-top: 35px">ACE (CF)</p>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>

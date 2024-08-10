@@ -3,165 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insurance Premium Factors</title>
+    <title>Importance of IRDA in Insurance Sector</title>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       body {
         font-family: Raleway, sans-serif;
+        background: linear-gradient(135deg, #f5f5f5, #d1e3f0);
+        margin: 0;
+        padding: 20px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
         min-height: 100vh;
-        background-color: #ddd;
-      }
-
-      .card-container {
-        perspective: 50em;
-        margin: 10px;
-      }
-
-      .card {
-        position: relative;
-        width: 320px;
-        padding: 2em;
-        color: #fff;
-        background: linear-gradient(60deg, #880e4f, #1a237e);
-        border-radius: 1em;
-        box-shadow: 0 0 1em #000;
-        transition: background 0.3s ease;
         text-align: center;
       }
 
+      h2 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #333;
+        font-size: 24px;
+      }
+
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius:5px 25px 5px 50px;
+        padding: 10px;
+        color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        /* width: 100%; */
+        text-align: center;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
       .card h3 {
-        margin-bottom: 1em;
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #1a237e;
       }
-
-      .layers {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        transform-style: preserve-3d;
-        z-index: -1;
+      .card p {
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 600;
       }
-
-      .layer {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 1em;
-        background-image: linear-gradient(60deg, #880e4f, #1a237e);
-        transform: translateZ(-1px);
-        box-shadow: 0 0 0.5em #000d inset;
+      .contact-info {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #1a237e;
+        font-weight: 600;
       }
-
-      .layer:last-child {
-        box-shadow: 0 0 0.5em #000d inset, 0 0 5px #000;
+      .contact-info a {
+        color: #1a237e;
+        text-decoration: none;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <h2
-      style="text-align: center; padding-top: 10px; font-weight: 700 !important"
-    >
-      Factors on which premium depend
-    </h2>
+    <h2>Importance of IRDA in Insurance Sector</h2>
     <div class="card-container">
       <div class="card">
-        <h3>Insured Declared Value (IDV)</h3>
+        <h3>Role of IRDA</h3>
         <p>
-          The IDV represents the maximum claim amount that the insurance company
-          will pay if the vehicle is stolen or damaged beyond repair.
+          All insurance companies in India operate under the IRDA (Insurance
+          Regulatory and Development Authority). It regulates the insurance
+          sector, promotes its growth, and ensures the protection of
+          policyholders' rights.
         </p>
-        <div class="layers">
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-        </div>
       </div>
-    </div>
-
-    <div class="card-container">
       <div class="card">
-        <h3>Cubic Capacity (CC of Engine)</h3>
+        <h3>Filing Complaints</h3>
         <p>
-          The engine's cubic capacity influences the premium, with larger
-          engines generally leading to higher premiums.
+          If you are dissatisfied with an insurance company, you can file a
+          complaint with IRDA.
+          <br /><br />
+          1. Contact the grievance redressal officer of the company.
+          <br />2. Submit a written complaint with necessary documents. <br />3.
+          Obtain a written acknowledgment of the complaint with the date.
+          <br />4. If unsatisfied within 15 days, escalate to IRDA. <br /><br />
+          Contact IRDA via:
         </p>
-        <div class="layers">
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card">
-        <h3>Geographical Zones</h3>
-        <p>
-          Different zones may have different risk levels, which can impact the
-          premium. Urban areas usually have higher premiums due to increased
-          risk.
-        </p>
-        <div class="layers">
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card">
-        <h3>Vehicle Manufacturing Year</h3>
-        <p>
-          Older vehicles generally attract lower premiums due to their lower
-          IDV, but they might have higher maintenance costs.
-        </p>
-        <div class="layers">
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
+        <div class="contact-info">
+          Toll-free: <a href="tel:155255">155255</a> or
+          <a href="tel:18004254732">1800 4254 732</a><br />
+          Email:
+          <a href="mailto:complaints@irda.gov.in">complaints@irda.gov.in</a
+          ><br />
+          Address: <br />
+          Consumer Affairs Department<br />
+          Insurance Regulatory and Development Authority<br />
+          3-5-817/818, United India Towers, 9th Floor<br />
+          Hyderguda, Basheerbagh,<br />
+          Hyderabad - 500029
         </div>
       </div>
     </div>

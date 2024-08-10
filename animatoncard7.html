@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #f4f7f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        background: linear-gradient(
+          145deg,
+          #111111 0%,
+          /* Coral */ #354283 25%,
+          /* Peach */ #302e2e 50%,
+          /* Orange */ #2b4398 75%,
+          /* Gold */ #141414 100% /* Spring Green */
+        ); /* 
+        /* background-image: url(./assets/images/riskbg.avif); */
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        clip-path: polygon(
+          0 0,
+          100% 0%,
+          100% calc(100% - 30px),
+          calc(100% - 30px) 100%,
+          0% 100%
+        ); */
+      }
+
+      /* .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(./assets/images/riskbg.avif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 80% !important;
+        z-index: 0; 
+        clip-path: polygon(
+          0 0,
+          100% 0%,
+          100% calc(100% - 30px),
+          calc(100% - 30px) 100%,
+          0% 100%
+        );
+        mix-blend-mode: color-burn;
+      } */
+      .card-header,
+      .card-body {
+        position: relative;
+        z-index: 1; /* Ensure the text is above the image */
+      }
+
+      .card-header h3 {
+        font-family: "Roboto", sans-serif;
+        font-size: 22px;
+        color: black;
+        margin-bottom: 15px;
+        /* opacity: 0; */
+      }
+
+      .card-body {
+        font-family: "Open Sans", sans-serif;
+        color: white;
+        line-height: 1.6;
+      }
+
+      .risk-list,
+      .risk-cover-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .risk-list li,
+      .risk-cover-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 25px;
+        font-weight: 700;
+      }
+
+      .risk-list li::before,
+      .risk-cover-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: white;
+        font-size: 30px;
+      }
+
+      .risk-cover-list li::before {
+        color: white;
+      }
+
+      .risk-list i,
+      .risk-cover-list i {
+        margin-right: 12px;
+        color: inherit;
+        font-size: 18px;
+      }
+
+      .divider {
+        border: none;
+        border-top: 2px solid white;
+        margin: 20px 0;
+      }
+
+      h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      /* Responsive design */
+      @media (max-width: 600px) {
+        .card {
+          padding: 15px;
+          clip-path: polygon(
+            0 0,
+            100% 0%,
+            100% calc(100% - 8px),
+            calc(100% - -13px) 100%,
+            0% 100%
+          );
+          border-radius: 25px 0px 0px 25px;
+        }
+
+        .card-header h3 {
+          font-size: 20px;
+          font-weight: 900 !important;
+        }
+
+        h4 {
+          font-size: 16px;
+        }
+
+        .risk-list i,
+        .risk-cover-list i {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h3 style="color: white">RISKS NOT COVERED IN THESE CASES</h3>
+      </div>
+      <div class="card-body">
+        <ul class="risk-list">
+          <li>
+            <i class="fas fa-ban"></i> If the damage occurs due to war, terror
+            attacks, civil wars, or nuclear attacks.
+          </li>
+          <li>
+            <i class="fas fa-times-circle"></i> If the policy is not valid. The
+            policy must be renewed on time without any break. If the accident
+            happens between the expiration of the old policy and the renewal of
+            the new policy, the loss is not covered.
+          </li>
+          <li>
+            <i class="fas fa-wine-bottle"></i> If the driver is driving the
+            vehicle under the influence of alcohol or drugs, etc.
+          </li>
+          <li>
+            <i class="fas fa-id-card-alt"></i> If the vehicle is driven by a
+            person without a valid driving license.
+          </li>
+          <li>
+            <i class="fas fa-car-crash"></i> If the damage occurs due to
+            violation of car manufacturing guidelines.
+          </li>
+          <li>
+            <i class="fas fa-hand-rock"></i> If the damage occurs due to an
+            accident done intentionally.
+          </li>
+          <li>
+            <i class="fas fa-gavel"></i> If the claim is rejected by the
+            insurance company. The insurance holder can appeal in court within
+            12 months of the rejection.
+          </li>
+        </ul>
+        <hr class="divider" />
+        <h4>RISK IS COVERED IN THESE CASES</h4>
+        <ul class="risk-cover-list">
+          <li>
+            <i class="fas fa-fire"></i> By fire explosion, self-ignition, or
+            lightning
+          </li>
+          <li><i class="fas fa-theft"></i> By house breaking or theft</li>
+          <li><i class="fas fa-users"></i> By riot and strike</li>
+          <li><i class="fas fa-globe-asia"></i> By earthquake</li>
+          <li>
+            <i class="fas fa-water"></i> By flood, typhoon, hurricane, or storm
+          </li>
+          <li><i class="fas fa-car"></i> By accidental exterior means</li>
+          <li><i class="fas fa-hand-holding-usd"></i> By malicious act</li>
+          <li><i class="fas fa-mountain"></i> By landslide, or rockslide</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

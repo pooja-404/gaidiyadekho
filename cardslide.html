@@ -3,49 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insurance Form</title>
+    <title>Insurance Information Accordion</title>
     <style>
       body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 12px;
-        flex-direction: column;
-      }
-      .container {
-        width: 100%;
-        max-width: 357px;
-        overflow: hidden;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        box-sizing: border-box;
-        margin: auto;
-        margin-top: 20px;
-        height: 300px;
+        margin: 0;
+        padding: 0;
       }
       .slider-container {
         overflow: hidden;
         width: 100%;
+        display: flex;
+        justify-content: center; /* Centering the slider horizontally */
       }
+
       .slider {
         display: flex;
         transition: transform 0.5s ease-in-out;
-        width: 300%;
+        width: 300%; /* Adjust based on the number of cards */
+        transform: translateX(0); /* Default position */
       }
+
       .card {
-        min-width: 33.33%;
+        width: 100%;
         box-sizing: border-box;
-        transition: transform 0.5s ease-in-out;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center; /* Centering the form content */
+        align-items: center; /* Centering vertically */
       }
+
       .card form {
         display: flex;
         flex-direction: column;
+        /* width: 100%; */
+        max-width: 600px; /* Adjust based on your design */
       }
+
       .card form input,
       .card form select,
       .card form button {
@@ -54,6 +49,7 @@
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 4px;
+        width: 332px;
       }
       .card form button {
         background-color: darkblue;
@@ -76,14 +72,29 @@
       .options label {
         margin-right: 10px;
       }
-      .accordion {
+      .card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the image */
+      }
+
+      .conatinerm {
         width: 100%;
-        max-width: 357px;
-        margin: 20px auto;
+        padding: 10px;
+        margin: auto;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 10px auto;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
+      }
+      .accordion {
+        width: 100%;
       }
       .accordion-item {
         border-bottom: 1px solid #ccc;
@@ -106,29 +117,77 @@
       .accordion-header.active::after {
         transform: rotate(90deg); /* Rotates the triangle to point down */
       }
+      /* .accordion-content {
+        display: none;
+        padding: 15px;
+      } */
+      .accordion-content p,
+      .accordion-content ul {
+        margin: 0;
+      }
+      /* table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      } */
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      .form-section {
+        padding: 15px;
+        background-color: #f9faff;
+      }
+      .form-section input,
+      .form-section textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-section button {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .form-section button:hover {
+        background-color: #0056b3;
+      }
+
       .accordion-content {
         display: none;
         padding: 15px;
+        max-height: 300px; /* Adjust height as needed */
+        overflow: auto; /* Enable both vertical and horizontal scrolling */
       }
-      .accordion-content p {
-        margin: 0;
-      }
+
       table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 10px;
+        table-layout: auto; /* Allow table to expand beyond container width if needed */
       }
-      table, th, td {
-        border: 1px solid #ccc;
-      }
-      th, td {
+
+      th,
+      td {
         padding: 10px;
         text-align: left;
+        word-wrap: break-word; /* Handle long words or content */
       }
     </style>
   </head>
   <body>
-    <div>
+    <div class="conatinerm" style="margin: auto">
       <div class="header">
         <h2 style="font-size: 16px">
           NEED INSURANCE? JUST FILL THE FORM AND WE WILL CONTACT YOU SOON.
@@ -150,12 +209,46 @@
           <div class="slider" id="slider">
             <div class="card" id="card1">
               <form id="form1">
-                <input
-                  type="number"
-                  placeholder="Registration Year"
-                  required
-                  id="regYear"
-                />
+                <select required id="regYear">
+                  <option value="" disabled selected>
+                    Select Registration Year
+                  </option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+                  <option value="2011">2011</option>
+                  <option value="2010">2010</option>
+                  <option value="2009">2009</option>
+                  <option value="2008">2008</option>
+                  <option value="2007">2007</option>
+                  <option value="2006">2006</option>
+                  <option value="2005">2005</option>
+                  <option value="2004">2004</option>
+                  <option value="2003">2003</option>
+                  <option value="2002">2002</option>
+                  <option value="2001">2001</option>
+                  <option value="2000">2000</option>
+                  <option value="1999">1999</option>
+                  <option value="1998">1998</option>
+                  <option value="1997">1997</option>
+                  <option value="1996">1996</option>
+                  <option value="1995">1995</option>
+                  <option value="1994">1994</option>
+                  <option value="1993">1993</option>
+                  <option value="1992">1992</option>
+                  <option value="1991">1991</option>
+                  <option value="1990">1990</option>
+                </select>
                 <select required id="vehicleModel">
                   <option value="" disabled selected>
                     Select Vehicle Model
@@ -214,75 +307,35 @@
           </div>
         </div>
       </div>
-      <h3 style="text-align: center">Accordion</h3>
+    </div>
+    <div class="container">
       <div class="accordion">
+        <!-- Necessity of Insurance Policy -->
         <div class="accordion-item">
-          <div class="accordion-header">Neccesity of insurance policy</div>
+          <div class="accordion-header">Necessity of Insurance Policy</div>
           <div class="accordion-content">
             <p>
-              According to motor vehicle act 1988, section 146, says insurance
-              is compulsory for all the vehicles that are running on the road.
-              Motor insurance gives protection to the vehicle owner against (i).
-              damages to his/her vehicle and (ii). pays for any Third Party
-              Liability determined as per law against the owner of the vehicle.
-              Third Party Insurance is a statutory requirement. The owner of the
-              vehicle is legally liable for any injury or damage to third party
-              life or property caused by or arising out of the use of the
-              vehicle in a public place.
+              According to the Motor Vehicle Act 1988, Section 146, insurance is
+              compulsory for all vehicles running on the road. Motor insurance
+              provides protection to the vehicle owner against (i) damages to
+              his/her vehicle and (ii) pays for any Third Party Liability
+              determined as per law against the owner of the vehicle. Third
+              Party Insurance is a statutory requirement. The vehicle owner is
+              legally liable for any injury or damage to third-party life or
+              property caused by or arising out of the use of the vehicle in a
+              public place.
             </p>
           </div>
         </div>
+        <!-- Depreciation Slab -->
         <div class="accordion-item">
-          <div class="accordion-header">Description Of Policy</div>
-          <div class="accordion-content">
-            <p>
-              Comprehensive policy- it covers 3rd party loss cover + coverage
-              due to theft of the vehicle + loss/ damage occurred to insurance
-              holder as well + personal accident cover to owner/ driver.
-            </p>
-            <h3>Zero Depreciation Policy</h3>
-            <p>
-              It covers all the risks of comprehensive policy and depreciation
-              cover is also added. In this policy, 100% claim is obtained on all
-              the plastic parts, fibre parts, rubber parts (e.g., bumper, tyres
-              etc.). There is no depreciation deduction on these parts of the
-              vehicle. The premium of this policy is more than comprehensive
-              policy.
-            </p>
-            <h3>Comprehensive Policy</h3>
-            <p>
-              There are mainly 2 types of insurance policy:
-              <ol style="padding-left: 16px;">
-                <li>Third party insurance policy</li>
-                <li>Comprehensive insurance policy</li>
-              </ol>
-            </p>
-            <p>
-              <strong>Third Party Insurance:</strong> It only covers the damage
-              to the property/loss occurred to the other party due to accident
-              done by the insurance holder. It does not cover any loss/damage
-              occurring to the insurance holder.
-            </p>
-            <p>
-              It does not cover the loss of vehicle due to theft of vehicle, but
-              loss due to theft can be added by paying extra premium.
-            </p>
-            <p>
-              <strong>Comprehensive Insurance:</strong> Comprehensive policy covers third party
-              loss cover + coverage due to theft of vehicle + loss/ damage
-              occurred to insurance holder as well + personal accident cover to
-              owner/ driver.
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">Depreciation Table</div>
+          <div class="accordion-header">Depreciation Slab</div>
           <div class="accordion-content">
             <table>
               <thead>
                 <tr>
-                  <th>AGE OF VEHICLE</th>
-                  <th>% DEPRECIATION</th>
+                  <th>Age of Vehicle</th>
+                  <th>% Depreciation</th>
                   <th>IDV</th>
                 </tr>
               </thead>
@@ -293,27 +346,27 @@
                   <td>95% of showroom price</td>
                 </tr>
                 <tr>
-                  <td>6 month to 1st year</td>
+                  <td>6 months to 1 year</td>
                   <td>15%</td>
                   <td>85% of showroom price</td>
                 </tr>
                 <tr>
-                  <td>1st year up to 2nd year</td>
+                  <td>1 year up to 2 years</td>
                   <td>20%</td>
                   <td>80% of showroom price</td>
                 </tr>
                 <tr>
-                  <td>2nd year up to 3rd year</td>
+                  <td>2 years up to 3 years</td>
                   <td>30%</td>
                   <td>70% of showroom price</td>
                 </tr>
                 <tr>
-                  <td>3rd year up to 4th year</td>
+                  <td>3 years up to 4 years</td>
                   <td>40%</td>
                   <td>60% of showroom price</td>
                 </tr>
                 <tr>
-                  <td>4th year up to 5th year</td>
+                  <td>4 years up to 5 years</td>
                   <td>50%</td>
                   <td>50% of showroom price</td>
                 </tr>
@@ -321,83 +374,194 @@
             </table>
           </div>
         </div>
+        <!-- Transfer of Insurance Policy -->
         <div class="accordion-item">
           <div class="accordion-header">Transfer of Insurance Policy</div>
           <div class="accordion-content">
-            <p>1. On transferring the vehicle, the transfer of insurance is compulsory within 14 days. If the insurance is not transferred within 14 days, then the insurance policy is not valid. The insurance must be in the name of the vehicle owner.</p>
-            <p>2. On vehicle transfer, the policy can be transferred to the new vehicle owner, but NCB is not given to him. The new vehicle owner has to pay the difference of NCB for the remaining time period. Then the insurance policy transfers to the new owner.</p>
-            <p>3. After selling the vehicle, if the insurance holder wants, the policy can be transferred to the other new vehicle and profit of NCB can be received.</p>
-            <p>4. On transferring, the old certificate of insurance is required to be surrendered and a fee of Rs.50/- is to be submitted for the issue of a new certificate of insurance. If the old certificate of insurance cannot be submitted, then full detail about the policy should be submitted for issuing a new certificate of insurance.</p>
+            <p>
+              1. On transferring the vehicle, the transfer of insurance is
+              compulsory within 14 days. If the insurance is not transferred
+              within 14 days, then the insurance policy is not valid. The
+              insurance must be in the name of the vehicle owner.
+            </p>
+            <p>
+              2. On vehicle transfer, the policy can be transferred to the new
+              vehicle owner, but NCB is not given to them. The new vehicle owner
+              has to pay the difference of NCB for the remaining time period.
+              Then the insurance policy transfers to the new owner.
+            </p>
+            <p>
+              3. After selling the vehicle, if the insurance holder wants, the
+              policy can be transferred to another new vehicle, and the profit
+              of NCB can be received.
+            </p>
+            <p>
+              4. On transferring, the old certificate of insurance is required
+              to be surrendered, and a fee of Rs.50/- is to be submitted for the
+              issue of a new certificate of insurance. If the old certificate of
+              insurance cannot be submitted, then full details about the policy
+              should be submitted for issuing a new certificate of insurance.
+            </p>
           </div>
         </div>
+        <!-- Certificate of Insurance and Cover Note -->
         <div class="accordion-item">
-          <div class="accordion-header">No Claim Bonus (NCB)</div>
+          <div class="accordion-header">
+            Certificate of Insurance and Cover Note
+          </div>
           <div class="accordion-content">
-            <p>NCB (No Claim Bonus) - The discount given by the insurance company in premium for not taking any claim in the previous year is NCB. If the claim is applied by the insurance holder, then NCB will not be given next year.</p>
-            <p><strong>A). NCB is given to the insurance holder, not to the vehicle.</strong></p>
-            <p><strong>B). After selling the vehicle, if the insurance holder wants, the policy can be transferred to the other new vehicle and profit of NCB can be received.</strong></p>
-            <p><strong>C). On vehicle transfer, the policy can be transferred to the new vehicle owner, but NCB is not given to him. The new vehicle owner has to pay the difference of NCB for the remaining time period. Then the insurance policy transfers to the new owner.</strong></p>
-            <p><strong>D). Transfer of NCB on changing the insurance company - Yes, the benefit of NCB can be obtained from the new company at the time of purchase of the policy by presenting the proof of NCB certificate obtained from the old insurance company.</strong></p>
+            <p>
+              According to the Central Motor Vehicle Act, 1989, the Certificate
+              of Insurance is a certificate issued by the insurance company
+              under Form 51.
+            </p>
+            <p>
+              Whereas the Cover Note is issued under Form 52. A cover note is
+              valid up to 60 days from the issuing date, and the policy of
+              insurance is issued before the expiration of the cover note.
+            </p>
+          </div>
+        </div>
+        <!-- HP (Hypothecation) in Insurance -->
+        <div class="accordion-item">
+          <div class="accordion-header">HP (Hypothecation) in Insurance</div>
+          <div class="accordion-content">
+            <p>
+              When the registered owner enters into an agreement of loan with
+              the finance company, the name of the finance company is entered in
+              the registration certificate (RC); this is called hypothecation.
+              After entering the HP in the RC, the name of the financer also
+              appears in the insurance policy.
+            </p>
+            <p>
+              At the time of claim receiving, the finance company has the first
+              right on the claim money. Any remaining amount (if any) is given
+              to the policyholder or loan bearer.
+            </p>
+          </div>
+        </div>
+        <!-- Personal Accident (PA) Cover under Motor Policy -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Personal Accident (PA) Cover under Motor Policy
+          </div>
+          <div class="accordion-content">
+            <p>
+              Personal accident covers the risk in both third party and
+              comprehensive policies.
+            </p>
+            <p>
+              1. If the registered owner is driving and has a valid driving
+              license, cover is provided as an owner-driver.
+            </p>
+            <p>
+              2. The owner-driver of the insured vehicle receives compensation
+              from the insurance company in case of death or injury under the
+              following scale:
+            </p>
             <table>
               <thead>
                 <tr>
-                  <th>TIME</th>
-                  <th>NCB OFFERED BY COMPANY ON PREMIUM</th>
+                  <th>Type of Vehicle</th>
+                  <th>Insured Amount</th>
+                  <th>Premium</th>
+                  <th>Cover</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>After 1 year</td>
-                  <td>10%</td>
+                  <td>2 Wheeler</td>
+                  <td>One Lakh</td>
+                  <td>Rs. 50</td>
+                  <td>
+                    1) 100% for death, loss of two eyes or both limbs and sight
+                    of one eye.<br />
+                    2) 50% for the loss of one limb or sight of one eye.<br />
+                    3) 100% for permanent disablement other than above.
+                  </td>
                 </tr>
                 <tr>
-                  <td>After 2 Years</td>
-                  <td>25%</td>
+                  <td>Private Vehicle</td>
+                  <td>Two Lakhs</td>
+                  <td>Rs. 100</td>
+                  <td>Same as above</td>
                 </tr>
                 <tr>
-                  <td>After 3 Years</td>
-                  <td>35%</td>
-                </tr>
-                <tr>
-                  <td>After 4 years</td>
-                  <td>45%</td>
-                </tr>
-                <tr>
-                  <td>After 5 Years and so on</td>
-                  <td>50%</td>
+                  <td>Commercial Vehicle</td>
+                  <td>Two Lakhs</td>
+                  <td>Rs. 100</td>
+                  <td>Same as above</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
+        <!-- On Adding Detail to the Vehicle -->
+        <div class="accordion-item">
+          <div class="accordion-header">On Adding Detail to the Vehicle</div>
+          <div class="accordion-content">
+            <p>
+              According to the insurance company, after purchasing a policy, if
+              there is any change in the vehicle, there is a procedure for
+              changing the policy by paying an extra premium for that addition.
+              For example, on the addition of an LPG or CNG kit to the vehicle,
+              the RTA should be notified for a change in RC. Then the insurance
+              company should be notified so that by paying an extra premium,
+              that addition can be claimed.
+            </p>
+            <p>Procedure for recording changes in the policy:</p>
+            <ul>
+              <li>Submit a letter to the company with the proof of change.</li>
+              <li>
+                Based on the proof of change, the company will modify the
+                policy.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+
     <script>
-      const headers = document.querySelectorAll(".accordion-header");
-      headers.forEach((header) => {
-        header.addEventListener("click", () => {
-          header.classList.toggle("active");
-          const content = header.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      });
+      let currentCard = 0;
+      const cards = document.querySelectorAll(".card");
 
       function showNextCard(currentFormId, nextCardId) {
-        const form = document.getElementById(currentFormId);
-        if (form.reportValidity()) {
-          const currentCard = form.parentElement;
-          const nextCard = document.getElementById(nextCardId);
-          const slider = document.getElementById("slider");
-          const currentIndex = Array.from(slider.children).indexOf(currentCard);
-          const nextIndex = Array.from(slider.children).indexOf(nextCard);
-          const translateX = nextIndex * -100;
-          slider.style.transform = `translateX(${translateX}%)`;
+        const currentForm = document.getElementById(currentFormId);
+        if (currentForm.checkValidity()) {
+          // Move to the next card
+          currentCard++;
+          document.querySelector(".slider").style.transform = `translateX(-${
+            currentCard * 100
+          }%)`;
+
+          // Optional: Add additional logic for form validation or submission
+        } else {
+          currentForm.reportValidity(); // Show validation errors if form is not valid
         }
       }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+        accordionHeaders.forEach((header) => {
+          header.addEventListener("click", () => {
+            const isActive = header.classList.contains("active");
+
+            // Close all accordion items
+            document.querySelectorAll(".accordion-header").forEach((h) => {
+              h.classList.remove("active");
+              h.nextElementSibling.style.display = "none";
+            });
+
+            // Open the clicked accordion item if it was not already active
+            if (!isActive) {
+              header.classList.add("active");
+              header.nextElementSibling.style.display = "block";
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
